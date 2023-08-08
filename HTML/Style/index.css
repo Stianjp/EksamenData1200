@@ -1,26 +1,32 @@
 /* Benytter stjerne(*)-selector for å få dette som mal på alle sider*/
 *{
-    width: 0;
-    height: 0;
     font-family:'Courier New', Courier, monospace; 
+    margin:0;
+    padding:0;
+    text-decoration:none;
 }
 /*CSS FOR NAVBAR START*/
 .navbar{
-    display: grid; /*Benytter grid for å få mer fleksibilitet og kontroll over layouten*/
-    grid-template-columns: auto 2fr; /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen*/
-    padding: 15px 18px;
+    display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
+    justify-content: space-between; /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen*/
+    padding: 14px 16px;
+    align-items: center; /*Denne justerer innholdet i navbar til å være sentrert vertikalt*/
 }
 
-.logo{
-    background-color: rgb(133, 12, 12);
-    size: 20px;
+.logo img{
+    height: 60px; /*Setter høyden til logoen*/
+    width: auto; /*Setter bredden til å være auto, slik at den tilpasser seg høyden*/
 }
 
-.navbarmeny{
-display: grid;
-grid-template-columns: repeat(6, auto); /* 6 stk like kolonner for hvert navbarmenyelement*/
-justify-content: end; /*Denne justerer navbarmenyelementene mot slutten av containeren*/
-gap: 16px; /*Øker mellomrom mellom elementene i navbarmenyen*/
+.NavElementer{
+    display:flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
+    width: 50%; /*Setter bredden til 50% av siden*/
+    justify-content: space-between;/*Plasserer elementene med lik avstand mellom seg*/
+    
 }
+.NavElementer a{
+    color: black; /*Farge på teksten i hvert element*/
+}
+
 
 /*CSS FOR NAVBAR SLUTT*/
