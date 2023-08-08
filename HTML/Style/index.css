@@ -1,0 +1,26 @@
+/* Benytter stjerne(*)-selector for å få dette som mal på alle sider*/
+*{
+    width: 0;
+    height: 0;
+    font-family:'Courier New', Courier, monospace; 
+}
+/*CSS FOR NAVBAR START*/
+.navbar{
+    display: grid; /*Benytter grid for å få mer fleksibilitet og kontroll over layouten*/
+    grid-template-columns: auto 2fr; /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen*/
+    padding: 15px 18px;
+}
+
+.logo{
+    background-color: rgb(133, 12, 12);
+    size: 20px;
+}
+
+.navbarmeny{
+display: grid;
+grid-template-columns: repeat(6, auto); /* 6 stk like kolonner for hvert navbarmenyelement*/
+justify-content: end; /*Denne justerer navbarmenyelementene mot slutten av containeren*/
+gap: 16px; /*Øker mellomrom mellom elementene i navbarmenyen*/
+}
+
+/*CSS FOR NAVBAR SLUTT*/
