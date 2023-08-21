@@ -1,9 +1,9 @@
 /* Benytter stjerne(*)-selector for å få dette som mal på alle sider*/
 *{
-    font-family:'Courier New', Courier, monospace; 
-    margin:0;
-    padding:0;
-    text-decoration:none;
+    font-family:'Courier New', Courier, monospace; /*Setter fonten til å være Courier New*/
+    margin:0; /*Setter margin til 0*/
+    padding:0; /*Setter padding til 0*/
+    text-decoration:none; /*Fjerner understrek på lenker*/
 }
 /*CSS FOR NAVBAR START*/
 .navbar{
@@ -26,7 +26,17 @@
 }
 .NavElementer a{
     color: black; /*Farge på teksten i hvert element*/
+}/*CSS FOR NAVBAR SLUTT*/
+
+/*CSS FOR INTROSIDE START*/
+.introNavigasjon{
+    display: grid; /*Benytter grid-bokser for å legge ting inn i rader og kolonner*/
+    row-gap: 50px; /*Øker avstand mellom radene*/
+    grid-template-columns:1fr 1fr; /*Deler grid-containeren inn i to kolonner som er like store*/
+    grid-row: 1fr 1fr; /*Deler grid i to like rader*/
+    width: 100vw; /*Fyller hele viewportens bredde*/
+    text-align: center; /*sentrerer teksten i grid-boksene*/
 }
-
-
-/*CSS FOR NAVBAR SLUTT*/
+.introTekst{
+    display: grid;
+}

@@ -12,19 +12,37 @@
         <!--Navigasjonsbar START-->
         <nav class="navbar">
             <a href="#" class="logo"><img src="Media/Navbar/OsloMetLogo1.png" alt="Bilde er hentet fra: https://ansatt.oslomet.no/logo-visuell-profil"></a><!--Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan-->
-            <!--link på logo, slik at man kommer til forsiden-->
-            <div class="NavElementer">
-                <a href="index.html">Hjem</a>
-                <a href="topical.html">Topitcal</a>
-                <a href="">Kantine?</a>
-                <a href="">Datatorget?</a>
-                <a href="accessibility.html">Accessibility</a>
-                <a href="ENindex.html">EN</a>
+            <!--link på logo, slik at man kommer til forsiden, dog vil ikke laste siden inn på nytt når man befinner seg i index.html-->
+            <div class="NavElementer"><!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
+                <a href="index.html">Hjem</a><!--Boks 1-->
+                <a href="topical.html">Topitcal</a><!--Boks 2-->
+                <a href="">Kantine?</a><!--Boks 3-->
+                <a href="">Datatorget?</a><!--Boks 4-->
+                <a href="accessibility.html">Accessibility</a><!--Boks 5-->
+                <a href="ENindex.html">EN</a><!--Boks 6-->
             </div>
-                
         </nav>
         <!--Navigasjonsbar SLUTT-->
-    </header>
-    
+    </header> <!--Avslutter header for å starte på selve siden-->
+    <h1>OsloMet</h1>
+    <div class="introNavigasjon"><!--SE CSS-fil, diven er til for å gridde <p>-elementene nedenfor-->
+        <div><a href="topical.html">Topical</a></div><!--grid-boks 1: plassert i øverste venstre hjørne-->
+        <div><a href="accessibility.html">Accessibility</a></div><!--grid-boks 2: plassert i øverste høyre hjørne-->
+        <div><a href="">Datatorget?</a></div><!--grid-boks 3: plassert i nedre venstre hjørne-->
+        <div><a href="">Kantine?</a></div><!--grid-boks 4: plassert i nedre høyre hjørne-->
+    </div>
+    <div class="introTekst"><!--SE CSS-fil, diven er til for å gridde <p>-elementene nedenfor-->
+        <div></div><!--grid-boks 1-->
+        <div></div><!--grid-boks 2-->
+        <div></div><!--grid-boks 3-->
+        <div></div><!--grid-boks 4-->
+        <h2>Hvordan er det å være student på OsloMet?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat, eos voluptas aliquam nam voluptatibus nesciunt cum cumque ducimus, minima est. Modi molestias quisquam eaque quibusdam cumque eius esse nulla.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sit, expedita tempora laboriosam aut perferendis! Modi mollitia perspiciatis nesciunt maiores itaque at dolore, debitis quidem eaque id laborum quos culpa.</p>
+        <h3>Rask innføring i Campus Oslo</h3>
+    </div>
+
+
+
 </body>
 </html>
