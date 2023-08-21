@@ -12,23 +12,22 @@
     padding: 14px 16px;
     align-items: center; /*Denne justerer innholdet i navbar til å være sentrert vertikalt*/
 }
-
 .logo img{
     height: 60px; /*Setter høyden til logoen*/
     width: auto; /*Setter bredden til å være auto, slik at den tilpasser seg høyden*/
 }
-
 .NavElementer{
     display:flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
     width: 50%; /*Setter bredden til 50% av siden*/
     justify-content: space-between;/*Plasserer elementene med lik avstand mellom seg*/
-    
 }
 .NavElementer a{
     color: black; /*Farge på teksten i hvert element*/
 }/*CSS FOR NAVBAR SLUTT*/
-
 /*CSS FOR INTROSIDE START*/
+.førsteContainer{
+    background-color: aqua; /*Endrer bakgrunnsfarge på første del av introside*/
+}
 .introNavigasjon{
     display: grid; /*Benytter grid-bokser for å legge ting inn i rader og kolonner*/
     row-gap: 50px; /*Øker avstand mellom radene*/
