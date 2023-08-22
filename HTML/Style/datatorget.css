@@ -5,3 +5,18 @@
     text-decoration:none; /*Fjerner understrek på lenker*/
 }
 
+.bodyDatatorg{
+    background-image: url(/HTML/Media/Datatorget/Datatorget.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: local;
+}
+
+.h1data{
+    margin-top: 400px;
+    text-align: center;
+}
+
+.gridDatatorg{
+    margin-top: 1000px;
+}
