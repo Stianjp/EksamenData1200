@@ -1,0 +1,7 @@
+*{
+    font-family:'Courier New', Courier, monospace; /*Setter fonten til å være Courier New*/
+    margin:0; /*Setter margin til 0*/
+    padding:0; /*Setter padding til 0*/
+    text-decoration:none; /*Fjerner understrek på lenker*/
+}
+
