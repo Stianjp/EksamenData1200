@@ -60,11 +60,10 @@
     display: grid; /*Oppretter grid*/
     grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner som er like store*/
     grid-template-rows: 1fr 1fr; /*Deler grid i to like rader*/
-    word-wrap: break-word;
-    hyphens: auto; 
+    word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
     padding-right: 25px; /*Tillater ikke at tekster går helt til høyre på siden*/
-    text-align:justify; 
-    line-height: 1.5;
+    text-align:justify; /*Justerer teksten til å strekke seg jevnt mellom containeren sin venstre og høyre side*/
+    line-height: 1.5; /*Endrer linjehøyde*/
 }
 #ToStudenter{ /*1.Bilde på introside*/
 width: 600px; 
