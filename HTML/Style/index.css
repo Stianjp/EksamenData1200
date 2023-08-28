@@ -9,7 +9,7 @@
 .navbar{
     display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
     justify-content: space-between; /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen*/
-    padding: 14px 16px;
+    padding: 14px 16px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
     background-color: #ffdb01; /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
     align-items: center; /*Denne justerer innholdet i navbar til å være sentrert vertikalt*/
     border-style:solid; /*Setter border til solid*/
@@ -39,16 +39,20 @@
 /*CSS FOR NAVBAR SLUTT*/
 /*CSS FOR INTROSIDE START*/
 #OsloMetIntro{
-    text-align: center;
-    padding: 15px;
-    color: #ffdb01;
-    font-size: 50px;
+    text-align: center; /*sentrerer teksten*/
+    padding: 15px; /*Øker padding for mer mellomrom*/
+    color: #ffdb01; /*Setter farge på tekst til å være samme gulfarge som navbar*/
+    font-size: 50px; /*Endrer tekststørrelsen*/
 }
-.IntroContainer{
+#OsloMetBygg{
+    height: auto; /*Setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
+    width: 100vw; /*Fyller hele viewportens bredde*/
+}
+#IntroContainer{
     background-color: #150c4b; /*Endrer bakgrunnsfarge på første del av introside*/
-    color: white;
+    color: white;/*Endrer farge på tekst til hvit for å øke kontraster*/
 }
-.introNavigasjon{
+#introNavigasjon{
     display: grid; /*Benytter grid-bokser for å legge ting inn i rader og kolonner*/
     row-gap: 50px; /*Øker avstand mellom radene*/
     grid-template-columns:1fr 1fr; /*Deler grid-containeren inn i to kolonner som er like store*/
@@ -56,18 +60,67 @@
     width: 100vw; /*Fyller hele viewportens bredde*/
     text-align: center; /*sentrerer teksten i grid-boksene*/
 }
-.introTekst{
+#introTekst{ 
+    display: grid; /*Oppretter grid*/
+    grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner som er like store*/
+    grid-template-rows: 1fr; /*Setter grid til å kun ha 1 rad*/
+    word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
+    padding-right: 25px; /*Tillater ikke at tekster går helt til høyre på siden*/
+    padding-left: 25px; /*Tillater ikke at tekster går helt til venstre på siden*/
+    line-height: 1.5; /*Endrer linjehøyde*/
+    font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
+    align-items: center; /*Sentrerer teksten vertikalt*/
+    text-align: center; /*Sentrerer teksten*/
+}
+#ToStudenter{ /*1.Bilde på introside*/
+width: 600px;  /*Endrer bredden*/
+height: auto; /*Setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
+border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
+border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kontrast og design*/
+}
+#CampusContainer{
+    display: grid; /*Oppretter grid*/
+    grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner som er like store*/
+    grid-template-rows: 1fr; /*Deler grid i to like rader*/
+    word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
+    padding-right: 25px; /*Tillater ikke at tekster går helt til høyre på siden*/
+    padding-left: 25px; /*Tillater ikke at tekster går helt til venstre på siden*/
+    line-height: 1.5; /*Endrer linjehøyde*/
+    font-size: 20px;/*Øker skriftstørrelse -> lettere å lese*/
+    padding-top: 10px; /*Øker paddingen på toppen*/
+    background-color: #54c7da; /*Endrer bakgrunnsfarge på andre del av introside*/
+    align-items: center; /*Sentrerer teksten vertikalt*/
+    text-align: center; /*Sentrerer teksten*/
+}
+#campusBilde{ /*2.bilde på introside*/
+    width: 600px; /*Endrer bredden*/
+    height: auto; /*Setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
+    border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
+    border-color: #150c4b; /*Benytter samme farge som bakgrunn over for å opprettholde kontrast og design*/
+}
+#InnføringCampus{
+    text-align: center; /*sentrerer teksten*/
+    padding: 15px; /*Øker padding for mer mellomrom*/
+    color: white; /*Setter farge på tekst til hvit for å øke kontraster*/
+    font-size: 50px; /*Endrer tekststørrelsen*/
+    background-color: #150c4b; /*Endrer bakgrunnsfarge på andre del av introside*/
+}
+#InnføringCampusContainer{
     display: grid; /*Oppretter grid*/
     grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner som er like store*/
     grid-template-rows: 1fr 1fr; /*Deler grid i to like rader*/
     word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
-    padding-right: 25px; /*Tillater ikke at tekster går helt til høyre på siden*/
+    padding: 50px; /*Øker padding for mer mellomrom*/
     text-align:justify; /*Justerer teksten til å strekke seg jevnt mellom containeren sin venstre og høyre side*/
     line-height: 1.5; /*Endrer linjehøyde*/
+    background-color: #150c4b; /*Endrer bakgrunnsfarge på andre del av introside*/
+    color: white; /*Setter farge på tekst til hvit for å øke kontraster*/
+    font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
 }
-#ToStudenter{ /*1.Bilde på introside*/
-width: 600px; 
-height: auto;
-border: solid;
-border-color: #ffdb01;
+#footer{
+    display: grid; /*Oppretter grid*/
+    background-color: #ffdb01; /*Endrer bakgrunnsfarge på footer*/
+    grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner som er like store*/
+    padding: 15px; /*Øker padding for mer mellomrom*/
+    font-size: 15px; /*Øker skriftstørrelse -> lettere å lese*/
 }
