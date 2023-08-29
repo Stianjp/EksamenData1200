@@ -116,14 +116,19 @@ border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kon
     grid-template-rows: 1fr 1fr; /*Deler grid i to like rader*/
     word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
     padding: 50px; /*Øker padding for mer mellomrom*/
-    text-align:justify; /*Justerer teksten til å strekke seg jevnt mellom containeren sin venstre og høyre side*/
-    line-height: 1.5; /*Endrer linjehøyde*/
     background-color: #150c4b; /*Endrer bakgrunnsfarge på andre del av introside*/
-    color: white; /*Setter farge på tekst til hvit for å øke kontraster*/
-    font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
     padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
 }
-#footer{
+.grid-item-innføringCampus{
+    color: white; /*Setter farge på tekst til hvit for å øke kontraster*/
+    font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
+    text-align:justify; /*Justerer teksten til å strekke seg jevnt mellom containeren sin venstre og høyre side*/
+    line-height: 1.5; /*Endrer linjehøyde*/
+}
+.grid-img-innføringcampus{
+    
+}
+.grid-footer-container{
     display: grid; /*Oppretter grid*/
     background-color: #ffdb01; /*Endrer bakgrunnsfarge på footer*/
     grid-template-columns: 1fr 1fr 1fr; /*Deler grid-containeren inn i 3 kolonner som er like store*/
@@ -131,4 +136,9 @@ border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kon
     font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
     padding-top: 100px; /*Øker padding på toppen for å få mer mellomrom*/
     padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
+}
+.grid-item-footer{
+    color: black; /*Setter farge på tekst til svart for å øke kontraster*/
+    text-align: center; /*Sentrerer teksten*/
+    line-height: 1.5; /*Endrer linjehøyde*/
 }
