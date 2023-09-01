@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="Style/topical.css"><!--Linker CSS-filen til HTML-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Link til sosiale meider knapper-->
+    <script src="Style/index.js"></script> <!--Linker javascript-filen til HTML-->
+        
+    </head>
+
+    <body>
+        <header>
+        <!--Navigasjonsbar START-->
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="Media/Navbar/OsloMetLogo1.png" alt="OsloMet Logo"></a><!--Bilde er hentet fra: https://ansatt.oslomet.no/logo-visuell-profil. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
+            <!--link på logo, slik at man kommer til forsiden, dog vil ikke laste siden inn på nytt når man befinner seg i index.html-->
+            <div class="NavElementer"><!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
+                <a href="index.html">Hjem</a><!--Flex-boks 1-->
+                <a href="topical.html">Topical</a><!--Flex-boks 2-->
+                <a href="kantine.html">Kantine</a><!--Flex-boks 3-->
+                <a href="datatorget.html">Datatorget</a><!--Flex-boks 4-->
+                <a href="accessibility.html">Accessibility</a><!--Flex-boks 5-->
+                <a href="ENindex.html">EN</a><!--Flex-boks 6-->
+            </div>
+        </nav>
+        <!--Navigasjonsbar SLUTT-->
+        </header>
+        
+        <div class="grid-felles">
+            <div class="grid grid-item-felles">
+
+
+            </div>
+        </div>
+        <div class="grid-sidebar"></div>
+
+        <footer>
+            <div class="grid-footer-container">
+                <div class="grid-item-felles"><!--Grid-boks 1: spørsmål/tilbakemeldingsboks-->
+                    <h4>Send oss spørsmål eller tilbakemelding</h4>
+                    <textarea id="melding" class="tilbakemelding-textarea" placeholder="Skriv din melding her..."></textarea><!--Unik klasse for tekstområdet-->
+                    <button class="tilbakemelding-knapp" onclick="sendMelding()">Send</button><!--Unik klasse for send-knappen - Legger også til en javascri-->
+                </div>
+                <div class="grid-item-felles"><!--Grid-boks 2: adresseinfo-->
+                    <h3>OSLO METROPOLITAN UNIVERSITY</h3>
+                    <h4>STORBYUNIVERSITETET</h4>
+                    <p>Postboks 4 St. Olavs plass, 0130 Oslo</p>
+                    <p>Telefon: 67 23 50 00</p>
+                    <p>E-post:
+                        <a href="mailto:someone@example.com">someone@example.com</a>
+                    </p>
+                </div>
+                <div class="grid-item-felles"><!--Grid-boks 3: Sosiale medier-->
+                    <div class="grid-footer-some">
+                        <div class="inline-footer-some">
+                            <a href="https://www.facebook.com/oslomet/" class="fa fa-facebook"><p>Facebook</p></a>
+                        </div>
+                        <div class="inline-footer-some">
+                            <a href="https://twitter.com/oslomet" class="fa fa-twitter"><p>X</p></a>
+                        </div>
+                        <div class="inline-footer-some">
+                            <a href="https://www.linkedin.com/school/oslomet/?originalSubdomain=no" class="fa fa-linkedin"><p>LinkedIn</p></a>
+                        </div>
+                        <div class="inline-footer-some">
+                            <a href="https://www.instagram.com/oslomet/?hl=nb" class="fa fa-instagram"><p>Instagram</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

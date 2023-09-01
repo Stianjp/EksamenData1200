@@ -1,0 +1,109 @@
+/* Benytter stjerne(*)-selector for å få dette som mal på alle sider*/
+*{
+    font-family:Arial, Helvetica, sans-serif; /*Setter font til Arial*/
+    margin:0; /*Setter margin til 0*/
+    padding:0; /*Setter padding til 0*/
+    text-decoration:none; /*Fjerner understrek på lenker*/
+}
+/*Globale styles START*/
+.grid-felles{ /*Benytter grid-bokser for å legge ting inn i rader og kolonner - siden dette gjøres ofte, lagde jeg en felles for å effektivisere kode*/
+    display: grid; /*Benytter grid-bokser for å legge ting inn i rader og kolonner*/
+    grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner*/
+    grid-template-rows: 1fr; /*Deler grid i en rad*/
+    padding: 16px; /*Øker padding for mer mellomrom*/
+    text-align: center; /*Sentrerer teksten*/
+    line-height: 1.5; /*Endrer linjehøyde*/
+}
+.grid-item-felles{ /*Oppretter en felles grid-item-gruppe, for å effektivisere kode og forhindre dublikater*/
+    line-height: 1.5; /*Endrer linjehøyde*/
+    text-align: center; /*Sentrerer teksten*/
+    font-size: 20px; /*Endrer tekststørrelsen*/
+    padding: 16px;
+}
+/*Globkale styles SLUTT*/
+/*CSS FOR NAVBAR START*/
+.navbar{
+    display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
+    justify-content: space-between; /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen*/
+    padding: 14px 36px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
+    background-color: #ffdb01; /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
+    align-items: center; /*Denne justerer innholdet i navbar til å være sentrert vertikalt*/
+    border-style:none; /*Setter border-style til none*/
+    font-weight: bold; /*Setter font-weight til bold*/
+    font-size: 20px; /*Setter font-size til 20px*/
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /*Legger til skygge på teksten*/
+}
+.logo img{
+    height: 80px; /*Setter høyden til logoen*/
+    width: auto; /*Setter bredden til å være auto, slik at den tilpasser seg høyden*/
+}
+.NavElementer{
+    display:flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
+    width: 50%; /*Setter bredden til 50% av siden*/
+    justify-content: space-between;/*Plasserer elementene med lik avstand mellom seg*/
+}
+.NavElementer a{
+    color: black; /*Farge på teksten i hvert element*/
+}
+.navbar a:hover{
+    color: #555; /*Benytter andre farger når man hovrer over linker for å øke kontrasten*/
+    background-color: rgba(255, 255, 255, 0.3); /* samme gjelder her for å øke kontrasten*/ 
+}
+/*CSS FOR NAVBAR SLUTT*/
+
+
+
+/*FOOTER START*/
+.grid-footer-container{
+    display: grid; /*Oppretter grid*/
+    background-color: #ffdb01; /*Endrer bakgrunnsfarge på footer*/
+    grid-template-columns: 1fr 1fr 1fr; /*Deler grid-containeren inn i 3 kolonner som er like store*/
+    padding: 15px; /*Øker padding for mer mellomrom*/
+    font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
+    padding-top: 100px; /*Øker padding på toppen for å få mer mellomrom*/
+    padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
+}
+/*Style til tilbakemeldingsboksen*/
+.tilbakemelding-textarea{
+    width: 75%; /*Gir tekstområdet 75% bredde av grid-området*/
+    padding: 10px; /*Legger til noe padding inne i tekstområdet*/
+    margin-bottom: 10px; /*Legger til noe margin under tekstområdet*/
+    border: 1px solid #ddd; /*Setter en grense rundt tekstområdet, grensen er solid, og har endret farge*/
+    border-radius: 5px; /*Gjør hjørnene på tekstområdet til litt rundere*/
+    font-size: 14px; /*endrer skriftstørrelse inne i boksen*/
+}
+.tilbakemelding-knapp{
+    width: 30%; /*Gir knappen 30% bredde av grid-området*/
+    padding: 10px; /*legger noe padding inne i knappen*/
+    background-color: #007BFF; /*endrer bakgrunnsfarge på knappen*/
+    color: white; /*Setter tekstfarge til knappen*/
+    border: none; /*Fjerner grensen rundt knappen*/
+    border-radius: 5px; /*Gjør hjørnene til knappen noe rundere*/
+    font-size: 20px; /*Endrer til skriftstørrelse på knappen*/
+}
+/*Endrer effekter til knappen når musen er over den*/
+.tilbakemelding-knapp:hover{
+    background-color: #0056b3; /*Bytter bakgrunnsfarge*/
+    cursor: pointer; /*Endrer musepeker til hånd*/
+}
+
+/*Style til linker til sosiale medier*/
+.grid-footer-some{
+    display: grid; /*Oppretter grid*/
+    grid-template-columns: 1fr; /*Setter 1 kolonne*/
+}
+.inline-footer-some .fa{
+    color: black;/*Endrer farge på symboler og tekst*/
+}
+.grid-footer-some .inline-footer-some{
+    margin-bottom: 10px; /*Legger til margin på bunnen for å øke mellomrom*/
+}
+/*Endrer effekter til knappen når musen er over den*/
+.fa:hover{
+    text-decoration: underline; /*Teksten for underlinje*/
+    color: rgb(255, 255, 255); /*Endrer farge på tekst*/
+    background-color: rgba(0, 0, 0, 0.47); /*Endrer bakgrunnsfarge*/
+    border-radius: 4px; /*Gjør hjørnene noe rundere*/
+}
+/*FOOTER SLUTT*/
+
