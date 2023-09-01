@@ -10,7 +10,7 @@
     display: grid; /*Benytter grid-bokser for å legge ting inn i rader og kolonner*/
     grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner*/
     grid-template-rows: 1fr; /*Deler grid i en rad*/
-    padding: 15px; /*Øker padding for mer mellomrom*/
+    padding: 16px; /*Øker padding for mer mellomrom*/
     text-align: center; /*Sentrerer teksten*/
     line-height: 1.5; /*Endrer linjehøyde*/
 }
@@ -18,13 +18,14 @@
     line-height: 1.5; /*Endrer linjehøyde*/
     text-align: center; /*Sentrerer teksten*/
     font-size: 20px; /*Endrer tekststørrelsen*/
+    padding: 16px;
 }
 /*Globkale styles SLUTT*/
 /*CSS FOR NAVBAR START*/
 .navbar{
     display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
     justify-content: space-between; /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen*/
-    padding: 14px 16px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
+    padding: 14px 36px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
     background-color: #ffdb01; /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
     align-items: center; /*Denne justerer innholdet i navbar til å være sentrert vertikalt*/
     border-style:none; /*Setter border-style til none*/
