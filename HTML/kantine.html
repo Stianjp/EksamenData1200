@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/kantine.css"><!--Linker CSS-filen til HTML-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Link til sosiale medier knapper-->
+    <script src="Style/index.js"></script> <!--Linker javascript-filen til HTML-->
     <title>OsloMet</title>
 </head>
 <body>
@@ -43,7 +44,7 @@
             </div>
             <div class="kantineItem">
                 <img src="Media/Kantine/coffeeshop.jpg" alt="Kafe"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-stoler-gruppe-butikk-2159065/-->
-                <h3>Kafe</h3>
+                <h3>Kafé</h3>
             </div>
             <div class="kantineItem">
                 <img src="Media/Kantine/ellas.jpg" alt="Ellas spiseri"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-planter-anlegg-bord-601169/-->
@@ -70,6 +71,39 @@
 
         <!--Footer START-->
     <footer>
-
+        <div class="grid-footer-container">
+            <div class="grid-item-felles"><!--Grid-boks 1: spørsmål/tilbakemeldingsboks-->
+                <h4>Send oss spørsmål eller tilbakemelding</h4>
+                <textarea id="melding" class="tilbakemelding-textarea" placeholder="Skriv din melding her..."></textarea><!--Unik klasse for tekstområdet-->
+                <button class="tilbakemelding-knapp" onclick="sendMelding()">Send</button><!--Unik klasse for send-knappen - Legger også til en javascri-->
+            </div>
+            <div class="grid-item-felles"><!--Grid-boks 2: adresseinfo-->
+                <h3>OSLO METROPOLITAN UNIVERSITY</h3>
+                <h4>STORBYUNIVERSITETET</h4>
+                <p>Postboks 4 St. Olavs plass, 0130 Oslo</p>
+                <p>Telefon: 67 23 50 00</p>
+                <p>E-post:
+                    <a href="mailto:someone@example.com">someone@example.com</a>
+                </p>
+            </div>
+            <div class="grid-item-felles"><!--Grid-boks 3: Sosiale medier-->
+                <div class="grid-footer-some">
+                    <div class="inline-footer-some">
+                        <a href="https://www.facebook.com/oslomet/" class="fa fa-facebook"><p>Facebook</p></a>
+                    </div>
+                    <div class="inline-footer-some">
+                        <a href="https://twitter.com/oslomet" class="fa fa-twitter"><p>X</p></a>
+                    </div>
+                    <div class="inline-footer-some">
+                        <a href="https://www.linkedin.com/school/oslomet/?originalSubdomain=no" class="fa fa-linkedin"><p>LinkedIn</p></a>
+                    </div>
+                    <div class="inline-footer-some">
+                        <a href="https://www.instagram.com/oslomet/?hl=nb" class="fa fa-instagram"><p>Instagram</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
-        <!--Footer SLUTT-->
+    <!--Footer SLUTT-->
+</body>
+</html>
