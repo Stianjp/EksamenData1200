@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kantine</title>
+    <link rel="stylesheet" href="Style/kantine.css"><!--Linker CSS-filen til HTML-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Link til sosiale medier knapper-->
+    <title>OsloMet</title>
 </head>
 <body>
-      <!--Header START-->
-      <header>
+    <!--Header START-->
+    <header>
         <!--Navigasjonsbar START-->
         <nav class="navbar">
-            <a href="#" class="logo"><img src="Media/Navbar/OsloMetLogo1.png" alt="Bilde er hentet fra: https://ansatt.oslomet.no/logo-visuell-profil"></a><!--Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan-->
+            <a href="index.html" class="logo"><img src="Media/Navbar/OsloMetLogo1.png" alt="OsloMet Logo"></a><!--Bilde er hentet fra: https://ansatt.oslomet.no/logo-visuell-profil. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
             <!--link på logo, slik at man kommer til forsiden, dog vil ikke laste siden inn på nytt når man befinner seg i index.html-->
             <div class="NavElementer"><!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
                 <a href="index.html">Hjem</a><!--Flex-boks 1-->
-                <a href="topical.html">Topitcal</a><!--Flex-boks 2-->
+                <a href="topical.html">Topical</a><!--Flex-boks 2-->
                 <a href="kantine.html">Kantine</a><!--Flex-boks 3-->
                 <a href="datatorget.html">Datatorget</a><!--Flex-boks 4-->
                 <a href="accessibility.html">Accessibility</a><!--Flex-boks 5-->
@@ -23,12 +25,51 @@
             </div>
         </nav>
         <!--Navigasjonsbar SLUTT-->
-    </header> <!--Avslutter header for å starte på selve siden-->
+        <!--Kantine main START-->
     <main>
+        <div class="kantineIntro">
+            <H1>Våre spisesteder</H1>
+                <br>
+            <h3>Husk: uten mat og drikke - duger helten ikke!</h3>
+                <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam voluptates provident 
+                deserunt aliquam corrupti dolor laudantium voluptatibus ex id nihil rem, ab officiis, 
+                blanditiis quas consequatur suscipit voluptatem excepturi iste.</p>
+        </div>
+        <div class="kantineContainer">
+            <div class="kantineItem">
+                <img src="Media/Kantine/salat.jpg" alt="Salat fra Annas-spiseri"> <!--Bilde hentet fra: salat : https://www.pexels.com/nb-no/bilde/glass-sunt-kosthold-spise-sunt-bord-1640775/-->
+                <h3>Anna's spiseri</h3>
+            </div>
+            <div class="kantineItem">
+                <img src="Media/Kantine/coffeeshop.jpg" alt="Kafe"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-stoler-gruppe-butikk-2159065/-->
+                <h3>Kafe</h3>
+            </div>
+            <div class="kantineItem">
+                <img src="Media/Kantine/ellas.jpg" alt="Ellas spiseri"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-planter-anlegg-bord-601169/-->
+                <h3>Ella's spiseri</h3>
+            </div>
+            <div class="kantineItem">
+                <img src="Media/Kantine/recharge+.jpg" alt="Recharge+ kafe"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/sunn-mat-frukt-pynt-stilleben-8230023/-->
+                <h3>Recharge+</h3>
+            </div>
+            <div class="kantineItem">
+                <img src="Media/Kantine/olesKafe.jpg" alt="Oles Kafe"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/koselig-kafe-interiordesign-inne-1307698/-->
+                <h3>Ole's kaffesjappe</h3>
+            </div>
+            <div class="kantineItem">
+                <img src="Media/Kantine/buffet.jpg" alt="SIO buffet i kantinen"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/valg-matfotografering-buffet-gronnsaker-17965451/-->
+                <h3>SIO Kantinen</h3>
+            </div>
+        </div>
+      
+
 
     </main>
+        <!--Kantine main SLUTT-->
+
+        <!--Footer START-->
     <footer>
 
     </footer>
-</body>
-</html>
+        <!--Footer SLUTT-->
