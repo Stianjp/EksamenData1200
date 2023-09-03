@@ -54,22 +54,20 @@
 /*CSS FOR MAIN START*/
 .kantineIntro{
     text-align: center;
-    margin: 10%;
-    margin-top: 5%;
+    margin: 5%;
+    padding: 50px;
 }
-
 .kantineContainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color:  #54c7da;
-    padding-top: 20px;
 }
-
+.kantineContainer :hover{
+    box-shadow: inset 1px 1px 1px 1px;
+}
 img{
     width: 300px;
     height: 220px;
 }
-
 .kantineItem{
     justify-content: space-around;
     text-align: center;
