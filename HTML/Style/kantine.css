@@ -59,22 +59,31 @@
 }
 .kantineContainer{
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-}
-.kantineContainer :hover{
-    box-shadow: inset 1px 1px 1px 1px;
+    grid-gap: 25px 10px;
+    padding: 50px;
 }
 img{
     width: 300px;
     height: 220px;
 }
 .kantineItem{
-    justify-content: space-around;
     text-align: center;
+    border: 1px solid grey;
     max-width: 100%;
     line-height: 50px;
+    color: black;
+    padding: 30px;
 }
-
+.kantineItem:hover{
+    zoom:103%;
+    box-shadow: inset 1px black;
+}
+#pin{
+    width: 20px;
+    height: 20px;
+}
 /*FOOTER START*/
 .grid-footer-container{
     display: grid; /*Oppretter grid*/
