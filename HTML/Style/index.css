@@ -32,6 +32,11 @@
     font-weight: bold; /*Setter font-weight til bold*/
     font-size: 20px; /*Setter font-size til 20px*/
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /*Legger til skygge på teksten*/
+    height: 7vh; /*endrer navbaren sin høyde til å være 7% av skjermens synsfelt*/
+}
+/*Fjerner hamburger-ikon på navbar*/
+.fa-bars{
+    visibility: hidden;
 }
 .logo img{
     height: 80px; /*Setter høyden til logoen*/
@@ -39,7 +44,7 @@
 }
 .NavElementer{
     display:flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
-    width: 50%; /*Setter bredden til 50% av siden*/
+    width: 75%; /*Setter bredden til 75% av siden*/
     justify-content: space-between;/*Plasserer elementene med lik avstand mellom seg*/
 }
 .NavElementer a{
@@ -213,4 +218,34 @@ border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kon
     border-radius: 4px; /*Gjør hjørnene noe rundere*/
 }
 /*FOOTER SLUTT*/
+/*Responsiv design*/
+/*Mobil 320-425px*/
+@media (max-width: 425px){
+
+}
+/*Nettbrett stående 426-768*/
+@media (max-width: 768px){
+
+}
+/*Nettbrett liggende 769-1024*/
+@media (max-width: 1024px) {
+    .fa-bars{
+        visibility:visible;
+    }
+    .NavElementer{
+        visibility:hidden;
+    }
+
+}
+/*Liten skjerm 1025-1999*/
+@media (max-width: 1999px){
+    .logo img{
+        height: 60px; /*Setter høyden til logoen*/
+    }  
+    .navbar{
+        padding: 10px 30px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
+        font-size: 18px; /*Setter font-size til 20px*/ 
+    }
+}
+/*Desktop 1200 -> er grunninnstilling*/
 
