@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/index.css"><!--Linker CSS-filen til HTML-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Link til sosiale meider knapper-->
-    <script src="Style/index.js"></script> <!--Linker javascript-filen til HTML-->
     <title>OsloMet</title>
 </head>
 <body>
@@ -16,6 +15,7 @@
         <nav class="navbar">
             <a href="index.html" class="logo"><img src="Media/Navbar/OsloMetLogo1.png" alt="OsloMet Logo"></a><!--Bilde er hentet fra: https://ansatt.oslomet.no/logo-visuell-profil. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
             <!--link på logo, slik at man kommer til forsiden, dog vil ikke laste siden inn på nytt når man befinner seg i index.html-->
+            <!--Standrad navigasjonsmeny for større skjermer-->
             <div class="NavElementer"><!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
                 <a href="index.html">Hjem</a><!--Flex-boks 1-->
                 <a href="topical.html">Topical</a><!--Flex-boks 2-->
@@ -24,7 +24,19 @@
                 <a href="accessibility.html">Accessibility</a><!--Flex-boks 5-->
                 <a href="ENindex.html">EN</a><!--Flex-boks 6-->
             </div>
-            <i id="fa fa-bars" class="fa fa-bars"></i>
+            <!--Standard naviasjonsmeny for mindre skjermer enn 1999px bredde-->
+            <i id="menyToggle" class="fa fa-bars"></i>
+            <div class="mobil-nav" id="mobilmeny">
+                <div class="grid-meny-mobil">
+                    <div><a href="index.html">Hjem </a><!--Grid-boks 1--></div>
+                    <div><a href="topical.html">Topical </a><!--Grid-boks 2--></div>
+                    <div><a href="kantine.html">Kantine</a><!--Grid-boks 3--></div>
+                    <div><a href="datatorget.html">Datatorget</a><!--Grid-boks 4--></div>
+                    <div><a href="accessibility.html">Accessibility</a><!--Grid-boks 5--></div>
+                    <div><a href="ENindex.html">EN</a><!--Grid-boks 6--></div>
+                </div>
+                <button id="lukkMeny">Lukk</button>
+            </div>
         </nav>
         <!--Navigasjonsbar SLUTT-->
     </header> <!--Avslutter header for å starte på selve siden-->
@@ -54,25 +66,43 @@
         <div><!--grid-boks 1-->
             <img class="grid-img-innføringcampus" src="Media/Introside/img-bilde-venstre-innføringscampus.jpeg" alt="Hovedinngangen til byggning P52"><!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/administrasjon-arkitektur-bibliotek-bygning-256490/-->
         </div>
-        <div><!--grid-boks 2-->
-            <img class="grid-img-innføringcampus" src="Media/Introside/img-bilde-innføringcampus-høyre.jpeg" alt="Bilde av P35 fra avstand med dammen"><!--Link til bilde: https://www.pexels.com/nb-no/bilde/skole-arkitektur-dam-refleksjon-11823038/-->
+        <div>
+            <!--START: Grid boks 2 - Bilde høyre side-->
+            
+            <!--Kilden til bilde: https://www.pexels.com/nb-no/bilde/skole-arkitektur-dam-refleksjon-11823038/-->
+            <!--Bilde av P35 fra avstand med dammen vises kun på stor skjerm i denne grid-boksen, på mindre skjermen vil den forsvinne-->
+            <img class="Fjernes-ved-liten-skjerm grid-img-innføringcampus" src="Media/Introside/img-bilde-innføringcampus-høyre.jpeg" alt="Bilde av P35 fra avstand med dammen">
+            
+            <!--Når skjermen er under 1024px bred vil denne teksten komme opp-->
+            <div class="grid-item-felles Tekst-MindreSkjerm">
+                <h2>Pilestredet 52 - Studenthuset</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eaque!</p>
+            </div>
+            <!--SLUTT: Grid boks 2 - Bilde høyre side-->
         </div>
-        <div class="grid-item-innføringCampus-venstre grid-item-felles"><!--grid-boks 3-->
-            <h2>Pilestredet 52 - Studenthuset</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eaque!</p>
-            <p class="grid-item-innføringCampus-skille farge-hvit"></p>
+        <div class="grid-item-innføringCampus-venstre grid-item-felles">
+            <!--START: Grid boks 3: -->
+            <!--Teksten er kun synlig ved større enn 1025px bredde-->
+            <h2 class="Fjernes-ved-liten-skjerm">Pilestredet 52 - Studenthuset</h2>
+            <p class="Fjernes-ved-liten-skjerm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eaque!</p>
+            <p class="grid-item-innføringCampus-skille farge-hvit Fjernes-ved-liten-skjerm"></p>
+            
+            <!--Bilde kommer frem når skjerm er mindre enn 1024px-->
+            <img class="Bilde-Mindre-Skjerm" src="Media/Introside/img-bilde-innføringcampus-høyre.jpeg" alt="Bilde av P35 fra avstand med dammen">
+            <!--SLUTT Grid boks 3-->
+        
         </div>
-        <div class="grid-item-innføringCampus-høyre grid-item-felles"><!--grid-boks 4-->
+        <div class="grid-item-innføringCampus-høyre grid-item-felles margin-bottom-100px"><!--grid-boks 4-->
             <h2>Pilestredet 35</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eaque!</p>
-            <p class="grid-item-innføringCampus-skille" ></p>
+            <p class="grid-item-innføringCampus-skille Fjernes-ved-liten-skjerm" ></p>
         </div>
         <div class="grid-item-innføringCampus-venstre grid-item-felles"><!--grid-boks 5-->
             <h3>Flere studenter velger økonomi, helse og kreative fag ved OsloMet</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, ad.</p>
-            <p><a class="grid-item-knapp" href="https://www.oslomet.no/om/nyheter/okonomi-helse-kreative-fag-mest-populert">Les mer om saken her</a></p><!--Link til OsloMet sine nyheter. Hentet 29.08.23-->
+            <p><a class="grid-item-knapp bakgrunnsfarge-hvit-svart-tekst" href="https://www.oslomet.no/om/nyheter/okonomi-helse-kreative-fag-mest-populert">Les mer om saken her</a></p><!--Link til OsloMet sine nyheter. Hentet 29.08.23-->
         </div>
-        <div class="grid-item-innføringCampus-høyre grid-item-felles"><!--grid-boks 6-->
+        <div class="grid-item-innføringCampus-høyre grid-item-felles margin-bottom-100px"><!--grid-boks 6-->
             <h3>Slik finner du studentbolig i Oslo</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut.</p>
             <p><a class="grid-item-knapp" href="https://www.oslomet.no/studier/studenthistorier/finn-studentbolig-i-oslo">Les mer om saken her</a></p><!--Link til OsloMet sine nyheter. Hentet 29.08.23-->
@@ -112,5 +142,6 @@
         </div>
     </div>
 </footer>
+<script src="Style/index.js"></script> <!--Linker javascript-filen til HTML-->
 </body>
 </html>
