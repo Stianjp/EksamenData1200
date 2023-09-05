@@ -271,7 +271,37 @@
         grid-template-columns: 1fr; /*Setter antall kolonner til å være 1*/
     }
     .InnføringCampusContainer{
-        grid-template-columns: 1fr; /*Setter antall kolonner til å være 1*/
+        display: flex;
+        flex-direction: column;
+    }
+    /*Setter rekkefølgen av bildene i flex-containeren for mindre skjermer fra og med 1024px bredde*/
+    .InnføringCampusContainer img[alt="Hovedinngangen til bygning P52"] {
+        order: 1;
+    }
+    .InnføringCampusContainer img[alt="Bilde av P35 fra avstand med dammen"] {
+        order: 3;
+    }
+    .Bilde-Mindre-Skjerm{
+        display:flex; 
+        object-fit: cover; 
+        max-width: 100%;
+    }
+    /*Fellesklasser for å endre styling*/
+    .margin-bottom-100px{
+        margin-bottom: 100px;
+    }
+    .grid-item-knapp{
+        margin-top: 40px; 
+    }
+    .grid-item-innføringCampus-venstre{
+        padding: 0 0 100px 0; /*Legger til padding på bunnen*/ 
+    }
+    .bakgrunnsfarge-hvit-svart-tekst{
+        color: black; 
+        background-color: white; 
+    }
+    .padding-15px{
+        padding: 15px;
     }
     .Fjernes-ved-liten-skjerm{
         display: none;
@@ -283,28 +313,8 @@
         padding: 15px;
         background-color: #150c4b;
         padding-bottom: 100px;
-        font-size: 20px;
+        font-size: 20px; 
     }
-    .Bilde-Mindre-Skjerm{
-        display:grid;
-    }
-    .margin-bottom-100px{
-        margin-bottom: 100px;
-    }
-    .grid-item-knapp{
-        margin-top: 40px;
-    }
-    .grid-item-innføringCampus-venstre{
-        padding-bottom: 100px;
-    }
-    .bakgrunnsfarge-hvit-svart-tekst{
-        color: black;
-        background-color: white;
-    }
-    .grid-item-innføringCampus-venstre{
-        padding: 0;
-    }
-    
 /*Endring av index.html SLUTT*/
 }
 /*Liten skjerm 1025-1999*/
