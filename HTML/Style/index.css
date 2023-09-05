@@ -248,7 +248,7 @@
     /* Spesifikke stiler for lenker inni mobil navigasjon*/
     .mobil-nav .grid-meny-mobil a{
         padding: 5px; /*Padding rundt lenkene*/
-        background-color: ; /*Bakgrunnsfarge for lenkene*/
+       /* background-color: ; /*Bakgrunnsfarge for lenkene*/
         border: 1px solid black; /*Setter ramme rundt hver lenke - slik at det skal se ut som en knapp*/
         color: black; /*Tekstfarge endres til svart*/ 
     }
@@ -287,7 +287,6 @@
     }
     .Bilde-Mindre-Skjerm{
         display:grid;
-        
     }
     .margin-bottom-100px{
         margin-bottom: 100px;
@@ -301,6 +300,9 @@
     .bakgrunnsfarge-hvit-svart-tekst{
         color: black;
         background-color: white;
+    }
+    .grid-item-innføringCampus-venstre{
+        padding: 0;
     }
     
 /*Endring av index.html SLUTT*/
