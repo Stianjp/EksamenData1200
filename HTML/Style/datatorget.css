@@ -38,6 +38,7 @@
 }
 /*CSS FOR NAVBAR SLUTT*/
 
+/*
 .bodyDatatorg{
     background-image:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/HTML/Media/Datatorget/Datatorget.jpg);
     width: 100%;
@@ -45,7 +46,7 @@
     background-size: cover;
     background-position: center;
 }
-
+*/
 .h1data{
     width: 100%;
     position: absolute;
@@ -55,10 +56,40 @@
     color: #ffdb01;
 }
 
-.datatorgetflex{
+#datatorgbilde{
+    height: 100vh;
+}
+
+section{
     height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    scroll-snap-align: start;
+}
+
+.datatorgetflex{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 85.3vh;
+}
+
+.datatorget1{
+    background-image: url(/HTML/Media/Datatorget/Datatorget.jpg);
+
+}
+
+.datatorget2{
+    background-color: yellow;
+
+}
+
+.datatorget3{
+    background-color: turquoise;
+
+}
+
+.datatorget4{
+    background-color: grey;
 
 }

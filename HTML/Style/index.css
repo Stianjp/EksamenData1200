@@ -32,6 +32,8 @@
     font-weight: bold; /*Setter font-weight til bold*/
     font-size: 20px; /*Setter font-size til 20px*/
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /*Legger til skygge på teksten*/
+    height: 7vh; /*endrer navbaren sin høyde til å være 7% av skjermens synsfelt*/
+    position: relative; 
 }
 .logo img{
     height: 80px; /*Setter høyden til logoen*/
@@ -39,7 +41,7 @@
 }
 .NavElementer{
     display:flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
-    width: 50%; /*Setter bredden til 50% av siden*/
+    width: 75%; /*Setter bredden til 75% av siden*/
     justify-content: space-between;/*Plasserer elementene med lik avstand mellom seg*/
 }
 .NavElementer a{
@@ -49,6 +51,16 @@
     color: #555; /*Benytter andre farger når man hovrer over linker for å øke kontrasten*/
     background-color: rgba(255, 255, 255, 0.3); /* samme gjelder her for å øke kontrasten*/ 
 }
+/*Fjerner mobil-visning av navbar*/
+.mobil-nav{
+    display: none; 
+    flex-direction: column;
+}
+/*Fjerner hamburger-ikon på navbar ved stor-skjerm-oppløsning*/
+.fa-bars{
+    display: none;
+    visibility: hidden;
+}
 /*CSS FOR NAVBAR SLUTT*/
 /*CSS FOR INTROSIDE START*/
 .bakgrunn-intro-container{
@@ -57,28 +69,9 @@
     background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
     background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
 }
-.OsloMetIntro{
-    text-align: center; /*sentrerer teksten*/
-    padding: 15px; /*Øker padding for mer mellomrom*/
-    color: #ffdb01; /*Setter farge på tekst til å være samme gulfarge som navbar*/
-    font-size: 50px; /*Endrer tekststørrelsen*/
-    
-}
-#OsloMetBygg{
-    height: auto; /*Setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
-    width: 100vw; /*Fyller hele viewportens bredde*/
-}
 .IntroContainer{
     color: white;/*Endrer farge på tekst til hvit for å øke kontraster*/
-    background-color: rgba(0, 0, 0, 0.591);
-}
-.introNavigasjon{
-    display: grid; /*Benytter grid-bokser for å legge ting inn i rader og kolonner*/
-    row-gap: 50px; /*Øker avstand mellom radene*/
-    grid-template-columns:1fr 1fr; /*Deler grid-containeren inn i to kolonner som er like store*/
-    grid-row: 1fr 1fr; /*Deler grid i to like rader*/
-    width: 100vw; /*Fyller hele viewportens bredde*/
-    text-align: center; /*sentrerer teksten i grid-boksene*/
+    background-color: rgba(0, 0, 0, 0.591); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
 }
 .introTekst{ /*1. tekstboks på introside*/
     word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
@@ -87,10 +80,10 @@
     padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
 }
 #ToStudenter{ /*1.Bilde på introside*/
-width: 600px;  /*Endrer bredden*/
-height: auto; /*Setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
-border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
-border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kontrast og design*/
+    width: 600px;  /*Endrer bredden*/
+    height: auto; /*Setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
+    border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
+    border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kontrast og design*/
 }
 .CampusContainer{ /*2. tekstboks på introside*/
     word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
@@ -106,26 +99,31 @@ border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kon
     border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
     border-color: #150c4b; /*Benytter samme farge som bakgrunn over for å opprettholde kontrast og design*/
 }
-.InnføringCampusContainer{
+.InnføringCampusContainer{ /*dobbelbilde på introside*/
     display: grid; /*Oppretter grid*/
     grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner som er like store*/
     word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
 }
-.grid-item-innføringCampus-venstre{
+.grid-item-innføringCampus-venstre{ /*Tekst-boks under bilde på venstre side*/
     color: white; /*Setter farge på tekst til hvit for å øke kontraster*/
-    /*font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
     text-align:justify; /*Justerer teksten til å strekke seg jevnt mellom containeren sin venstre og høyre side*/
-    /*line-height: 1.5; /*Endrer linjehøyde*/
     padding: 15px; /*Øker padding for mer mellomrom*/
     background-color: #150c4b; /*Endrer bakgrunnsfarge på andre del av introside*/
     padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
 }
-.grid-img-innføringcampus{
+.grid-img-innføringcampus{ /*bilder som står vedsiden av hverandre*/
     width: 100%; /*Endrer bredden til 100%*/
     height: 100%; /*Endrer høyde til 100%, slik at bildene blir like*/
     object-fit: cover; /*Fyller hele containeren med bilde*/
 }
-.grid-item-innføringCampus-skille{
+/*Klasser for mindre skjerm, blir fjernet når skjerm er stor*/
+.Tekst-MindreSkjerm{
+    display: none;
+}
+.Bilde-Mindre-Skjerm{
+    display: none;
+}
+.grid-item-innføringCampus-skille{ /*Skille mellom tekst de to tekstene under bildet*/
     border-bottom:black; /*Setter farge på skillelinje*/
     border-bottom-style: solid; /*Setter stil på skillelinje*/
     border-bottom-width: 1px; /*Setter tykkelse på skillelinje*/
@@ -133,24 +131,28 @@ border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kon
     padding: 0 50px; /*Øker padding for mer mellomrom*/
     margin-top: 100px; /*Øker margin på toppen for mer mellomrom*/
 }
-.grid-item-innføringCampus-høyre{
+/*Klasse for å endre farge til hvit*/
+.farge-hvit{
+    border-color: white;/*Endrer farge til hvit*/
+}
+.grid-item-innføringCampus-høyre{ /*For tekstboksene under bilde på høyre side*/
     background-color: white; /*Endrer bakgrunnsfarge på andre del av introside*/
     text-align:justify; /*Justerer teksten til å strekke seg jevnt mellom containeren sin venstre og høyre side*/
     padding: 15px; /*Øker padding for mer mellomrom*/
 }
-.grid-item-knapp{
+.grid-item-knapp{ /*For knapp som er under tekstene*/
     color: white; /*Setter farge på tekst til hvit for å øke kontraster*/
     font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
     background-color: black; /*Endrer bakgrunnsfarge på linker, slik at det skal se ut som en knapp*/
     text-align: center; /*Sentrerer teksten*/
     display: inline-block; /*Gjør at knappen ikke tar hele linjen*/
     cursor: pointer; /*Endrer musepeker til hånd*/
-    border-radius: 8px;
+    border-radius: 8px; /*Gjør hjørnene til knappen noe rundere*/
     border: none; /*Fjerner border*/
     padding: 10px 20px; /*Øker padding for mer mellomrom*/
     margin: 10px 2px; /*Øker margin for mer mellomrom*/
 }
-.grid-item-knapp:hover{
+.grid-item-knapp:hover{ /*Effekt når man har musepeker over kanpp under tekstene*/
     background-color: #ffdb01; /*Endrer bakgrunnsfarge på linker, slik at det skal se ut som en knapp*/
     color: black; /*Setter farge på tekst til svart for å øke kontraster*/
     font-weight: bolder; /*Gjør teksten tykkere*/
@@ -209,4 +211,121 @@ border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kon
     border-radius: 4px; /*Gjør hjørnene noe rundere*/
 }
 /*FOOTER SLUTT*/
+/*Responsiv design*/
+/*Mobil 320-425px*/
+@media (max-width: 425px){
+
+}
+/*Nettbrett stående 426-768*/
+@media (max-width: 768px){
+
+}
+/*Nettbrett liggende 769-1024*/
+@media (max-width: 1024px) {
+/*Endring av NAVBAR START*/
+    /*Viser hamburger-ikonet for mindre skjermer*/
+    .fa-bars{
+        display: inline-block; 
+        visibility: visible;
+    }
+    /*Gjemmer standard navigasjonselementer for små skjermer*/
+    .NavElementer{
+        display: none; 
+    }
+    /*Viser navbar for liten skjerm når den er aktiv*/
+    .mobil-nav.active{
+        display: flex;
+    }
+    /*Generelle stiler for navbaren for mindre skjermer*/
+    .mobil-nav{
+        position: absolute; /*Plassert i forhold til nærmeste posisjonerte forfader*/
+        top: 100%; /* Plassert rett nedenfor navbaren*/
+        left: 0; /*Starter fra venstre side*/
+        width: 100%; /*Bredde settes til 100%*/
+        background-color: #ffdb01; /*for synlighet*/
+        align-items: center; /*Plasserer elementene i mobil-nav i midten*/
+    }
+    /* Spesifikke stiler for lenker inni mobil navigasjon*/
+    .mobil-nav .grid-meny-mobil a{
+        padding: 5px; /*Padding rundt lenkene*/
+       /* background-color: ; /*Bakgrunnsfarge for lenkene*/
+        border: 1px solid black; /*Setter ramme rundt hver lenke - slik at det skal se ut som en knapp*/
+        color: black; /*Tekstfarge endres til svart*/ 
+    }
+    /*Setter opp grid-layout for mobilmenyen*/
+    .grid-meny-mobil{
+        display: grid; /*Benytter grid-layout*/
+        grid-template-columns: repeat(2, 1fr); /*Oppretter to kolonner, hver kolonne tar opp lik andel av den tilgjengelige plassen i containeren*/
+        gap: 50px; /*Mellomrom mellom grid-bokser*/
+        
+    }
+    /*Stil for lukk-knapp i mobil navigasjon*/
+    #lukkMeny{
+        margin: 30px; /*Plasserer en marg rundt knappen*/
+        padding: 10px; /*Padding rundt knappens tekst for å gjøre den mer synlig og lettere å trykke på*/
+    }
+/*NAVBAR SLUTT*/
+/*Endring av index.html START*/
+    /*Endrer alle gridder til å komme under hverandre, slik at det blir mer optimalt for mindre skjermer*/
+    .grid-felles{
+        grid-template-columns: 1fr; /*Setter antall kolonner til å være 1*/
+    }
+    .InnføringCampusContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    /*Setter rekkefølgen av bildene i flex-containeren for mindre skjermer fra og med 1024px bredde*/
+    .InnføringCampusContainer img[alt="Hovedinngangen til bygning P52"] {
+        order: 1;
+    }
+    .InnføringCampusContainer img[alt="Bilde av P35 fra avstand med dammen"] {
+        order: 3;
+    }
+    .Bilde-Mindre-Skjerm{
+        display:flex; 
+        object-fit: cover; 
+        max-width: 100%;
+    }
+    /*Fellesklasser for å endre styling*/
+    .margin-bottom-100px{
+        margin-bottom: 100px;
+    }
+    .grid-item-knapp{
+        margin-top: 40px; 
+    }
+    .grid-item-innføringCampus-venstre{
+        padding: 0 0 100px 0; /*Legger til padding på bunnen*/ 
+    }
+    .bakgrunnsfarge-hvit-svart-tekst{
+        color: black; 
+        background-color: white; 
+    }
+    .padding-15px{
+        padding: 15px;
+    }
+    .Fjernes-ved-liten-skjerm{
+        display: none;
+    }
+    .Tekst-MindreSkjerm{
+        display:grid;
+        color: white;
+        text-align: justify;
+        padding: 15px;
+        background-color: #150c4b;
+        padding-bottom: 100px;
+        font-size: 20px; 
+    }
+/*Endring av index.html SLUTT*/
+}
+/*Liten skjerm 1025-1999*/
+@media (max-width: 1999px){
+    .logo img{
+        height: 60px; /*Setter høyden til logoen*/
+    }  
+    .navbar{
+        padding: 10px 30px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
+        font-size: 18px; /*Setter font-size til 20px*/ 
+    }
+}
+/*Desktop 1200 -> er grunninnstilling*/
 
