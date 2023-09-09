@@ -32,6 +32,11 @@
     font-weight: bold; /*Setter font-weight til bold*/
     font-size: 20px; /*Setter font-size til 20px*/
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /*Legger til skygge på teksten*/
+    height: 7vh; /*endrer navbaren sin høyde til å være 7% av skjermens synsfelt*/
+}
+/*Fjerner hamburger-ikon på navbar*/
+.fa-bars{
+    visibility: hidden;
 }
 .logo img{
     height: 80px; /*Setter høyden til logoen*/
@@ -39,7 +44,7 @@
 }
 .NavElementer{
     display:flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
-    width: 50%; /*Setter bredden til 50% av siden*/
+    width: 75%; /*Setter bredden til 75% av siden*/
     justify-content: space-between;/*Plasserer elementene med lik avstand mellom seg*/
 }
 .NavElementer a{
