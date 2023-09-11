@@ -1,11 +1,11 @@
-/* Benytter stjerne(*)-selector for å få dette som mal på alle sider*/
+/* Globale stiler for hele nettsiden */
 *{
     font-family:Arial, Helvetica, sans-serif; /*Setter font til Arial*/
-    margin:0; /*Setter margin til 0*/
-    padding:0; /*Setter padding til 0*/
-    text-decoration:none; /*Fjerner understrek på lenker*/
+    margin:0; /*Nullstiller margin*/
+    padding:0; /*Nullstiller padding*/
+    text-decoration: none; /*Fjerner understrek på lenker*/
 }
-/*Globale styles START*/
+/*Felles-klasser*/
 .grid-felles{ /*Benytter grid-bokser for å legge ting inn i rader og kolonner - siden dette gjøres ofte, lagde jeg en felles for å effektivisere kode*/
     display: grid; /*Benytter grid-bokser for å legge ting inn i rader og kolonner*/
     grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner*/
@@ -25,7 +25,7 @@
 .navbar{
     display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
     justify-content: space-between; /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen*/
-    padding: 14px 36px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
+    padding: 14px 36px; /*Setter innvendig marg til å ha 14px på topp,  36px på høyre side*/ 
     background-color: #ffdb01; /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
     align-items: center; /*Denne justerer innholdet i navbar til å være sentrert vertikalt*/
     border-style:none; /*Setter border-style til none*/
@@ -79,7 +79,7 @@
     padding-top: 100px; /*Øker padding på toppen for å få mer mellomrom*/
     padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
 }
-#ToStudenter{ /*1.Bilde på introside*/
+.ToStudenter{ /*1.Bilde på introside*/
     width: 600px;  /*Endrer bredden*/
     height: auto; /*Setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
     border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
@@ -93,7 +93,7 @@
     padding-top: 100px; /*Øker padding på toppen for å få mer mellomrom*/
     padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
 }
-#campusBilde{ /*2.bilde på introside*/
+.campusBilde{ /*2.bilde på introside*/
     width: 600px; /*Endrer bredden*/
     height: auto; /*Setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
     border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
@@ -109,7 +109,7 @@
     text-align:justify; /*Justerer teksten til å strekke seg jevnt mellom containeren sin venstre og høyre side*/
     padding: 15px; /*Øker padding for mer mellomrom*/
     background-color: #150c4b; /*Endrer bakgrunnsfarge på andre del av introside*/
-    padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
+    
 }
 .grid-img-innføringcampus{ /*bilder som står vedsiden av hverandre*/
     width: 100%; /*Endrer bredden til 100%*/
@@ -117,19 +117,17 @@
     object-fit: cover; /*Fyller hele containeren med bilde*/
 }
 /*Klasser for mindre skjerm, blir fjernet når skjerm er stor*/
-.Tekst-MindreSkjerm{
+.responsiv-tekst{
     display: none;
 }
-.Bilde-Mindre-Skjerm{
-    display: none;
+.responsive-img{
+    display: none; 
 }
 .grid-item-innføringCampus-skille{ /*Skille mellom tekst de to tekstene under bildet*/
     border-bottom:black; /*Setter farge på skillelinje*/
     border-bottom-style: solid; /*Setter stil på skillelinje*/
     border-bottom-width: 1px; /*Setter tykkelse på skillelinje*/
-    margin: 0 50px; /*Øker margin for mer mellomrom*/
-    padding: 0 50px; /*Øker padding for mer mellomrom*/
-    margin-top: 100px; /*Øker margin på toppen for mer mellomrom*/
+    margin: 100px 50px 100px 50px; /*Øker margin for mer mellomrom: topp, høyre, bunn, venstre*/
 }
 /*Klasse for å endre farge til hvit*/
 .farge-hvit{
@@ -149,8 +147,8 @@
     cursor: pointer; /*Endrer musepeker til hånd*/
     border-radius: 8px; /*Gjør hjørnene til knappen noe rundere*/
     border: none; /*Fjerner border*/
-    padding: 10px 20px; /*Øker padding for mer mellomrom*/
-    margin: 10px 2px; /*Øker margin for mer mellomrom*/
+    padding: 10px 20px; /*Øker innvendig marg på topp og bunn til 10px og til høyre og venstre til 20px*/
+    margin: 10px 2px; /*Øker utvendig marg på topp og bunn til 10px sa,t høyre og venstre side 2px*/
 }
 .grid-item-knapp:hover{ /*Effekt når man har musepeker over kanpp under tekstene*/
     background-color: #ffdb01; /*Endrer bakgrunnsfarge på linker, slik at det skal se ut som en knapp*/
@@ -165,8 +163,7 @@
     grid-template-columns: 1fr 1fr 1fr; /*Deler grid-containeren inn i 3 kolonner som er like store*/
     padding: 15px; /*Øker padding for mer mellomrom*/
     font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
-    padding-top: 100px; /*Øker padding på toppen for å få mer mellomrom*/
-    padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
+    padding: 100px 0 100px; /*Øker innvendig marg på topp og bunn */
 }
 /*Style til tilbakemeldingsboksen*/
 .tilbakemelding-textarea{
@@ -212,13 +209,34 @@
 }
 /*FOOTER SLUTT*/
 /*Responsiv design*/
-/*Mobil 320-425px*/
-@media (max-width: 425px){
-
+/*Mobil 320-500px*/
+@media (max-width: 500px){
+    .responsiv-img-min426px{
+        max-width: 250px; /*Endrer størrelse på bilde(r)*/
+    }
 }
-/*Nettbrett stående 426-768*/
+/*Nettbrett stående 320-768*/
 @media (max-width: 768px){
-
+/*Endring av index.html START*/
+    .responsiv-img-min426px{
+        max-width: 400px; /*Endrer størrelse på bilde(r)*/
+    }
+    *{
+        font-size: 16px; /*Setter all tekst til skriftstørrlese 16px*/
+    }
+    .h2{
+        font-size: 24px;
+    }
+    .h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    .grid-item-knapp{
+       font-size: 16px;
+    }
+/*Endring av index.html SLUTT*/
 }
 /*Nettbrett liggende 769-1024*/
 @media (max-width: 1024px) {
@@ -234,7 +252,7 @@
     }
     /*Viser navbar for liten skjerm når den er aktiv*/
     .mobil-nav.active{
-        display: flex;
+        display: flex; 
     }
     /*Generelle stiler for navbaren for mindre skjermer*/
     .mobil-nav{
@@ -274,6 +292,9 @@
         display: flex;
         flex-direction: column;
     }
+    .grid-item-innføringCampus-venstre{
+        padding: 0;
+    }
     /*Setter rekkefølgen av bildene i flex-containeren for mindre skjermer fra og med 1024px bredde*/
     .InnføringCampusContainer img[alt="Hovedinngangen til bygning P52"] {
         order: 1;
@@ -281,10 +302,13 @@
     .InnføringCampusContainer img[alt="Bilde av P35 fra avstand med dammen"] {
         order: 3;
     }
-    .Bilde-Mindre-Skjerm{
+    .responsive-img{
         display:flex; 
-        object-fit: cover; 
+        object-fit: cover;
         max-width: 100%;
+    }
+    .responsiv-img-1{
+        display:flex; 
     }
     /*Fellesklasser for å endre styling*/
     .margin-bottom-100px{
@@ -292,9 +316,6 @@
     }
     .grid-item-knapp{
         margin-top: 40px; 
-    }
-    .grid-item-innføringCampus-venstre{
-        padding: 0 0 100px 0; /*Legger til padding på bunnen*/ 
     }
     .bakgrunnsfarge-hvit-svart-tekst{
         color: black; 
@@ -306,7 +327,7 @@
     .Fjernes-ved-liten-skjerm{
         display: none;
     }
-    .Tekst-MindreSkjerm{
+    .responsiv-tekst{
         display:grid;
         color: white;
         text-align: justify;
@@ -315,6 +336,16 @@
         padding-bottom: 100px;
         font-size: 20px; 
     }
+    /*Footer START*/
+    .grid-footer-container{
+        display: flex; /*Benytter flex for å få de tidligere grid-boksene til å komme under hverandre*/
+        flex-direction: column; /*Legger til at den skal gå etter kolonner*/ 
+    }
+    .tilbakemelding-textarea{
+        max-width: 70%; /*Endrer vidde på tekstboks*/
+        resize: none; /*Fjerner mulighet til at bruker kan gjøre tekstboks mindre/større*/
+    }
+    /*Footer SLUTT*/
 /*Endring av index.html SLUTT*/
 }
 /*Liten skjerm 1025-1999*/
@@ -327,5 +358,5 @@
         font-size: 18px; /*Setter font-size til 20px*/ 
     }
 }
-/*Desktop 1200 -> er grunninnstilling*/
+/*Desktop 1200px -> er grunninnstilling*/
 
