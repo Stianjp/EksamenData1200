@@ -258,29 +258,36 @@
     .mobil-nav{
         position: absolute; /*Plassert i forhold til nærmeste posisjonerte forfader*/
         top: 100%; /* Plassert rett nedenfor navbaren*/
-        left: 0; /*Starter fra venstre side*/
-        width: 100%; /*Bredde settes til 100%*/
+        left: 50%; /*Starter fra venstre side*/
+        width: 50%; /*Bredde settes til 100%*/
         background-color: #ffdb01; /*for synlighet*/
         align-items: center; /*Plasserer elementene i mobil-nav i midten*/
+        border: 1px solid black; /*Setter ramme rundt pop-up boksen*/
     }
     /* Spesifikke stiler for lenker inni mobil navigasjon*/
     .mobil-nav .grid-meny-mobil a{
-        padding: 5px; /*Padding rundt lenkene*/
-       /* background-color: ; /*Bakgrunnsfarge for lenkene*/
+        padding: 10px; /*Padding rundt lenkene*/
         border: 1px solid black; /*Setter ramme rundt hver lenke - slik at det skal se ut som en knapp*/
         color: black; /*Tekstfarge endres til svart*/ 
+        row-gap: 20px;
     }
     /*Setter opp grid-layout for mobilmenyen*/
     .grid-meny-mobil{
-        display: grid; /*Benytter grid-layout*/
-        grid-template-columns: repeat(2, 1fr); /*Oppretter to kolonner, hver kolonne tar opp lik andel av den tilgjengelige plassen i containeren*/
-        gap: 50px; /*Mellomrom mellom grid-bokser*/
-        
+        display: flex; /*Benytter flex-layout*/
+        flex-direction: column; /*Legger den i kolonne og rader, fremfor horisontalt*/
+        row-gap: 40px; /*Mellomrom mellom grid-bokser*/
+        text-align: center; /*Setter teksten i midten*/
+        margin-top: 20px;/*Lager mellomrom fra navbar*/
     }
+
     /*Stil for lukk-knapp i mobil navigasjon*/
     #lukkMeny{
         margin: 30px; /*Plasserer en marg rundt knappen*/
         padding: 10px; /*Padding rundt knappens tekst for å gjøre den mer synlig og lettere å trykke på*/
+        font-size: 20px;
+    }
+    #lukkMeny:hover{
+        background-color: rgba(255, 255, 255, 0.3); /*For å øke kontrasten når man hovrer*/ ;
     }
 /*NAVBAR SLUTT*/
 /*Endring av index.html START*/
