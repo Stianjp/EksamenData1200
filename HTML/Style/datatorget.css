@@ -50,27 +50,55 @@
 }
 */
 
-.datatorget_start{
+.header{
+    position: absolute; /* for å ikke presse resten av siden nedover går header over*/
+    color: turquoise;
+    
+}
+
+.datatorget_start_bildet{
     background-image: url(/HTML/Media/Datatorget/Datatorget.jpg);
-    background-color:rgba(0, 0, 0, 0.5);
     background-size:cover;
     background-repeat: no-repeat;
-    height:100vh;
+    height:93vh;
+}
+
+.datatorget_start{
+    background-color: rgba(0, 0, 0, 0.506);
+    height: 93vh;
+    display: flex;
+    align-items: center;
+}
+
+.datatorget_start > div {
+    margin: 10%;
+    justify-content: center;
+}
+
+.boks1{
+    padding: 10%;
+    color: white;
+}
+
+.boks2{
+    border: solid;
+    border-color:turquoise;
+    color: white;
+    max-width: 50%;
 }
 
 section{
-    height:100vh;
+    height:75vh;
     display: flex;
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-
 }
 
 .datatorgetflex{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 60vh;
+    height: 75vh;
     margin: 10%;
 }
 
