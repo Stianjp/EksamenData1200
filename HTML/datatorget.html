@@ -13,31 +13,35 @@
 
     <!--Header START-->
     <header>
-        <!--Navigasjonsbar START-->
-        <nav class="navbar">
-            <a href="#" class="logo"><img src="Media/Navbar/OsloMetLogo1.png" alt="Bilde er hentet fra: https://ansatt.oslomet.no/logo-visuell-profil"></a><!--Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan-->
+          <!--Navigasjonsbar START-->
+          <nav class="navbar">
+            <a href="index.html" class="logo"><img src="Media/Navbar/OsloMetLogo1.png" alt="OsloMet Logo"></a><!--Bilde er hentet fra: https://ansatt.oslomet.no/logo-visuell-profil. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
             <!--link på logo, slik at man kommer til forsiden, dog vil ikke laste siden inn på nytt når man befinner seg i index.html-->
             <div class="NavElementer"><!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
                 <a href="index.html">Hjem</a><!--Flex-boks 1-->
-                <a href="topical.html">Topitcal</a><!--Flex-boks 2-->
+                <a href="topical.html">Topical</a><!--Flex-boks 2-->
                 <a href="kantine.html">Kantine</a><!--Flex-boks 3-->
                 <a href="datatorget.html">Datatorget</a><!--Flex-boks 4-->
                 <a href="accessibility.html">Accessibility</a><!--Flex-boks 5-->
                 <a href="ENindex.html">EN</a><!--Flex-boks 6-->
             </div>
+            <i id="fa fa-bars" class="fa fa-bars"></i>
         </nav>
-    </div>
         <!--Navigasjonsbar SLUTT-->
     </header> <!--Avslutter header for å starte på selve siden-->
 
-    <div class="bodyDatatorg">
-        <div class="datatorgetflex">
 
-            <section class="datatorget1">
-                <h1 class>DATATORGET</h1>
-                <img src="/HTML/Media/Datatorget/Datatorget.jpg" alt="bilde av hovedrommet på ">
-            </section>
-    
+
+    <div class="datatorget_start">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique fuga laborum pariatur laudantium hic facilis sit nemo quia illum recusandaes.
+        </p>
+    </div>
+
+
+    <div class="bodyDatatorg">
+
+        <div class="datatorgetflex">
             <section class="datatorget2"> 
                 <h2>side 2</h2>
             </section>    
@@ -49,5 +53,41 @@
                 <h2>side 4</h2>
             </section>
         </div>
+
+<footer>
+    <div class="grid-footer-container">
+        <div class="grid-item-felles"><!--Grid-boks 1: spørsmål/tilbakemeldingsboks-->
+            <h4>Send oss spørsmål eller tilbakemelding</h4>
+            <textarea id="melding" class="tilbakemelding-textarea" placeholder="Skriv din melding her..."></textarea><!--Unik klasse for tekstområdet-->
+            <button class="tilbakemelding-knapp" onclick="sendMelding()">Send</button><!--Unik klasse for send-knappen - Legger også til en javascri-->
+        </div>
+        <div class="grid-item-felles"><!--Grid-boks 2: adresseinfo-->
+            <h3>OSLO METROPOLITAN UNIVERSITY</h3>
+            <h4>STORBYUNIVERSITETET</h4>
+            <p>Postboks 4 St. Olavs plass, 0130 Oslo</p>
+            <p>Telefon: 67 23 50 00</p>
+            <p>E-post:
+                <a href="mailto:someone@example.com">someone@example.com</a>
+            </p>
+        </div>
+        <div class="grid-item-felles"><!--Grid-boks 3: Sosiale medier-->
+            <div class="grid-footer-some">
+                <div class="inline-footer-some">
+                    <a href="https://www.facebook.com/oslomet/" class="fa fa-facebook"><p>Facebook</p></a>
+                </div>
+                <div class="inline-footer-some">
+                    <a href="https://twitter.com/oslomet" class="fa fa-twitter"><p>X</p></a>
+                </div>
+                <div class="inline-footer-some">
+                    <a href="https://www.linkedin.com/school/oslomet/?originalSubdomain=no" class="fa fa-linkedin"><p>LinkedIn</p></a>
+                </div>
+                <div class="inline-footer-some">
+                    <a href="https://www.instagram.com/oslomet/?hl=nb" class="fa fa-instagram"><p>Instagram</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        
 </body>
 </html>
