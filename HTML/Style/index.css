@@ -21,6 +21,7 @@
     padding: 16px;
 }
 /*Globkale styles SLUTT*/
+/*Desktop 1200px -> er grunninnstilling*/
 /*CSS FOR NAVBAR START*/
 .navbar{
     display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
@@ -258,16 +259,14 @@
     .mobil-nav{
         position: absolute; /*Plassert i forhold til nærmeste posisjonerte forfader*/
         top: 100%; /* Plassert rett nedenfor navbaren*/
-        left: 50%; /*Starter fra venstre side*/
-        width: 50%; /*Bredde settes til 100%*/
+        left: 0%; /*Starter fra venstre side*/
+        width: 100%; /*Bredde settes til 100%*/
         background-color: #ffdb01; /*for synlighet*/
         align-items: center; /*Plasserer elementene i mobil-nav i midten*/
         border: 1px solid black; /*Setter ramme rundt pop-up boksen*/
     }
     /* Spesifikke stiler for lenker inni mobil navigasjon*/
     .mobil-nav .grid-meny-mobil a{
-        padding: 10px; /*Padding rundt lenkene*/
-        border: 1px solid black; /*Setter ramme rundt hver lenke - slik at det skal se ut som en knapp*/
         color: black; /*Tekstfarge endres til svart*/ 
         row-gap: 20px;
     }
@@ -278,6 +277,10 @@
         row-gap: 40px; /*Mellomrom mellom grid-bokser*/
         text-align: center; /*Setter teksten i midten*/
         margin-top: 20px;/*Lager mellomrom fra navbar*/
+    }
+    .grid-meny-mobil a:hover{
+        font-size: 30px;
+        width: 100%;
     }
 
     /*Stil for lukk-knapp i mobil navigasjon*/
@@ -365,5 +368,5 @@
         font-size: 18px; /*Setter font-size til 20px*/ 
     }
 }
-/*Desktop 1200px -> er grunninnstilling*/
+
 
