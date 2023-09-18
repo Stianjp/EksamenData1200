@@ -9,16 +9,18 @@
 .navbar{
     display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
     justify-content: space-between; /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen*/
-    padding: 14px 16px;
+    padding: 14px 36px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
     background-color: #ffdb01; /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
     align-items: center; /*Denne justerer innholdet i navbar til å være sentrert vertikalt*/
-    border-style:solid; /*Setter border til solid*/
-    border-color: black; /*Setter border-farge til svart*/
-    border-bottom: black; /*Setter border til å være svart nederst*/
+    border-style:none; /*Setter border-style til none*/
     font-weight: bold; /*Setter font-weight til bold*/
     font-size: 20px; /*Setter font-size til 20px*/
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /*Legger til skygge på teksten*/
-    
+    height: 7vh; /*endrer navbaren sin høyde til å være 7% av skjermens synsfelt*/
+}
+/*Fjerner hamburger-ikon på navbar*/
+.fa-bars{
+    visibility: hidden;
 }
 .logo img{
     height: 80px; /*Setter høyden til logoen*/
@@ -26,7 +28,7 @@
 }
 .NavElementer{
     display:flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
-    width: 50%; /*Setter bredden til 50% av siden*/
+    width: 75%; /*Setter bredden til 75% av siden*/
     justify-content: space-between;/*Plasserer elementene med lik avstand mellom seg*/
 }
 .NavElementer a{
@@ -47,17 +49,13 @@
     background-position: center;
 }
 */
-.h1data{
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #ffdb01;
-}
 
-#datatorgbilde{
-    height: 100vh;
+.datatorget_start{
+    background-image: url(/HTML/Media/Datatorget/Datatorget.jpg);
+    background-color:rgba(0, 0, 0, 0.5);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:100vh;
 }
 
 section{
@@ -66,17 +64,14 @@ section{
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
+
 }
 
 .datatorgetflex{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 85.3vh;
-}
-
-.datatorget1{
-    background-image: url(/HTML/Media/Datatorget/Datatorget.jpg);
-
+    height: 60vh;
+    margin: 10%;
 }
 
 .datatorget2{
@@ -93,3 +88,88 @@ section{
     background-color: grey;
 
 }
+
+/*FOOTER START*/
+.grid-footer-container{
+    display: grid; /*Oppretter grid*/
+    background-color: #ffdb01; /*Endrer bakgrunnsfarge på footer*/
+    grid-template-columns: 1fr 1fr 1fr; /*Deler grid-containeren inn i 3 kolonner som er like store*/
+    padding: 15px; /*Øker padding for mer mellomrom*/
+    font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
+    padding-top: 100px; /*Øker padding på toppen for å få mer mellomrom*/
+    padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
+}
+/*Style til tilbakemeldingsboksen*/
+.tilbakemelding-textarea{
+    width: 75%; /*Gir tekstområdet 75% bredde av grid-området*/
+    padding: 10px; /*Legger til noe padding inne i tekstområdet*/
+    margin-bottom: 10px; /*Legger til noe margin under tekstområdet*/
+    border: 1px solid #ddd; /*Setter en grense rundt tekstområdet, grensen er solid, og har endret farge*/
+    border-radius: 5px; /*Gjør hjørnene på tekstområdet til litt rundere*/
+    font-size: 14px; /*endrer skriftstørrelse inne i boksen*/
+}
+.tilbakemelding-knapp{
+    width: 30%; /*Gir knappen 30% bredde av grid-området*/
+    padding: 10px; /*legger noe padding inne i knappen*/
+    background-color: #007BFF; /*endrer bakgrunnsfarge på knappen*/
+    color: white; /*Setter tekstfarge til knappen*/
+    border: none; /*Fjerner grensen rundt knappen*/
+    border-radius: 5px; /*Gjør hjørnene til knappen noe rundere*/
+    font-size: 20px; /*Endrer til skriftstørrelse på knappen*/
+}
+/*Endrer effekter til knappen når musen er over den*/
+.tilbakemelding-knapp:hover{
+    background-color: #0056b3; /*Bytter bakgrunnsfarge*/
+    cursor: pointer; /*Endrer musepeker til hånd*/
+}
+
+/*Style til linker til sosiale medier*/
+.grid-footer-some{
+    display: grid; /*Oppretter grid*/
+    grid-template-columns: 1fr; /*Setter 1 kolonne*/
+}
+.inline-footer-some .fa{
+    color: black;/*Endrer farge på symboler og tekst*/
+}
+.grid-footer-some .inline-footer-some{
+    margin-bottom: 10px; /*Legger til margin på bunnen for å øke mellomrom*/
+}
+/*Endrer effekter til knappen når musen er over den*/
+.fa:hover{
+    text-decoration: underline; /*Teksten for underlinje*/
+    color: rgb(255, 255, 255); /*Endrer farge på tekst*/
+    background-color: rgba(0, 0, 0, 0.47); /*Endrer bakgrunnsfarge*/
+    border-radius: 4px; /*Gjør hjørnene noe rundere*/
+}
+/*FOOTER SLUTT*/
+
+/*Responsiv design*/
+/*Mobil 320-425px*/
+@media (max-width: 425px){
+
+}
+/*Nettbrett stående 426-768*/
+@media (max-width: 768px){
+
+}
+/*Nettbrett liggende 769-1024*/
+@media (max-width: 1024px) {
+    .fa-bars{
+        visibility:visible;
+    }
+    .NavElementer{
+        visibility:hidden;
+    }
+
+}
+/*Liten skjerm 1025-1999*/
+@media (max-width: 1999px){
+    .logo img{
+        height: 60px; /*Setter høyden til logoen*/
+    }  
+    .navbar{
+        padding: 10px 30px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
+        font-size: 18px; /*Setter font-size til 20px*/ 
+    }
+}
+/*Desktop 1200 -> er grunninnstilling*/
