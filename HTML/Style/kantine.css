@@ -58,36 +58,36 @@
 
 /*CSS FOR MAIN START*/
 .kantineIntro{
-    text-align: center;
-    margin: 5%;
-    padding: 50px;
+    text-align: center; /* Spesifiserer hvor tektsen skal plasseres innad i elementet*/
+    margin: 5%;/* Definerer plass utenfor elementes grense */
+    padding: 50px;/* Gir større plass rundt innholdet i elementet*/
 }
 .kantineContainer{
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 25px 10px;
-    padding: 50px;
+    display: grid;/* Setter innholdet i et rutenettsystem */
+    align-items: center;/* Sentrerer innholdet i elementet innad i rutenettsystemet*/
+    grid-template-columns: 1fr 1fr 1fr; /* Tillater å plassere 3 elementer i 1fr-størrelse horisontalt */
+    grid-gap: 25px 10px;/* Gir oss mer space mellom hvert grid-elemtnt (top, right) */
+    padding: 50px;/* Gir større plass rundt innholdet innad i grid-elementet */
 }
 img{
-    width: 300px;
-    height: 220px;
+    width: 300px;/* Setter bredde 300px på bildene*/
+    height: 220px;/* Setter høyde 220px på bildene */
 }
 .kantineItem{
-    text-align: center;
-    border: 1px solid grey;
-    max-width: 100%;
-    line-height: 50px;
-    color: black;
-    padding: 30px;
+    text-align: center;/* Spesifiserer posisjonering horisontalt av tekst innad i grid-elementet*/
+    border: 1px solid grey;/* Definerer kant rundt innholdet - danner en boks*/
+    max-width: 100%; /* Tillater elementet å kunne ta 100% bredde  */
+    line-height: 50px; /* Setter distanse mellom linjer med tekst*/
+    color: black;/* Setter svart farge teskten i innholdet*/
+    padding: 30px;/* Gir større plass rundt innholdet i "boksene"*/
 }
 .kantineItem:hover{
-    zoom:103%;
-    box-shadow: inset 1px black;
+    zoom: 103%;/* Når man hovrer over vil selve "boksen" gi en pop-up effekt*/
+    box-shadow: inset 1px black; /* Forsterker pop-up effekt ved å legge en liten skygge bak når man hovrer*/
 }
 #pin{
-    width: 20px;
-    height: 20px;
+    width: 20px; /* Definerer bredde på location-pin elementene */
+    height: 20px;/* Definerer høyde på location-pin elementene */
 }
 /*FOOTER START*/
 .grid-footer-container{
@@ -142,4 +142,32 @@ img{
     border-radius: 4px; /*Gjør hjørnene noe rundere*/
 }
 /*FOOTER SLUTT*/
+
+/*Media Query START*/
+/*Responsiv design*/
+/*Mobil 320-500px*/
+@media (max-width: 500px){
+    .kantineContainer{
+        
+    }
+}
+/*Nettbrett stående 320-768*/
+@media (max-width:768px){
+    .kantineContainer{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+/*Nettbrett liggende 769-1024*/
+@media (max-width: 1024px) {
+}
+
+/*Liten skjerm 1025-1999*/
+@media (max-width: 1999px){
+}
+
+/*Desktop 1200px -> er grunninnstilling*/
+
+/*Media Query SLUTT*/
 
