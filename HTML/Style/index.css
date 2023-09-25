@@ -52,6 +52,9 @@
     color: #555; /*Benytter andre farger når man hovrer over linker for å øke kontrasten*/
     background-color: rgba(255, 255, 255, 0.3); /* samme gjelder her for å øke kontrasten*/ 
 }
+.navbar .logo:hover{ 
+    background-color: transparent; /*Unngår å få bakgrunnsfargre når man hovrer over logo*/
+}
 /*Fjerner mobil-visning av navbar*/
 .mobil-nav{
     display: none; 
@@ -263,7 +266,6 @@
         width: 100%; /*Bredde settes til 100%*/
         background-color: #ffdb01; /*for synlighet*/
         align-items: center; /*Plasserer elementene i mobil-nav i midten*/
-        border: 1px solid black; /*Setter ramme rundt pop-up boksen*/
     }
     /* Spesifikke stiler for lenker inni mobil navigasjon*/
     .mobil-nav .grid-meny-mobil a{
@@ -277,11 +279,12 @@
         row-gap: 40px; /*Mellomrom mellom grid-bokser*/
         text-align: center; /*Setter teksten i midten*/
         margin-top: 20px;/*Lager mellomrom fra navbar*/
+        font-size: 30px;
     }
     .grid-meny-mobil a:hover{
-        font-size: 30px;
-        width: 100%;
+        font-size: 32px;
     }
+   
 
     /*Stil for lukk-knapp i mobil navigasjon*/
     #lukkMeny{
