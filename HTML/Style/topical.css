@@ -21,6 +21,8 @@
     padding: 16px;
 }
 /*Globkale styles SLUTT*/
+
+
 /*CSS FOR NAVBAR START*/
 .navbar{
     display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
@@ -106,4 +108,5 @@
     border-radius: 4px; /*Gjør hjørnene noe rundere*/
 }
 /*FOOTER SLUTT*/
+
 
