@@ -80,22 +80,29 @@
     grid-gap: 25px 10px;/* Gir oss mer space mellom hvert grid-elemtnt (top, right) */
     padding: 50px;/* Gir større plass rundt innholdet innad i grid-elementet */
 }
-img{
+
+.kantineBilder{
     width: 300px;/* Setter bredde 300px på bildene*/
-    height: 220px;/* Setter høyde 220px på bildene */
+    height: 220px;/* Setter høyde 220px på bildene*/
+    max-width: 300px;
+    max-height: 220px;
+    transition: ease-in-out 0.1s;
+    overflow: hidden;
+    
 }
 .kantineItem{
     text-align: center;/* Spesifiserer posisjonering horisontalt av tekst innad i grid-elementet*/
     border: 1px solid grey;/* Definerer kant rundt innholdet - danner en boks*/
-    max-width: 100%; /* Tillater elementet å kunne ta 100% bredde  */
+    max-width: 300px; /* Tillater elementet å kunne ta 100% bredde  */
     line-height: 50px; /* Setter distanse mellom linjer med tekst*/
     color: black;/* Setter svart farge teskten i innholdet*/
-    padding: 30px;/* Gir større plass rundt innholdet i "boksene"*/
+    background-color: #ffdb01;
+    overflow: hidden;
 }
-.kantineItem:hover{
-    zoom: 103%;/* Når man hovrer over vil selve "boksen" gi en pop-up effekt*/
-    box-shadow: inset 1px black; /* Forsterker pop-up effekt ved å legge en liten skygge bak når man hovrer*/
+.kantineBilder:hover{
+    transform:scale(1.02);/* Når man hovrer over vil selve "bildet" gi en pop-up effekt*/
 }
+
 #pin{
     width: 20px; /* Definerer bredde på location-pin elementene */
     height: 20px;/* Definerer høyde på location-pin elementene */
