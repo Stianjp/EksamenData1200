@@ -27,13 +27,15 @@
 .navbar{
     display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
     justify-content: space-between; /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen*/
-    padding: 14px 36px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
+    padding: 14px 36px; /*Setter innvendig marg til å ha 14px på topp,  36px på høyre side*/ 
     background-color: #ffdb01; /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
     align-items: center; /*Denne justerer innholdet i navbar til å være sentrert vertikalt*/
     border-style:none; /*Setter border-style til none*/
     font-weight: bold; /*Setter font-weight til bold*/
     font-size: 20px; /*Setter font-size til 20px*/
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /*Legger til skygge på teksten*/
+    height: 7vh; /*endrer navbaren sin høyde til å være 7% av skjermens synsfelt*/
+    position: relative; 
 }
 .logo img{
     height: 80px; /*Setter høyden til logoen*/
@@ -41,7 +43,7 @@
 }
 .NavElementer{
     display:flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
-    width: 50%; /*Setter bredden til 50% av siden*/
+    width: 75%; /*Setter bredden til 75% av siden*/
     justify-content: space-between;/*Plasserer elementene med lik avstand mellom seg*/
 }
 .NavElementer a{
@@ -51,7 +53,88 @@
     color: #555; /*Benytter andre farger når man hovrer over linker for å øke kontrasten*/
     background-color: rgba(255, 255, 255, 0.3); /* samme gjelder her for å øke kontrasten*/ 
 }
+.navbar .logo:hover{ 
+    background-color: transparent; /*Unngår å få bakgrunnsfargre når man hovrer over logo*/
+}
+/*Fjerner mobil-visning av navbar*/
+.mobil-nav{
+    display: none; 
+    flex-direction: column;
+}
+/*Fjerner hamburger-ikon på navbar ved stor-skjerm-oppløsning*/
+.fa-bars{
+    display: none;
+    visibility: hidden;
+}
 /*CSS FOR NAVBAR SLUTT*/
+
+
+/*Nettbrett liggende 769-1024*/
+@media (max-width: 1024px) {
+    /*Endring av NAVBAR START*/
+    /*Viser hamburger-ikonet for mindre skjermer*/
+    .fa-bars{
+        display: inline-block; 
+        visibility: visible;
+    }
+    /*Gjemmer standard navigasjonselementer for små skjermer*/
+    .NavElementer{
+        display: none; 
+    }
+    /*Viser navbar for liten skjerm når den er aktiv*/
+    .mobil-nav.active{
+        display: flex; 
+    }
+    /*Generelle stiler for navbaren for mindre skjermer*/
+    .mobil-nav{
+        position: absolute; /*Plassert i forhold til nærmeste posisjonerte forfader*/
+        top: 100%; /* Plassert rett nedenfor navbaren*/
+        left: 0%; /*Starter fra venstre side*/
+        width: 100%; /*Bredde settes til 100%*/
+        background-color: #ffdb01; /*for synlighet*/
+        align-items: center; /*Plasserer elementene i mobil-nav i midten*/
+    }
+    /* Spesifikke stiler for lenker inni mobil navigasjon*/
+    .mobil-nav .grid-meny-mobil a{
+        color: black; /*Tekstfarge endres til svart*/ 
+        row-gap: 20px;
+    }
+    /*Setter opp grid-layout for mobilmenyen*/
+    .grid-meny-mobil{
+        display: flex; /*Benytter flex-layout*/
+        flex-direction: column; /*Legger den i kolonne og rader, fremfor horisontalt*/
+        row-gap: 40px; /*Mellomrom mellom grid-bokser*/
+        text-align: center; /*Setter teksten i midten*/
+        margin-top: 20px;/*Lager mellomrom fra navbar*/
+        font-size: 30px;
+    }
+    .grid-meny-mobil a:hover{
+        font-size: 32px;
+    }
+   
+    /*Stil for lukk-knapp i mobil navigasjon*/
+    #lukkMeny{
+        margin: 30px; /*Plasserer en marg rundt knappen*/
+        padding: 10px; /*Padding rundt knappens tekst for å gjøre den mer synlig og lettere å trykke på*/
+        font-size: 20px;
+    }
+    #lukkMeny:hover{
+        background-color: rgba(255, 255, 255, 0.3); /*For å øke kontrasten når man hovrer*/ ;
+    }
+    
+/*NAVBAR SLUTT*/
+}
+/*Liten skjerm 1025-1999*/
+@media (max-width: 1999px){
+    .logo img{
+        height: 60px; /*Setter høyden til logoen*/
+    }  
+    .navbar{
+        padding: 10px 30px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
+        font-size: 18px; /*Setter font-size til 20px*/ 
+    }
+    }
+
 
 
 
