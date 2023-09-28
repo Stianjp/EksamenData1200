@@ -24,7 +24,7 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Deler grid-containeren inn i to kolonner, der den andre kolonnen er dobbelt så bred som den første for å gi plass til sidebar */
+    grid-template-columns: 1fr 3fr; /* Deler grid-containeren inn i to kolonner, der den andre kolonnen er dobbelt så bred som den første for å gi plass til sidebar */
     grid-template-rows: 1fr;
     padding: 16px;
     text-align: center;
