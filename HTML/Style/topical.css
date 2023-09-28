@@ -22,6 +22,52 @@
 }
 /*Globkale styles SLUTT*/
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Deler grid-containeren inn i to kolonner, der den andre kolonnen er dobbelt så bred som den første for å gi plass til sidebar */
+    grid-template-rows: 1fr;
+    padding: 16px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.sidebar {
+    background-color: #ffdb01; /* Bakgrunnsfarge for sidebar */
+    padding: 16px;
+    border-radius: 10px; /* Avrundede hjørner for penere utseende */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Legger til en subtil skyggeeffekt */
+}
+
+.sidebar > * {
+    margin-bottom: 30px; /*Mellomrom mellom hvert element i sidebaren */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333; /* Farge for lenker */
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    color: #ff6600; /* Endre fargen ved hover for å indikere interaktivitet */
+}
+
+.sidebar p {
+    margin: 8px 0; /* Mindre avstand over og under avsnitt*/
+}
+
+
+.sidebar img {
+    max-width: 100%; /* Sørg for at bilder ikke overstiger bredden av parent container */
+}
+
+.main-content {
+    line-height: 1.5;
+    text-align: center;
+    font-size: 20px;
+    padding: 16px;
+}
+
 
 /*CSS FOR NAVBAR START*/
 .navbar{
