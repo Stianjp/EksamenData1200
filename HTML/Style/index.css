@@ -26,13 +26,6 @@
     padding: 20px;
 }
 
-
-    /*Sentrerer teksten*/
-/*    text-align: center;
-
-
-
-
 /*Oppretter en felles grid-item-gruppe, for å effektivisere kode og forhindre dublikater*/
 .grid-item-felles {
     /*Sentrerer teksten og skriftstørrelse for bedre lesbarhet*/
@@ -52,7 +45,7 @@
 
 
 /* -------- Header: Navbar (felles for alle sider)  ---------------------*/
-/* ------Responsivt design: Desktop 1200px -> er grunninnstilling ----- */
+/* ------Responsivt design: Desktop 1200px -> 2000px er grunninnstilling ----- */
 .navbar {
     /*Benytter flex for å legge elementene på en horisontal linje*/
     display: flex;
@@ -133,6 +126,30 @@
         /*Endrer skriftstørrelse til 25px*/
         font-size: 25px;
     }
+}
+
+/* ----- Responsivt design for Navbar: Store skjermer 2000px --> ----- */
+@media (min-width: 1999px) {
+    /*Øker skriftstørrelse i navbar*/
+    .navbar{
+        font-size: 30px;
+    }
+
+    /*Øker størrelse på logo*/
+    .logo img {
+        height: 7vh;
+    }
+    .grid-item-innføringCampus-venstre{
+        font-size: 2rem;
+    }
+    .grid-item-innføringCampus-høyre{
+        font-size: 2rem;
+    }
+    
+    .grid-item-knapp{
+        font-size: 1.5rem;
+    }
+
 }
 
 /* ----- Responsivt design for Navbar: Nettbrett liggende 769-1024px ----- */
@@ -224,7 +241,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .IntroContainer {
@@ -328,13 +344,13 @@
 }
 
 /*For knapp som er under tekstene*/
-.grid-item-knapp {
+.grid-item-knapp{
     /*Gjør at knappen ikke tar hele linjen*/
     display: inline-block;
 
     /*Endring av tekst: Farge, skriftstørrelse, bakgrunnsfarge, plassering*/
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
     background-color: black;
     text-align: center;
     
@@ -361,6 +377,15 @@
     font-weight: bolder;
 }
 
+/* ----- Responsivt design for introside: Store skjermer 2000->3000px ----- */
+@media (min-width: 1999px) {
+    .grid-item-felles{
+        font-size: 2rem;
+    }
+    .grid-item-knapp{
+        font-size: 1.5rem;
+    }
+}
 
 /* ----- Responsiv design introside: Nettbrett liggende 769-1024px  ----- */
 @media (max-width: 1024px) {
@@ -412,7 +437,7 @@
 
     /*Endrer utvendig marg*/
     .grid-item-knapp {
-        margin-top: 40px; 
+        margin-top: 1rem; 
     }
 
     /*Endrer bakgrunnsfarge til hvit og svart tekst*/
@@ -439,7 +464,6 @@
 
 /* ----- Responsiv design introside: Mindre nettbrett 431-768px -----*/
 @media (max-width: 768px) {
-
     /*Endring av index.html START*/
     .responsiv-img-min426px {
         /*Endrer størrelse på bilde*/
