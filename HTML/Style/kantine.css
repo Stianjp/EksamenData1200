@@ -77,32 +77,37 @@
     display: grid;/* Setter innholdet i et rutenettsystem */
     align-items: center;/* Sentrerer innholdet i elementet innad i rutenettsystemet*/
     place-items: center; /*Sentrerer selve gridden på nettsiden*/
-    overflow: hidden;
     grid-template-columns: 1fr 1fr 1fr; /* Tillater å plassere 3 elementer i 1fr-størrelse horisontalt */
     grid-gap: 25px 10px;/* Gir oss mer space mellom hvert grid-elemtnt (top, right) */
     padding: 50px;/* Gir større plass rundt innholdet innad i grid-elementet */
-}
-
-.btn{
+    overflow: hidden;
+} 
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn {
     border: none;
     outline: none;
-    padding: 5px 7px;
-    background-color: #0056b3;
-    color: white;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
     cursor: pointer;
-}
-.btn.active{
-    background-color: #0057b38b;
-}
+  }
+
+  /* Add a dark background to the active button */
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
 
 .kantineBilder{
     width: 300px;/* Setter bredde 300px på bildene*/
     height: 220px;/* Setter høyde 220px på bildene*/
     max-width: 300px;
     max-height: 220px;
-    transition: ease-in-out 0.1s;
-    overflow: hidden;
-    
+    transition: ease-in-out 0.1s;   
 }
 .kantineItem{
     text-align: center;/* Spesifiserer posisjonering horisontalt av tekst innad i grid-elementet*/
@@ -111,13 +116,7 @@
     line-height: 50px; /* Setter distanse mellom linjer med tekst*/
     color: black;/* Setter svart farge teskten i innholdet*/
     background-color: #ffdb01;
-    overflow: hidden;
-    float: left;
-    display: none;
-}
-
-.show{
-    display: block;
+    text-align: center;
 }
 .kantineBilder:hover{
     transform:scale(1.02);/* Når man hovrer over vil selve "bildet" gi en pop-up effekt*/

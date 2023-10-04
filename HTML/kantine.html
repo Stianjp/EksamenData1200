@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/kantine.css"><!--Linker CSS-filen til HTML-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Link til sosiale medier knapper-->
-    <script src="Style/index.js"></script> <!--Linker javascript-filen til HTML-->
     <title>OsloMet</title>
 </head>
 <body>
@@ -83,69 +82,104 @@
             </p>
         </div>
 
-        <div id="buttons">
-            <button class="btn" onclick="filterObjects('all')">Vis alle</button>
-            <button class="btn" onclick="filterObjects('veg')">Vegetar vennlig</button>
-            <button class="btn" onclick="filterObjects('studRabatt')">Student-rabatt</button>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Vis alle</button>
+            <button class="btn" onclick="filterSelection('veg')"> Vegetarvennlig</button>
+            <button class="btn" onclick="filterSelection('studRab')"> Student-rabatt</button>
         </div>
 
         <div class="kantineContainer">
-            <div class="kantineItem studRabatt ">
-                <div>
+            <div class="kantineItem veg">
                     <img class="kantineBilder" src="Media/Kantine/salat.jpg" alt="Salat fra Annas-spiseri"> <!--Bilde hentet fra: salat : https://www.pexels.com/nb-no/bilde/glass-sunt-kosthold-spise-sunt-bord-1640775/-->
                     <h3>Anna's spiseri</h3>
                     <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://goo.gl/maps/cFZ4RByWFTMdGpNk9">Pilestredet 32</a>
                     <h5>Åpent 09:00-15:00</h5>
-                </div>
             </div>
             <div class="kantineItem">
-                <div>
                     <img class="kantineBilder" src="Media/Kantine/coffeeshop.jpg" alt="Kafe"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-stoler-gruppe-butikk-2159065/-->
                     <h3>Kafé Henry</h3>
                     <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://goo.gl/maps/AkKVBMpxWtqwLSTa9">Pilestredet 46</a>
                     <h5>Åpent 08:00-14:00</h5>
-                </div>
             </div>
-            <div class="kantineItem veg">
-                <div>
+            <div class="kantineItem studRab">
                     <img class="kantineBilder" src="Media/Kantine/ellas.jpg" alt="Ellas spiseri"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-planter-anlegg-bord-601169/-->
                     <h3>Ella's spiseri</h3>
                     <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://goo.gl/maps/RJZ83k1EHpLw9cRa9">Pilestredet 44</a>
                     <h5>Åpent 07:30-15:00</h5>
-                </div>
             </div>
             <div class="kantineItem veg">
-                <div>
                     <img class="kantineBilder" src="Media/Kantine/recharge+.jpg" alt="Recharge+ kafe"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/sunn-mat-frukt-pynt-stilleben-8230023/-->
                     <h3>Recharge+</h3>
                     <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://goo.gl/maps/ZbYzY3BnPKG8oeYL6">Pilestredet 48</a>
                     <h5>Åpent 09:00-17:00</h5>
-                    
-                </div>
             </div>
-            <div class="kantineItem">
-                <div>
+            <div class="kantineItem studRab">
                     <img class="kantineBilder" src="Media/Kantine/olesKafe.jpg" alt="Oles Kafe"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/koselig-kafe-interiordesign-inne-1307698/-->
                     <h3>Ole's kaffesjappe</h3>
                     <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://goo.gl/maps/yqqj28mnK1fK93U96">Pilestredet 31</a>
                     <h5>Åpent 09:00-14:30</h5>
-                </div>
             </div>
-            <div class="kantineItem studRabatt">
-                <div>
+            <div class="kantineItem studRab">
                     <img class="kantineBilder" src="Media/Kantine/buffet.jpg" alt="SIO buffet i kantinen"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/valg-matfotografering-buffet-gronnsaker-17965451/-->
                     <h3>Kantinen i P35</h3>
                     <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://goo.gl/maps/46piMFJ5gBG5u1NQ9">Pilestredet 35</a>
                     <h5>Åpent 08:00-15:30</h5>
-                </div>
             </div>
         </div>
+       
+        <script>
+            filterSelection('all')
+            function filterSelection(c) {
+              var x, i;
+              x = document.getElementsByClassName("kantineItem");
+              if (c == "all"){
+                c = "";
+              }
+              for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+              }
+            }
+            
+            function w3AddClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+              }
+            }
+            
+            function w3RemoveClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                  arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+              }
+              element.className = arr1.join(" ");
+            }
+            
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+              });
+            }
+            </script>
+
     </main>
         <!--Kantine main SLUTT-->
 
@@ -183,8 +217,9 @@
                 </div>
             </div>
         </div>
+        <script src="Style/index.js"></script> <!--Linker javascript-filen til HTML-->
+
     </footer>
     <!--Footer SLUTT-->
-    <script src="kantine.js"></script>
 </body>
 </html>
