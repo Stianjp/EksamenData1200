@@ -82,8 +82,15 @@
                 blanditiis quas consequatur suscipit voluptatem excepturi iste.
             </p>
         </div>
+
+        <div id="buttons">
+            <button class="btn" onclick="filterObjects('all')">Vis alle</button>
+            <button class="btn" onclick="filterObjects('veg')">Vegetar vennlig</button>
+            <button class="btn" onclick="filterObjects('studRabatt')">Student-rabatt</button>
+        </div>
+
         <div class="kantineContainer">
-            <div class="kantineItem">
+            <div class="kantineItem studRabatt ">
                 <div>
                     <img class="kantineBilder" src="Media/Kantine/salat.jpg" alt="Salat fra Annas-spiseri"> <!--Bilde hentet fra: salat : https://www.pexels.com/nb-no/bilde/glass-sunt-kosthold-spise-sunt-bord-1640775/-->
                     <h3>Anna's spiseri</h3>
@@ -95,13 +102,13 @@
             <div class="kantineItem">
                 <div>
                     <img class="kantineBilder" src="Media/Kantine/coffeeshop.jpg" alt="Kafe"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-stoler-gruppe-butikk-2159065/-->
-                    <h3>Kafé</h3>
+                    <h3>Kafé Henry</h3>
                     <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://goo.gl/maps/AkKVBMpxWtqwLSTa9">Pilestredet 46</a>
                     <h5>Åpent 08:00-14:00</h5>
                 </div>
             </div>
-            <div class="kantineItem">
+            <div class="kantineItem veg">
                 <div>
                     <img class="kantineBilder" src="Media/Kantine/ellas.jpg" alt="Ellas spiseri"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-planter-anlegg-bord-601169/-->
                     <h3>Ella's spiseri</h3>
@@ -110,7 +117,7 @@
                     <h5>Åpent 07:30-15:00</h5>
                 </div>
             </div>
-            <div class="kantineItem">
+            <div class="kantineItem veg">
                 <div>
                     <img class="kantineBilder" src="Media/Kantine/recharge+.jpg" alt="Recharge+ kafe"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/sunn-mat-frukt-pynt-stilleben-8230023/-->
                     <h3>Recharge+</h3>
@@ -129,7 +136,7 @@
                     <h5>Åpent 09:00-14:30</h5>
                 </div>
             </div>
-            <div class="kantineItem">
+            <div class="kantineItem studRabatt">
                 <div>
                     <img class="kantineBilder" src="Media/Kantine/buffet.jpg" alt="SIO buffet i kantinen"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/valg-matfotografering-buffet-gronnsaker-17965451/-->
                     <h3>Kantinen i P35</h3>
@@ -178,5 +185,6 @@
         </div>
     </footer>
     <!--Footer SLUTT-->
+    <script src="kantine.js"></script>
 </body>
 </html>

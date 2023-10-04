@@ -76,9 +76,23 @@
 .kantineContainer{
     display: grid;/* Setter innholdet i et rutenettsystem */
     align-items: center;/* Sentrerer innholdet i elementet innad i rutenettsystemet*/
+    place-items: center; /*Sentrerer selve gridden på nettsiden*/
+    overflow: hidden;
     grid-template-columns: 1fr 1fr 1fr; /* Tillater å plassere 3 elementer i 1fr-størrelse horisontalt */
     grid-gap: 25px 10px;/* Gir oss mer space mellom hvert grid-elemtnt (top, right) */
     padding: 50px;/* Gir større plass rundt innholdet innad i grid-elementet */
+}
+
+.btn{
+    border: none;
+    outline: none;
+    padding: 5px 7px;
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+}
+.btn.active{
+    background-color: #0057b38b;
 }
 
 .kantineBilder{
@@ -98,9 +112,18 @@
     color: black;/* Setter svart farge teskten i innholdet*/
     background-color: #ffdb01;
     overflow: hidden;
+    float: left;
+    display: none;
+}
+
+.show{
+    display: block;
 }
 .kantineBilder:hover{
     transform:scale(1.02);/* Når man hovrer over vil selve "bildet" gi en pop-up effekt*/
+}
+.btn:hover{
+    background-color: #0057b361;
 }
 
 #pin{
@@ -166,13 +189,13 @@
 /*Mobil 320-500px*/
 @media (max-width: 500px){
     .kantineContainer{
-        
+        grid-template-columns: 1fr;
     }
 }
 /*Nettbrett stående 320-768*/
 @media (max-width:768px){
     .kantineContainer{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
