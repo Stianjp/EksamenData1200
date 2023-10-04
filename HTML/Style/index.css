@@ -1,38 +1,41 @@
-/* ---- Globale stiler for hele nettsiden -------- */
+/* ----- Globale stiler for hele nettsiden ----- */
 * {
-    /*Endring av tekst: font, dekorasjon og orddelling*/
+    /*Endring av tekst: font, dekorasjon og orddelling og linjehøyde*/
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     word-wrap: break-word;
+    line-height: 1.5;
 
     /*Innvendig og utvendig marg fjernes*/
     margin: 0;
     padding: 0;
 }
 
-/* -------------- Felles-klasser ----------------------- */
-.grid-felles {
+/* ----- Felles-klasser ----- */
+.grid-felles-2kol-1rad {
     /*Benytter grid-bokser for å legge ting inn i rader og kolonner - siden dette gjøres ofte, lagde jeg en felles for å effektivisere kode*/
     display: grid;
 
     /*Kolonner og rader: to kolonner og en rad*/
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+}
 
+.padding-20px{
     /*Øker innvendig marg for mer luft*/
-    padding: 16px;
+    padding: 20px;
+}
+
 
     /*Sentrerer teksten*/
-    text-align: center;
+/*    text-align: center;
 
-    /*Endrer linjehøyde, for bedre lesbarget*/
-    line-height: 1.5;
-}
+
+
 
 /*Oppretter en felles grid-item-gruppe, for å effektivisere kode og forhindre dublikater*/
 .grid-item-felles {
-    /*Sentrerer teksten, øker linjeavstand og skriftstørrelse for bedre lesbarhet*/
-    line-height: 1.5;
+    /*Sentrerer teksten og skriftstørrelse for bedre lesbarhet*/
     text-align: center;
     font-size: 20px;
 
@@ -44,6 +47,7 @@
 .farge-hvit {
     border-color: white;
     color: white;
+    background-color: rgba(0, 0, 0, 0.617);
 }
 
 
@@ -126,11 +130,8 @@
     }
 
     .navbar {
-        /*Endrer innvendig marg på topp (10 px) og bunn (30px)*/
-        padding: 10px 30px;
-
-        /*Endrer skriftstørrelse til 18px*/
-        font-size: 18px;
+        /*Endrer skriftstørrelse til 25px*/
+        font-size: 25px;
     }
 }
 
@@ -223,6 +224,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .IntroContainer {
@@ -236,14 +238,15 @@
     align-items: center;
 
     /*Øker innvending marg på top og bunn*/
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 5rem;
+
+    height: 74vh;
 }
 
 /*Bilde av ToStudenter (1.bilde på introside)*/
 .ToStudenter {
     /*Endrer bredden og setter høyde til automatisk i forhold til bredde*/
-    width: 600px;
+    width: 50vh;
     height: auto;
 
     /*Legger til en marg rundt bilde for å fremheve, samt bytter farge på marg til gul*/
@@ -257,17 +260,19 @@
     background-color: #54c7da;
 
     /*Øker innvendig marg på toppen og bunn*/
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 5rem;
     
     /*Sentrerer teksten vertikalt*/
     align-items: center;
+
+    /*Øker høyden til container til 84 viewpoint*/ 
+    height: 84vh;
 }
 
 /*2.bilde på introside*/
 .campusBilde {
     /*Endrer bredden og setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
-    width: 600px;
+    width: 50vh;
     height: auto;
 
 
@@ -275,21 +280,10 @@
     border: solid #150c4b;
 }
 
-/*3. og 4. bilde på introside: dobbelbilde*/
-.InnføringCampusContainer {
-    /*Benytter grud, med to kolonner som er like store*/
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 /*Fellesklasse for de to tekstene under bilde*/ 
 .InnføringCampus-tekst-felles{
     /*Endrer tekststørrelse og tekstplassering*/
-    /*font-size: 20px;*/
     text-align: justify;
-
-    /*Øker innvendig marg*/
-    padding: 20px;
 }
 
 /*Tekst-boks under bilde på venstre side (Pilestredet 52)*/
@@ -371,14 +365,22 @@
 /* ----- Responsiv design introside: Nettbrett liggende 769-1024px  ----- */
 @media (max-width: 1024px) {
     /* Gjør at alle grid-elementene stables vertikalt på mindre skjermer */
-    .grid-felles {
-        grid-template-columns: 1fr;
-    }
-
-    /* Setter flex layout med vertikal retning */ 
-    .InnføringCampusContainer {
+    .grid-felles-2kol-1rad {
         display: flex;
         flex-direction: column;
+    }
+
+    /*Øker mellomrom mellom bilde og tekst på intro- og campuscontainer*/
+    .CampusContainer{
+        row-gap: 5rem;
+    }
+    .introTekst{
+        row-gap: 5rem;
+    }
+
+    /*Oppnår full bredde på bildet alt="Bilde av P35 fra avstand med dammen"*/
+    .grid-item-innføringCampus-venstre .responsive-img[src*="img-bilde-innføringcampus-høyre.jpeg"]{
+        width: 100%;
     }
 
     /*Endrer rekkefølgen på bildene i flex-containeren for mindre skjermer fra og med 1024px bredde*/
@@ -443,6 +445,11 @@
         /*Endrer størrelse på bilde*/
         max-width: 400px;
     }
+
+    /*Minker skriftstørrelse*/
+    .grid-item-felles{
+        font-size: 17px;
+    }
 }
 
 /* ----- Responsiv design introside: Mobil 320-430px -----*/
@@ -450,6 +457,10 @@
     /*Endrer bredde på bilde slik at den blir responsiv for små skjermer*/
     .responsiv-img-min426px{
         width: 270px;
+    }
+    /*Minker skriftstørrelse*/
+    .grid-item-felles{
+        font-size: 14px;
     }
 }
 
