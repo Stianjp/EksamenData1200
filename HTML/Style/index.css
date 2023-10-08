@@ -400,7 +400,7 @@
         row-gap: 5rem;
     }
     .introTekst{
-        row-gap: 5rem;
+        row-gap: 3rem;
     }
 
     /*Oppnår full bredde på bildet alt="Bilde av P35 fra avstand med dammen"*/
@@ -469,10 +469,13 @@
         /*Endrer størrelse på bilde*/
         max-width: 400px;
     }
+    .introTekst{
+        row-gap: 1rem;
+    }
 
     /*Minker skriftstørrelse*/
     .grid-item-felles{
-        font-size: 17px;
+        font-size: 0.8rem;
     }
 }
 
@@ -480,11 +483,20 @@
 @media (max-width: 430px) {
     /*Endrer bredde på bilde slik at den blir responsiv for små skjermer*/
     .responsiv-img-min426px{
-        width: 270px;
+        width: 225px;
     }
     /*Minker skriftstørrelse*/
     .grid-item-felles{
         font-size: 14px;
+    }
+    .introTekst{
+        row-gap: 0.5rem;
+    }
+    .grid-item-felles{
+        font-size: 0.5rem;
+    }
+    .CampusContainer{
+        row-gap: 0.5rem;
     }
 }
 
