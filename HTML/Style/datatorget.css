@@ -177,8 +177,7 @@ body{
     text-align: center;
     font-size: 30px;
     color: rgb(0, 0, 0);
-    padding-top: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .fasilitetstekst{
@@ -222,6 +221,14 @@ section{
 .datatorget4{
     background-color: grey;
 
+}
+
+.datatorgetflexbilder{
+    display: flex;
+}
+
+.datatorgetflexbilder > div > img{
+    width: 100%;
 }
 
 /*FOOTER START*/
