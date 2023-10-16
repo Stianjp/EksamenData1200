@@ -253,21 +253,23 @@
     /*Sentrerer teksten vertikalt*/
     align-items: center;
 
-    /*Øker innvending marg på top og bunn*/
+    /*Øker innvending marg*/
     padding: 5rem;
 
+    /*Øker høyden i grid-boks*/
     height: 74vh;
 }
 
 /*Bilde av ToStudenter (1.bilde på introside)*/
 .ToStudenter {
-    /*Endrer bredden og setter høyde til automatisk i forhold til bredde*/
-    width: 50vh;
-    height: auto;
-
     /*Legger til en marg rundt bilde for å fremheve, samt bytter farge på marg til gul*/
     border: solid;
     border-color: #ffdb01;
+}
+/*Fellesklasse for endring av størrlese på bildene på intosiden*/
+.Introside-bilde-responsiv{
+    width: 60vh;
+    height: auto;
 }
 
 /*Tekstboks nr. 2 på introside - sammen med bilde av to mennesker som går over en bro*/
@@ -287,11 +289,6 @@
 
 /*2.bilde på introside*/
 .campusBilde {
-    /*Endrer bredden og setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
-    width: 50vh;
-    height: auto;
-
-
     /*Legger til en marg rundt bilde for å fremheve, samt bytter farge på marg*/
     border: solid #150c4b;
 }
@@ -385,6 +382,9 @@
     .grid-item-knapp{
         font-size: 1.5rem;
     }
+    .Introside-bilde-responsiv{
+        width: 50vh;
+    }
 }
 
 /* ----- Responsiv design introside: Nettbrett liggende 769-1024px  ----- */
@@ -401,6 +401,10 @@
     }
     .introTekst{
         row-gap: 3rem;
+        height: 70vh;
+    }
+    .Introside-bilde-responsiv{
+        width: 50vh;
     }
 
     /*Oppnår full bredde på bildet alt="Bilde av P35 fra avstand med dammen"*/
@@ -471,32 +475,38 @@
     }
     .introTekst{
         row-gap: 1rem;
+        padding: 30px;
+        height: 70vh;
     }
 
     /*Minker skriftstørrelse*/
     .grid-item-felles{
-        font-size: 0.8rem;
+        font-size: 1rem;
+    }
+    .CampusContainer{
+        padding: 30px;
+        height: 70vh;
+        row-gap: 0;
+    }
+    .Introside-bilde-responsiv{
+        width: 50vh;
     }
 }
 
 /* ----- Responsiv design introside: Mobil 320-430px -----*/
 @media (max-width: 430px) {
-    /*Endrer bredde på bilde slik at den blir responsiv for små skjermer*/
-    .responsiv-img-min426px{
-        width: 225px;
-    }
     /*Minker skriftstørrelse*/
-    .grid-item-felles{
-        font-size: 14px;
-    }
     .introTekst{
         row-gap: 0.5rem;
-    }
-    .grid-item-felles{
-        font-size: 0.5rem;
+        padding: 10px;
+        height: 80vh;
     }
     .CampusContainer{
         row-gap: 0.5rem;
+        padding: 10px;
+    }
+    .Introside-bilde-responsiv{
+        width: 34vh;
     }
 }
 
