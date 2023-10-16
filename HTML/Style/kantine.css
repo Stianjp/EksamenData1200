@@ -1,11 +1,11 @@
-/* Benytter stjerne(*)-selector for å få dette som mal på alle sider*/
+/* Globale stiler for hele nettsiden */
 *{
     font-family:Arial, Helvetica, sans-serif; /*Setter font til Arial*/
-    margin:0; /*Setter margin til 0*/
-    padding:0; /*Setter padding til 0*/
-    text-decoration:none; /*Fjerner understrek på lenker*/
+    margin:0; /*Nullstiller margin*/
+    padding:0; /*Nullstiller padding*/
+    text-decoration: none; /*Fjerner understrek på lenker*/
 }
-/*Globale styles START*/
+/*Felles-klasser*/
 .grid-felles{ /*Benytter grid-bokser for å legge ting inn i rader og kolonner - siden dette gjøres ofte, lagde jeg en felles for å effektivisere kode*/
     display: grid; /*Benytter grid-bokser for å legge ting inn i rader og kolonner*/
     grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner*/
@@ -21,11 +21,12 @@
     padding: 16px;
 }
 /*Globkale styles SLUTT*/
+/*Desktop 1200px -> er grunninnstilling*/
 /*CSS FOR NAVBAR START*/
 .navbar{
     display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
     justify-content: space-between; /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen*/
-    padding: 14px 36px; /*Setter innvendig marg til 14 px, og utvendig marg til 16px*/
+    padding: 14px 36px; /*Setter innvendig marg til å ha 14px på topp,  36px på høyre side*/ 
     background-color: #ffdb01; /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
     align-items: center; /*Denne justerer innholdet i navbar til å være sentrert vertikalt*/
     border-style:none; /*Setter border-style til none*/
@@ -33,10 +34,7 @@
     font-size: 20px; /*Setter font-size til 20px*/
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /*Legger til skygge på teksten*/
     height: 7vh; /*endrer navbaren sin høyde til å være 7% av skjermens synsfelt*/
-}
-/*Fjerner hamburger-ikon på navbar*/
-.fa-bars{
-    visibility: hidden;
+    position: relative; 
 }
 .logo img{
     height: 80px; /*Setter høyden til logoen*/
@@ -54,6 +52,19 @@
     color: #555; /*Benytter andre farger når man hovrer over linker for å øke kontrasten*/
     background-color: rgba(255, 255, 255, 0.3); /* samme gjelder her for å øke kontrasten*/ 
 }
+.navbar .logo:hover{ 
+    background-color: transparent; /*Unngår å få bakgrunnsfargre når man hovrer over logo*/
+}
+/*Fjerner mobil-visning av navbar*/
+.mobil-nav{
+    display: none; 
+    flex-direction: column;
+}
+/*Fjerner hamburger-ikon på navbar ved stor-skjerm-oppløsning*/
+.fa-bars{
+    display: none;
+    visibility: hidden;
+}
 /*CSS FOR NAVBAR SLUTT*/
 
 /*CSS FOR MAIN START*/
@@ -65,26 +76,55 @@
 .kantineContainer{
     display: grid;/* Setter innholdet i et rutenettsystem */
     align-items: center;/* Sentrerer innholdet i elementet innad i rutenettsystemet*/
+    place-items: center; /*Sentrerer selve gridden på nettsiden*/
     grid-template-columns: 1fr 1fr 1fr; /* Tillater å plassere 3 elementer i 1fr-størrelse horisontalt */
     grid-gap: 25px 10px;/* Gir oss mer space mellom hvert grid-elemtnt (top, right) */
     padding: 50px;/* Gir større plass rundt innholdet innad i grid-elementet */
-}
-img{
+    overflow: hidden;
+} 
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  /* Add a dark background to the active button */
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+.kantineBilder{
     width: 300px;/* Setter bredde 300px på bildene*/
-    height: 220px;/* Setter høyde 220px på bildene */
+    height: 220px;/* Setter høyde 220px på bildene*/
+    max-width: 300px;
+    max-height: 220px;
+    transition: ease-in-out 0.1s;   
 }
 .kantineItem{
     text-align: center;/* Spesifiserer posisjonering horisontalt av tekst innad i grid-elementet*/
     border: 1px solid grey;/* Definerer kant rundt innholdet - danner en boks*/
-    max-width: 100%; /* Tillater elementet å kunne ta 100% bredde  */
+    max-width: 300px; /* Tillater elementet å kunne ta 100% bredde  */
     line-height: 50px; /* Setter distanse mellom linjer med tekst*/
     color: black;/* Setter svart farge teskten i innholdet*/
-    padding: 30px;/* Gir større plass rundt innholdet i "boksene"*/
+    background-color: #ffdb01;
+    text-align: center;
 }
-.kantineItem:hover{
-    zoom: 103%;/* Når man hovrer over vil selve "boksen" gi en pop-up effekt*/
-    box-shadow: inset 1px black; /* Forsterker pop-up effekt ved å legge en liten skygge bak når man hovrer*/
+.kantineBilder:hover{
+    transform:scale(1.02);/* Når man hovrer over vil selve "bildet" gi en pop-up effekt*/
 }
+.btn:hover{
+    background-color: #0057b361;
+}
+
 #pin{
     width: 20px; /* Definerer bredde på location-pin elementene */
     height: 20px;/* Definerer høyde på location-pin elementene */
@@ -148,19 +188,71 @@ img{
 /*Mobil 320-500px*/
 @media (max-width: 500px){
     .kantineContainer{
-        
+        grid-template-columns: 1fr;
     }
 }
 /*Nettbrett stående 320-768*/
 @media (max-width:768px){
     .kantineContainer{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
-    
 }
+
 
 /*Nettbrett liggende 769-1024*/
 @media (max-width: 1024px) {
+    /*Endring av NAVBAR START*/
+    /*Viser hamburger-ikonet for mindre skjermer*/
+    .fa-bars{
+        display: inline-block; 
+        visibility: visible;
+    }
+    /*Gjemmer standard navigasjonselementer for små skjermer*/
+    .NavElementer{
+        display: none; 
+    }
+    /*Viser navbar for liten skjerm når den er aktiv*/
+    .mobil-nav.active{
+        display: flex; 
+    }
+    /*Generelle stiler for navbaren for mindre skjermer*/
+    .mobil-nav{
+        position: absolute; /*Plassert i forhold til nærmeste posisjonerte forfader*/
+        top: 100%; /* Plassert rett nedenfor navbaren*/
+        left: 0%; /*Starter fra venstre side*/
+        width: 100%; /*Bredde settes til 100%*/
+        background-color: #ffdb01; /*for synlighet*/
+        align-items: center; /*Plasserer elementene i mobil-nav i midten*/
+    }
+    /* Spesifikke stiler for lenker inni mobil navigasjon*/
+    .mobil-nav .grid-meny-mobil a{
+        color: black; /*Tekstfarge endres til svart*/ 
+        row-gap: 20px;
+    }
+    /*Setter opp grid-layout for mobilmenyen*/
+    .grid-meny-mobil{
+        display: flex; /*Benytter flex-layout*/
+        flex-direction: column; /*Legger den i kolonne og rader, fremfor horisontalt*/
+        row-gap: 40px; /*Mellomrom mellom grid-bokser*/
+        text-align: center; /*Setter teksten i midten*/
+        margin-top: 20px;/*Lager mellomrom fra navbar*/
+        font-size: 30px;
+    }
+    .grid-meny-mobil a:hover{
+        font-size: 32px;
+    }
+   
+
+    /*Stil for lukk-knapp i mobil navigasjon*/
+    #lukkMeny{
+        margin: 30px; /*Plasserer en marg rundt knappen*/
+        padding: 10px; /*Padding rundt knappens tekst for å gjøre den mer synlig og lettere å trykke på*/
+        font-size: 20px;
+    }
+    #lukkMeny:hover{
+        background-color: rgba(255, 255, 255, 0.3); /*For å øke kontrasten når man hovrer*/ ;
+    }
+/*NAVBAR SLUTT*/
 }
 
 /*Liten skjerm 1025-1999*/
