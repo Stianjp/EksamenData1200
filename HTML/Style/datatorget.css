@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: turquoise;
+    background-color: #ffe856;
 }
 
 /*CSS FOR NAVBAR START*/
@@ -44,27 +44,18 @@ body{
 }
 /*CSS FOR NAVBAR SLUTT*/
 
-/*
-.bodyDatatorg{
-    background-image:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/HTML/Media/Datatorget/Datatorget.jpg);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-*/
-
 .bakgrunn-intro-container{
     background-image: url(../Media/Datatorget/Datatorget.jpg);/*Bilde tatt selv med mobiltelefonen*/
     background-position: center; /*vil plassere bildet i midten av elementet*/
     background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
     background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
-    height: 630px;
+    height: 700px;
     
 }
 .IntroContainer{
     color: white;/*Endrer farge på tekst til hvit for å øke kontraster*/
     background-color: rgba(0, 0, 0, 0.591); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
+    height: 700px;;
 }
 .introTekst{ /*1. tekstboks på introside*/
     word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
@@ -93,6 +84,53 @@ body{
     text-align: center; /*Sentrerer teksten*/
     font-size: 20px; /*Endrer tekststørrelsen*/
     padding: 16px;
+}
+
+@media (min-width: 1999px) {
+    .grid-item-felles{
+        font-size: 2rem;
+    }
+    .grid-item-knapp{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    /* Gjør at alle grid-elementene stables vertikalt på mindre skjermer */
+    .grid-felles-2kol-1rad {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    /*Endring av index.html START*/
+    .responsiv-img-min426px {
+        /*Endrer størrelse på bilde*/
+        max-width: 400px;
+    }
+    /*Minker skriftstørrelse*/
+    .grid-item-felles{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 430px) {
+    /*Endrer bredde på bilde slik at den blir responsiv for små skjermer*/
+    .responsiv-img-min426px{
+        width: 225px;
+    }
+    /*Minker skriftstørrelse*/
+    .grid-item-felles{
+        font-size: 14px;
+    }
+    .grid-item-felles{
+        font-size: 0.5rem;
+    }
+    .CampusContainer{
+        row-gap: 0.5rem;
+    }
 }
 
 .header{
@@ -138,8 +176,16 @@ body{
 .fasiliteterDatatorget{
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
     padding-top: 50px;
+    margin-top: 100px;
+}
+
+.fasilitetstekst{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
 }
 
 section{
@@ -150,7 +196,9 @@ section{
     scroll-snap-align: start;
 }
 .databilder{
-    height: 75vh;
+    height: 65vh;
+    border: solid; 
+    border-color: #000000;
 }
 
 .datatorgetflex{
@@ -158,6 +206,7 @@ section{
     overflow-y: scroll;
     height: 75vh;
     margin: 10%;
+    
 }
 
 .datatorget2{
@@ -166,7 +215,7 @@ section{
 }
 
 .datatorget3{
-    background-color: turquoise;
+    background-color: rgb(162, 180, 247);
 
 }
 
