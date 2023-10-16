@@ -5,6 +5,10 @@
     text-decoration:none; /*Fjerner understrek på lenker*/
 }
 
+body{
+    background-color: turquoise;
+}
+
 /*CSS FOR NAVBAR START*/
 .navbar{
     display: flex; /*Benytter flexbok for å legge elementene på en horisontal linje*/
@@ -50,10 +54,56 @@
 }
 */
 
-.header{
-    position: absolute; /* for å ikke presse resten av siden nedover går header over*/
-    color: turquoise;
+.bakgrunn-intro-container{
+    background-image: url(../Media/Datatorget/Datatorget.jpg);/*Bilde tatt selv med mobiltelefonen*/
+    background-position: center; /*vil plassere bildet i midten av elementet*/
+    background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
+    background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
+    height: 630px;
     
+}
+.IntroContainer{
+    color: white;/*Endrer farge på tekst til hvit for å øke kontraster*/
+    background-color: rgba(0, 0, 0, 0.591); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
+}
+.introTekst{ /*1. tekstboks på introside*/
+    word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
+    align-items: center; /*Sentrerer teksten vertikalt*/
+    padding-top: 100px; /*Øker padding på toppen for å få mer mellomrom*/
+    padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
+}
+.ToStudenter{ /*1.Bilde på introside*/
+    width: 600px;  /*Endrer bredden*/
+    height: auto; /*Setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
+    border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
+    border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kontrast og design*/
+}
+
+.grid-felles{ /*Benytter grid-bokser for å legge ting inn i rader og kolonner - siden dette gjøres ofte, lagde jeg en felles for å effektivisere kode*/
+    display: grid; /*Benytter grid-bokser for å legge ting inn i rader og kolonner*/
+    grid-template-columns: 1fr 1fr; /*Deler grid-containeren inn i to kolonner*/
+    grid-template-rows: 1fr; /*Deler grid i en rad*/
+    padding: 16px; /*Øker padding for mer mellomrom*/
+    text-align: center; /*Sentrerer teksten*/
+    line-height: 1.5; /*Endrer linjehøyde*/
+    height: 600px;
+}
+.grid-item-felles{ /*Oppretter en felles grid-item-gruppe, for å effektivisere kode og forhindre dublikater*/
+    line-height: 1.5; /*Endrer linjehøyde*/
+    text-align: center; /*Sentrerer teksten*/
+    font-size: 20px; /*Endrer tekststørrelsen*/
+    padding: 16px;
+}
+
+.header{
+    margin-top: 3%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.datatorgBilde{
+    position: relative;
+    height: 350px;
 }
 
 .datatorget_start_bildet{
@@ -61,10 +111,10 @@
     background-size:cover;
     background-repeat: no-repeat;
     height:93vh;
+    position: absolute;
 }
 
 .datatorget_start{
-    background-color: rgba(0, 0, 0, 0.506);
     height: 93vh;
     display: flex;
     align-items: center;
@@ -76,7 +126,6 @@
 }
 
 .boks1{
-    padding: 10%;
     color: white;
 }
 
@@ -86,6 +135,12 @@
     color: white;
     max-width: 50%;
 }
+.fasiliteterDatatorget{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 50px;
+}
 
 section{
     height:75vh;
@@ -93,6 +148,9 @@ section{
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
+}
+.databilder{
+    height: 75vh;
 }
 
 .datatorgetflex{
