@@ -20,6 +20,12 @@
     font-size: 20px; /*Endrer tekststørrelsen*/
     padding: 16px;
 }
+.grid-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
 /*Globkale styles SLUTT*/
 
 .grid-container {
