@@ -32,7 +32,7 @@
 }
 
 .sidebar {
-    background-color: #ffdb01; /* Bakgrunnsfarge for sidebar */
+    background-color: #55d2ff; /* Bakgrunnsfarge for sidebar */
     padding: 16px;
     border-radius: 10px; /* Avrundede hjørner for penere utseende */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Legger til en subtil skyggeeffekt */
@@ -92,7 +92,7 @@
     position: relative;
 
     /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
-    background-color: #ffdb01;
+    background-color: #55d2ff;
 
     /*Endring av tekst: fet skrift, større skriftstørrelse og skygge*/
     font-weight: bold;
@@ -210,7 +210,7 @@
         width: 100%;
 
         /*Benytter samme farge som opprinnelig navbar*/
-        background-color: #ffdb01;
+        background-color: #55d2ff;
 
         /*Plasserer elementene i mobil-nav i midten*/
         align-items: center;
@@ -265,7 +265,7 @@
 /*FOOTER START*/
 .grid-footer-container{
     display: grid; /*Oppretter grid*/
-    background-color: #ffdb01; /*Endrer bakgrunnsfarge på footer*/
+    background-color: #55d2ff; /*Endrer bakgrunnsfarge på footer*/
     grid-template-columns: 1fr 1fr 1fr; /*Deler grid-containeren inn i 3 kolonner som er like store*/
     padding: 15px; /*Øker padding for mer mellomrom*/
     font-size: 20px; /*Øker skriftstørrelse -> lettere å lese*/
