@@ -52,10 +52,11 @@
     text-decoration: none;
     color: #333; /* Farge for lenker */
     font-weight: bold;
+    font-size: 30px;
 }
 
 .sidebar a:hover {
-    color: #ff6600; /* Endre fargen ved hover for å indikere interaktivitet */
+    color: #ffffff; /* Endre fargen ved hover for å indikere interaktivitet */
 }
 
 .sidebar p {
