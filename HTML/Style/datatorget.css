@@ -49,13 +49,13 @@ body{
     background-position: center; /*vil plassere bildet i midten av elementet*/
     background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
     background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
-    height: 700px;
+    height:90vh;
     
 }
 .IntroContainer{
     color: white;/*Endrer farge på tekst til hvit for å øke kontraster*/
     background-color: rgba(0, 0, 0, 0.591); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
-    height: 700px;;
+    height: 90vh;;
 }
 .introTekst{ /*1. tekstboks på introside*/
     word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
@@ -204,7 +204,9 @@ section{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 75vh;
-    margin: 10%;
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
     
 }
 
@@ -225,10 +227,22 @@ section{
 
 .datatorgetflexbilder{
     display: flex;
+    background-color: #007BFF;
 }
 
 .datatorgetflexbilder > div > img{
     width: 100%;
+    height: 100vh;
+}
+
+.gradering{
+    background-image: url(/HTML/Media/Datatorget/klasserom\ 1.jpg);
+    background-position: center; /*vil plassere bildet i midten av elementet*/
+    background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
+    background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
+    height: 90vh;
+    
+
 }
 
 /*FOOTER START*/
