@@ -78,21 +78,23 @@
                 <br>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam voluptates provident 
                 deserunt aliquam corrupti dolor laudantium voluptatibus ex id nihil rem, ab officiis, 
-                blanditiis quas consequatur suscipit voluptatem excepturi iste.
+                blanditiis quas consequatur suscipit voluptatem excepturi iste. Lorem ipsum dolor sit 
+                amet consectetur adipisicing elit. Excepturi et dolorem at non aliquid, odit sed ut quas 
+                eos laudantium, in quae molestias nostrum quod repellat porro possimus, beatae eum.
             </p>
         </div>
 
         <div class="filter">
-            <h3>Begrens søk:</h3>
             <button class="filter-option" data-filter="*" onclick=filtrerSok(event)>Vis alle</button>
             <button class="filter-option" data-filter="veg" onclick=filtrerSok(event)>Vegetarvennlige</button>
-            <button class="filter-option" data-filter="studRab" onclick=filtrerSok(event)>Studentrabat/tilbud</button>
+            <button class="filter-option" data-filter="studRab" onclick=filtrerSok(event)>Studentrabatt/tilbud</button>
+            <!-- inspirasjon: https://dev.to/dhintz89/simple-filters-in-css-or-js-185k-->
 
            
             <div class="kantineContainer">
-                <div class="kantineItem veg">
-                    <img class="kantineBilder" src="Media/Kantine/salat.jpg" alt="Salat fra Annas-spiseri"> <!--Bilde hentet fra: salat : https://www.pexels.com/nb-no/bilde/glass-sunt-kosthold-spise-sunt-bord-1640775/-->
-                    <h3>Anna's spiseri</h3>
+                <div class="kantineItem studRab">
+                    <img class="kantineBilder" src="Media/Kantine/retro.jpg" alt="Salat fra Annas-spiseri"> <!--Bilde hentet fra: salat : https://www.pexels.com/nb-no/bilde/hus-anlegg-plante-gryte-1579739/-->
+                    <h3>Retro pub</h3>
                     <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://goo.gl/maps/cFZ4RByWFTMdGpNk9">Pilestredet 32</a>
                     <h5>Åpent 09:00-15:00</h5>
@@ -118,19 +120,40 @@
                         <a href="https://goo.gl/maps/ZbYzY3BnPKG8oeYL6">Pilestredet 48</a>
                         <h5>Åpent 09:00-17:00</h5>
                 </div>
-                <div class="kantineItem studRab">
+                <div class="kantineItem">
                         <img class="kantineBilder" src="Media/Kantine/olesKafe.jpg" alt="Oles Kafe"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/koselig-kafe-interiordesign-inne-1307698/-->
                         <h3>Ole's kaffesjappe</h3>
                         <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                         <a href="https://goo.gl/maps/yqqj28mnK1fK93U96">Pilestredet 31</a>
                         <h5>Åpent 09:00-14:30</h5>
                 </div>
-                <div class="kantineItem studRab">
+                <div class="kantineItem studRab veg">
                         <img class="kantineBilder" src="Media/Kantine/buffet.jpg" alt="SIO buffet i kantinen"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/valg-matfotografering-buffet-gronnsaker-17965451/-->
                         <h3>Kantinen i P35</h3>
                         <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                         <a href="https://goo.gl/maps/46piMFJ5gBG5u1NQ9">Pilestredet 35</a>
                         <h5>Åpent 08:00-15:30</h5>
+                </div>
+                <div class="kantineItem studRab">
+                    <img class="kantineBilder" src="Media/Kantine/rios.jpg" alt="SIO buffet i kantinen"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-palmer-planter-anlegg-799869/-->
+                    <h3>Rio's coffee bar</h3>
+                    <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                    <a href="https://maps.app.goo.gl/jXr5eVSRjTC1yNQ6A">Hegdehaugsveien 15</a>
+                    <h5>Åpent 08:00-14:30</h5>
+                </div>
+                <div class="kantineItem studRab veg">
+                    <img class="kantineBilder" src="Media/Kantine/kantine.jpg" alt="SIO buffet i kantinen"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-arkitektur-interiordesign-reise-2449455/-->
+                    <h3>Store kantina</h3>
+                    <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                    <a href="https://maps.app.goo.gl/c9RpjLSDVaHwbW7T9">Holbergs plass 2</a>
+                    <h5>Åpent 07:00-16:00</h5>
+                </div>
+                <div class="kantineItem studRab veg">
+                    <img class="kantineBilder" src="Media/Kantine/kroa.jpg" alt="SIO buffet i kantinen"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-interiordesign-inne-virksomhet-3465604/-->
+                    <h3>Kroa</h3>
+                    <img id="pin" src="Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                    <a href="https://maps.app.goo.gl/bSkYBRSjKq5YxeYo9">Pilestredet 52</a>
+                    <h5>Åpent 13:00-17:00</h5>
                 </div>
             </div>
         </div>
