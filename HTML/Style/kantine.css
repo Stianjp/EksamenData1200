@@ -73,6 +73,11 @@
     margin: 5%;/* Definerer plass utenfor elementes grense */
     padding: 50px;/* Gir større plass rundt innholdet i elementet*/
 }
+
+.hidden{
+    display: none;
+}
+
 .kantineContainer{
     display: grid;/* Setter innholdet i et rutenettsystem */
     align-items: center;/* Sentrerer innholdet i elementet innad i rutenettsystemet*/
@@ -82,25 +87,17 @@
     padding: 50px;/* Gir større plass rundt innholdet innad i grid-elementet */
     overflow: hidden;
 } 
-  /* The "show" class is added to the filtered elements */
-  .show {
-    display: block;
+  
+.myBtnContainer{
+  button[data-filter="veg"]:focus ~ div:not([class*="veg"]) {
+    display:none;
   }
   
-  /* Style the buttons */
-  .btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: #f1f1f1;
-    cursor: pointer;
+  button[data-filter="studRab"]:focus ~ div:not([class*="studRab"]) {
+    display:none;
   }
+}
 
-  /* Add a dark background to the active button */
-  .btn.active {
-    background-color: #666;
-    color: white;
-  }
 
 .kantineBilder{
     width: 300px;/* Setter bredde 300px på bildene*/
@@ -121,9 +118,7 @@
 .kantineBilder:hover{
     transform:scale(1.02);/* Når man hovrer over vil selve "bildet" gi en pop-up effekt*/
 }
-.btn:hover{
-    background-color: #0057b361;
-}
+
 
 #pin{
     width: 20px; /* Definerer bredde på location-pin elementene */
