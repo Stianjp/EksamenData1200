@@ -553,9 +553,9 @@
     /*Øker innvendig marg til 5px*/
     padding: 5px;
     
-    /*Endring av farge på knapp: bakgrunnsfarge og tekstfarge*/
-    background-color: #007BFF;
-    color: white;
+     /*Endring av farge på knapp for bedre kontrast mot footerens bakgrunnsfarge*/
+     background-color: #333; /* Mørk bakgrunnsfarge for kontrast */
+     color: #ffdb01; /* Gul tekstfarge for kontrast mot mørk bakgrunn */
    
     /*Gjør hjørnene til knappen noe rundere og endrer skriftstørrelse*/
     border-radius: 5px;
@@ -636,5 +636,20 @@
 
 
 /* ----- Endring av accessibility.html START ----- */
-
+/*Introteksten til accessibility-siden:*/
+.accessibility-intro{
+    /*Øker utvendig marg top:*/
+    margin-top: 3em;
+    /*Setter teksten i midten av siden*/
+    text-align: center;
+}
+.accessibility-tester-container{
+    margin: 10px;
+}
+.tester-bilder{
+    width: 28rem
+}
+.margin-20px{
+    margin: 20px;
+}
 /* ----- Endring av accessibility.html SLUTT ----- */

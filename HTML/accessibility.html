@@ -1,12 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Linker CSS-filen til HTML-->
+      <link rel="stylesheet" href="Style/index.css">
+      <!--Link til sosiale meider knapper-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Accessibility</title>
 </head>
+<!--Header START-->
+<header>
+    <!--Navigasjonsbar START-->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="Media/Navbar/OsloMetLogo.png" alt="OsloMet Logo"></a>
+        <!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
+
+        <!--Standrad navigasjonsmeny for større skjermer-->
+        <div class="NavElementer">
+            <!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
+            <!--Flex-boks 1-->
+            <a href="index.html">Hjem</a>
+
+            <!--Flex-boks 2-->
+            <a href="topical.html">Topical</a>
+
+            <!--Flex-boks 3-->
+            <a href="kantine.html">Kantine</a>
+
+            <!--Flex-boks 4-->
+            <a href="datatorget.html">Datatorget</a>
+
+            <!--Flex-boks 5-->
+            <a href="accessibility.html">Accessibility</a>
+
+            <!--Flex-boks 6-->
+            <a href="ENindex.html">EN</a>
+        </div>
+
+        <!--Standard naviasjonsmeny for mindre skjermer enn 1024px bredde-->
+        <!--Legger til hamburger-ikonet-->
+        <i id="menyToggle" class="fa fa-bars"></i>
+
+        <!--Meny for når man trykker på hamburger-ikonet-->
+        <div class="mobil-nav" id="mobilmeny">
+            <div class="grid-meny-mobil">
+
+                <!--Link til index siden: grid-boks 1-->
+                <div class="meny-knapp">
+                    <a href="index.html">Hjem </a>
+                </div>
+
+                <!--Link til topical siden: grid-boks 2-->
+                <div class="meny-knapp">
+                    <a href="topical.html">Topical </a>
+                </div>
+
+                <!--Link til kantine siden: grid-boks 3-->
+                <div>
+                    <a href="kantine.html">Kantine</a>
+                </div>
+
+                <!--Link til datatorget siden: grid-boks 4-->
+                <div>
+                    <a href="datatorget.html">Datatorget</a>
+                </div>
+
+                <!--Link til accessibility siden: grid-boks 5-->
+                <div>
+                    <a href="accessibility.html">Accessibility</a>
+                </div>
+
+                <!--Link til den engelske siden som man befinner seg på: grid-boks 6-->
+                <div>
+                    <a href="ENindex.html">EN</a>
+                </div>
+            </div>
+
+            <!--Knapp for å lukke menyen-->
+            <button id="lukkMeny">Lukk</button>
+        </div>
+    </nav>
+    <!--Navigasjonsbar SLUTT-->
+    <!--Avslutter header for å starte på body-->
+</header>
 <body>
+    <div class="accessibility-intro">
+        <h1>Generelt om accessibility i eksamen</h1>
+        <p>Vi har sett på flere elementer ved å få siden universell utformet for en best mulig brukeropplevelse og tilgjengelighet.</p>
+        <br>
+        <p>Det ble benyttet tester for å se på generelle errors, kontrast-feil, feiler og mangler på hver side</p>
+        <h2>Tester som ble benyttet:</h2>
+    </div>
+    <div class="accessibility-tester-container">
+        <div class="grid-felles-2kol-1rad">
+            <!--Liste-->
+            <!--Grid-boks 1: WAVE-->
+            <div>
+                <h3>WAVE Evulation tool</h3>
+                <p>Wave bruker en automatisert tilgjengelighetskontroll av nettsider og generer rapporter som viser eventuelle feil og mangler</p>
+                <figure>
+                    <img class="tester-bilder" src="../HTML/Media/Accebility/Skjermbilde 2023-10-30 kl. 11.44.29 2.png" 
+                    alt="Skjermbilde av Wave Evulation tool. Viser 0 errors, 0 kontrast errors, 13 alerts, 8 features og 13 structural elements">
+                    <figcaption>Generelt bilde av hvordan oversiktsrapport ser ut fra WAVE</figcaption>
+                </figure>
+            </div>
+            <!--Grid boks 2: Lighthouse-->
+            <div>
+                <h3>Lighthouse</h3>
+                <p>Lighthouse sjekker tilgjengelighet, ytelse- og beste praksis-analyser for nettsider</p>
+                <figure>
+                    <img class="tester-bilder" src="Media/Accebility/Skjermbilde av LightHouse.png" alt="Skjermbilde av hvordan Lighthouse rapport ser ut.">
+                    <figcaption>Generelt bilde av hvordan rapport fra Lighthouse ser ut</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
     
+    
+    <h4 class="accessibility-intro">Felles for alle sider: Header og Footer</h4>
+    <div class="grid-felles-2kol-1rad margin-20px">
+            <!--Grid boks 1: Header-->
+            <div>
+                <h5>Header</h5>
+                <p>Feiler som kommer etter WAVE</p>
+                <ul>
+                    <li>Redudant link - Gjelder for hver side, at i navbar vil man kunne trykke på samme side man er på. Dette ble ikke endret på.</li>
+                </ul>
+            </div>
+            <figure>
+                <img class="tester-bilder" src="Media/Accebility/Skjermbilde av WAVE på Header.png" alt="Skjermbilde av WAVE rapport på header/navbar">
+                <figcaption>Skjermbilde av WAVE rapport på header</figcaption>
+            </figure>
+            <!--Grid boks 3: Footer-->
+            <div>
+                <h5>Footer</h5>
+                <p>Feiler som har blitt rettet etter WAVE</p>
+                <ul>
+                    <li>Label i tilbakemeldingsvindu</li>
+                    <li>Kontrastfeil på tilbakemeldingsknappen</li>
+                </ul>
+            </div>
+            <!--Grid boks 4: Skjermdump av WAVE-->
+            <figure>
+                <img class="tester-bilder" src="Media/Accebility/Skjermbilde av WAVE på footer.png" alt="Skjermbilde av WAVE rapport på footer">
+                <figcaption>Skjermbilde av WAVE rapport på footer</figcaption>
+            </figure>
+    </div>
+    <h4 class="accessibility-intro">Forsiden</h4>
+    <div class="grid-felles-2kol-1rad margin-20px">
+    <!--Grid boks 1: -->
+    <div>
+
+    </div>
+    <!--Grid boks 2: -->
+    
+    </div>
+
+    <h4 class="accessibility-intro">Datatorget</h4>
+    <div class="grid-felles-2kol-1rad margin-20px">
+        <!--Grid boks 1: -->
+        <div>
+    
+        </div>
+        <!--Grid boks 2: -->
+        
+        </div>
+        
+    <h4 class="accessibility-intro">Kantine</h4>
+    <div class="grid-felles-2kol-1rad margin-20px">
+        <!--Grid boks 1: -->
+        <div>
+    
+        </div>
+        <!--Grid boks 2: -->
+        
+        </div>
+    <h4 class="accessibility-intro">Topical</h4>
+    
+    
+
 </body>
 </html>
