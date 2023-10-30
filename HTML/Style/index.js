@@ -1,3 +1,4 @@
+/* ----- JAVASCRIPT FOR INDEX.html ---- */
 /* Javascript for tilbakemeldingsboksen */
 function sendMelding(){
             var meldingsboks = document.getElementById("melding"); 
@@ -20,3 +21,24 @@ function toggleMobilMeny () {
 document.getElementById("menyToggle").addEventListener("click", toggleMobilMeny);
 /*hendelse for å lukke mobilmeny*/
 document.getElementById("lukkMeny").addEventListener("click", toggleMobilMeny);
+
+
+/* ----- JAVASCRIPT FOR ACCESSIBILITY.html ---- */
+// Hent knappen og body elementet 
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+const darkModeDot = document.getElementById("dark-mode-dot")
+const body = document.body;
+
+// Lytt etter klikk på knapp
+darkModeToggle.addEventListener("click", function(){
+    // Sjekker om body allerede har klassen 'dark-mode'
+    if(body.classList.contains("dark-mode")){
+        // Hvis den har det, fjern 'dark-mode' klassen for å deaktivere Dark Mode
+        body.classList.remove("dark-mode");
+        darkModeDot.classList.remove("green-dot"); //Fjerner den grønne prikken
+    }else{
+        // Hvis den ikke har det, legg til 'dark-mode' klassen for å aktivere Dark Mode
+        body.classList.add("dark-mode"); 
+        darkModeDot.classList.add("green-dot"); //Legger til den grønne prikken
+    }
+});

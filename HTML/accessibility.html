@@ -8,13 +8,14 @@
       <link rel="stylesheet" href="Style/index.css">
       <!--Link til sosiale meider knapper-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="description" content="Denne siden inneholder tilgjengeligheten på alle sider, hvor vi tar for oss de ulike testene som er brukt for å bedre en universell brukeropplevelse.">
     <title>Accessibility</title>
 </head>
 <!--Header START-->
 <header>
     <!--Navigasjonsbar START-->
     <nav class="navbar">
-        <a href="index.html" class="logo"><img src="Media/Navbar/OsloMetLogo.png" alt="OsloMet Logo"></a>
+        <a href="index.html" class="logo"><img src="Media/Navbar/OsloMetLogo.webp" alt="OsloMet Logo"></a>
         <!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
 
         <!--Standrad navigasjonsmeny for større skjermer-->
@@ -86,6 +87,14 @@
     <!--Avslutter header for å starte på body-->
 </header>
 <body>
+    <!--Dark-mode knapp-->
+    <div class="dark-mode-container">
+        <button id="dark-mode-toggle" class="dark-mode-knapp">
+            <span id="dark-mode-dot" class="red-dot"></span>
+            Dark Mode
+        </button>
+    </div>
+    
     <div class="accessibility-intro">
         <h1>Generelt om accessibility i eksamen</h1>
         <p>Vi har sett på flere elementer ved å få siden universell utformet for en best mulig brukeropplevelse og tilgjengelighet.</p>
@@ -95,7 +104,6 @@
     </div>
     <div class="accessibility-tester-container">
         <div class="grid-felles-2kol-1rad">
-            <!--Liste-->
             <!--Grid-boks 1: WAVE-->
             <div>
                 <h3>WAVE Evulation tool</h3>
@@ -197,6 +205,7 @@
     <h4 class="accessibility-intro">Topical</h4>
     
     
-
+<!--Linker javascript-filen til HTML-->
+<script src="Style/index.js"></script>
 </body>
 </html>

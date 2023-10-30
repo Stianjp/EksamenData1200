@@ -10,6 +10,11 @@
     margin: 0;
     padding: 0;
 }
+/*Standard lys modus*/
+body{
+    background-color: white;
+    color: black;
+}
 
 /* ----- Felles-klasser ----- */
 .grid-felles-2kol-1rad {
@@ -186,6 +191,8 @@
 
         /*Plasserer elementene i mobil-nav i midten*/
         align-items: center;
+
+        z-index: 1;
     }
 
     /*Spesifikke stiler for lenker inni mobil navigasjon*/
@@ -646,6 +653,42 @@
 
 
 /* ----- Endring av accessibility.html START ----- */
+/*Dark Mode*/
+.dark-mode-container{
+    position:absolute;
+    right: 0;
+}
+.dark-mode{
+    background-color: #333; /*Mørk bakgrunnsfarge*/
+    color: white; /*Lys tekstfarge*/
+}
+#dark-mode-toggle{
+    background-color: #333; /*Bakgrunnsfarge*/
+    color: white; /* Tekstfarge */ 
+    border: 1px solid #333; /* Ramme, tykkelse, type og farge */
+    padding: 10px 20px; /* Innvendig marg venstre og topp*/
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+}
+#dark-mode-toggle:hover{
+    background-color: #00f; /* Endrer bakgrunnsfarge ved hover */ 
+    color: #fff; /*Endrer tekstfarge ved hover*/ 
+    box-shadow: 0 0 10px #00f; /*Legger til skygge ved hover */ 
+}
+/*Rød prikk (standard når dark-mode er av*/
+.red-dot{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%; /* Gjør prikken siruklær */
+    display: inline-block;
+    margin-right: 5px; /*Avstand fra teksten */
+}
+/*Grønn prikk når dark-mode er på*/
+.green-dot{
+    background-color: green;
+}
+
 /*Introteksten til accessibility-siden:*/
 .accessibility-intro{
     /*Øker utvendig marg top:*/
@@ -665,4 +708,22 @@
 .lighthouse-bilder{
     width: 35rem;
 }
+
+/* ----- Responsivt design for accessibility-siden ----- */
+@media (max-width: 769px) {
+    .red-dot{
+        width: 5px;
+        height: 5px;
+    }
+    .tester-bilder, .lighthouse-bilder{
+        width: 20rem;
+    }
+}
+@media (max-width: 400px) {
+    .tester-bilder, .lighthouse-bilder{
+        width: 15rem;
+    }
+    
+}
+
 /* ----- Endring av accessibility.html SLUTT ----- */
