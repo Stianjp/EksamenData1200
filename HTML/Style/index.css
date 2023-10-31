@@ -45,7 +45,7 @@ body{
 .farge-hvit {
     border-color: white;
     color: white;
-    background-color: rgba(0, 0, 0, 0.617);
+    background-color: rgba(0, 0, 0, 0.733);
 }
 
 
@@ -79,7 +79,7 @@ body{
 
 /*Logoen sin høyde til å være 80 px og bredde til automatisk*/
 .logo img {
-    height: 80px;
+    height: 100%;
     width: auto;
 }
 
@@ -250,11 +250,6 @@ body{
     background-size: cover;
 }
 
-.IntroContainer {
-    /*Legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
-    background-color: rgba(0, 0, 0, 0.591);
-}
-
 /*1. tekstboks på introside - sammen med bilde: ToStudenter*/
 .introTekst {
     /*Sentrerer teksten vertikalt*/
@@ -264,7 +259,7 @@ body{
     padding: 5rem;
 
     /*Øker høyden i grid-boks*/
-    height: 74vh;
+    height: 100vh;
 }
 
 /*Bilde av ToStudenter (1.bilde på introside)*/
@@ -273,9 +268,9 @@ body{
     border: solid;
     border-color: #ffdb01;
 }
-/*Fellesklasse for endring av størrlese på bildene på intosiden*/
+/*Fellesklasse for endring av størrlese på bildene på introsiden*/
 .Introside-bilde-responsiv{
-    width: 60vh;
+    width: 90%;
     height: auto;
 }
 
@@ -390,7 +385,7 @@ body{
         font-size: 1.5rem;
     }
     .Introside-bilde-responsiv{
-        width: 50vh;
+        width: 100%;
     }
 }
 
@@ -484,7 +479,7 @@ body{
     /*Endring av index.html START*/
     .responsiv-img-min426px {
         /*Endrer størrelse på bilde*/
-        max-width: 400px;
+        max-width: 20rem;
     }
     .introTekst{
         row-gap: 1rem;
@@ -502,7 +497,7 @@ body{
         row-gap: 0;
     }
     .Introside-bilde-responsiv{
-        width: 50vh;
+        max-width: 20rem;
     }
 }
 
