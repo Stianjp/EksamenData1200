@@ -245,11 +245,6 @@ section{
     background-color: #007BFF;
 }
 
-.datatorgetflexbilder > div > img{
-    width: 100%;
-    height: 100vh;
-}
-
 .gradering{
     background-image: url(/HTML/Media/Datatorget/klasserom\ 1.jpg);
     background-position: center; /*vil plassere bildet i midten av elementet*/
@@ -318,11 +313,24 @@ section{
 /*Mobil 320-425px*/
 @media (max-width: 425px){
 
-}
-/*Nettbrett stående 426-768*/
-@media (max-width: 768px){
+    .databilder{
+        max-height: 35vh;
+    }
 
 }
+
+/*Nettbrett stående 426-768*/
+@media (max-width: 768px){
+    .grid-item-felles{
+        font-size: 20px;
+    }
+
+    .databilder{
+        height: 40vh;
+    }
+
+}
+
 /*Nettbrett liggende 769-1024*/
 @media (max-width: 1024px) {
     .fa-bars{
@@ -332,7 +340,12 @@ section{
         visibility:hidden;
     }
 
+    .databilder{
+        height: 50vh;
+    }
+
 }
+
 /*Liten skjerm 1025-1999*/
 @media (max-width: 1999px){
     .logo img{
@@ -343,4 +356,282 @@ section{
         font-size: 18px; /*Setter font-size til 20px*/ 
     }
 }
+
 /*Desktop 1200 -> er grunninnstilling*/
+@media (max-width: 769px) {
+    .grid-footer-container {
+        /*Benytter flex for å få de tidligere grid-boksene til å komme under hverandre*/
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .tilbakemelding-textarea {
+        /*Endrer vidde på tekstboks og fjerner mulighet til å endre størrelse på den*/
+        max-width: 70%;
+        resize: none;
+    }   
+} 
+
+
+/* ----- Responsiv design Navbar: Liten skjerm 1025-1999px ----- */
+@media (max-width: 1999px) {
+    .logo img {
+        /*Setter høyden til logoen*/
+        height: 60px;
+    }
+
+    .navbar {
+        /*Endrer skriftstørrelse til 25px*/
+        font-size: 25px;
+    }
+}
+
+/* ----- Responsivt design for Navbar: Store skjermer 2000px --> ----- */
+@media (min-width: 1999px) {
+    /*Øker skriftstørrelse i navbar*/
+    .navbar{
+        font-size: 30px;
+    }
+
+    /*Øker størrelse på logo*/
+    .logo img {
+        height: 7vh;
+    }
+    .grid-item-innføringCampus-venstre{
+        font-size: 2rem;
+    }
+    .grid-item-innføringCampus-høyre{
+        font-size: 2rem;
+    }
+    
+    .grid-item-knapp{
+        font-size: 1.5rem;
+    }
+
+}
+
+/* ----- Responsivt design for Navbar: Nettbrett liggende 769-1024px ----- */
+@media (max-width: 1024px) {
+
+    /*Viser hamburger-ikonet for mindre skjermer*/
+    .fa-bars {
+        display: inline-block;
+        visibility: visible;
+    }
+
+    /*Fjerner standard navigasjonselementer for små skjermer*/
+    .NavElementer {
+        display: none;
+    }
+
+    /*Viser navbar for liten skjerm når den er aktiv*/
+    .mobil-nav.active {
+        display: flex;
+    }
+
+    /*Generelle stiler for navbaren for mindre skjermer*/
+    .mobil-nav {
+        /*Plassert i forhold til nærmeste posisjonerte forfader*/
+        position: absolute;
+
+        /*Plassering av menyen og setter bredde til 100% for å dekke hele*/
+        top: 100%;
+        left: 0%;
+        width: 100%;
+
+        /*Benytter samme farge som opprinnelig navbar*/
+        background-color: #ffdb01;
+
+        /*Plasserer elementene i mobil-nav i midten*/
+        align-items: center;
+
+        z-index: 1;
+    }
+
+    /*Spesifikke stiler for lenker inni mobil navigasjon*/
+    .mobil-nav .grid-meny-mobil a {
+        /*Endrer farge på tekst*/
+        color: black;
+    }
+
+    /*Setter opp grid-layout for mobilmenyen*/
+    .grid-meny-mobil {
+        /*Benytter flex-layout og legger dem i rader*/
+        display: flex;
+        flex-direction: column;
+
+        /*Endring av mellomrom mellom radene, sentrerer tekst og øker skriftstørrelse*/
+        row-gap: 40px;
+        text-align: center;
+        font-size: 30px;
+
+        /*Øker utvendig marg på toppen, for å få mer luft*/
+        margin-top: 20px;
+    }
+
+    .grid-meny-mobil a:hover {
+        /*Lager en zoome-effekt når man hovrer over for økt lesbarhet*/
+        font-size: 32px;
+    }
+
+    /*Stil for lukk-knapp i mobil navigasjon*/
+    #lukkMeny {
+        /*Endrer utvendig og innvendig marg*/
+        margin: 30px;
+        padding: 10px;
+
+        /*Øker tekststørrelse*/
+        font-size: 20px;
+    }
+
+    #lukkMeny:hover {
+        /*For å øke kontrasten når man hovrer*/
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* ----- Responsivt design for introside: Store skjermer 2000->3000px ----- */
+@media (min-width: 1999px) {
+    .grid-item-felles{
+        font-size: 2rem;
+    }
+    .grid-item-knapp{
+        font-size: 1.5rem;
+    }
+    .Introside-bilde-responsiv{
+        width: 100%;
+    }
+}
+
+/* ----- Responsiv design introside: Nettbrett liggende 769-1024px  ----- */
+@media (max-width: 1024px) {
+    /* Gjør at alle grid-elementene stables vertikalt på mindre skjermer */
+    .grid-felles-2kol-1rad {
+        display: flex;
+        flex-direction: column;
+    }
+    .bakgrunn-intro-container{
+        height: 110vh;
+    }
+    .IntroContainer{
+        height: 110vh;
+    }
+
+    /*Øker mellomrom mellom bilde og tekst på intro- og campuscontainer*/
+    .CampusContainer{
+        row-gap: 5rem;
+    }
+    .introTekst{
+        row-gap: 1rem;
+        height: 70vh;
+    }
+    .Introside-bilde-responsiv{
+        width: 50vh;
+    }
+
+    /*Oppnår full bredde på bildet alt="Bilde av P35 fra avstand med dammen"*/
+    .grid-item-innføringCampus-venstre .responsive-img[src*="img-bilde-innføringcampus-høyre.jpeg"]{
+        width: 100%;
+    }
+
+    /*Endrer rekkefølgen på bildene i flex-containeren for mindre skjermer fra og med 1024px bredde*/
+    .InnføringCampusContainer img[alt="Hovedinngangen til bygning P52"] {
+        order: 1;
+    }
+
+    .InnføringCampusContainer img[alt="Bilde av P35 fra avstand med dammen"] {
+        order: 3;
+    }
+
+    /*Optimaliserer bildevisning for responivt deisgn*/ 
+    .responsive-img {
+        display: flex;
+        object-fit: cover;
+        max-width: 100%;
+    }
+
+    /*Endrer til flex-display*/
+    .responsiv-img-1 {
+        display: flex;
+    }
+
+    /*Fellesklasser for å endre styling*/
+    /*Endrer utvendig marg på bunn*/
+    .margin-bottom-100px {
+        margin-bottom: 100px;
+    }
+
+    /*Endrer utvendig marg*/
+    .grid-item-knapp {
+        margin-top: 1rem; 
+    }
+
+    /*Endrer bakgrunnsfarge til hvit og svart tekst*/
+    .bakgrunnsfarge-hvit-svart-tekst {
+        color: black;
+        background-color: white;
+    }
+
+    /*Skjuler elementer ved liten skjerm*/
+    .Fjernes-ved-liten-skjerm {
+        display: none;
+    }
+
+    /*Setter stil for responsive tekst med hvit farge, justert tekst, padding og en mørk bakgrunn*/
+    .responsiv-tekst {
+        display: grid;
+        color: white;
+        text-align: justify;
+        padding: 15px;
+        background-color: #150c4b;
+        padding-bottom: 100px;
+    }
+}
+
+/* ----- Responsiv design introside: Mindre nettbrett 431-768px -----*/
+@media (max-width: 768px) {
+    /*Endring av index.html START*/
+    .responsiv-img-min426px {
+        /*Endrer størrelse på bilde*/
+        max-width: 20rem;
+    }
+    .introTekst{
+        row-gap: 1rem;
+        padding: 30px;
+        height: 80vh;
+    }
+
+    /*Minker skriftstørrelse*/
+    .grid-item-felles{
+        font-size: 1rem;
+    }
+    .CampusContainer{
+        padding: 30px;
+        height: 70vh;
+        row-gap: 0;
+    }
+    .Introside-bilde-responsiv{
+        max-width: 20rem;
+    }
+}
+
+/* ----- Responsiv design introside: Mobil 320-430px -----*/
+@media (max-width: 430px) {
+    /*Minker skriftstørrelse*/
+    .introTekst{
+        row-gap: 0.5rem;
+        padding: 5px;
+        height: 80vh;
+    }
+    .CampusContainer{
+        row-gap: 0.5rem;
+        padding: 10px;
+        height: 80vh;
+    }
+    .Introside-bilde-responsiv{
+        width: 34vh;
+    }
+    .bakgrunn-intro-container{
+        height: 114vh;
+    }
+}
