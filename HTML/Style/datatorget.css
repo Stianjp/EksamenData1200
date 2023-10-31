@@ -50,19 +50,25 @@ body{
     background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
     background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
     height:90vh;
-    
 }
+
 .IntroContainer{
     color: white;/*Endrer farge på tekst til hvit for å øke kontraster*/
     background-color: rgba(0, 0, 0, 0.591); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
-    height: 90vh;;
+    height: 90vh;
 }
+
 .introTekst{ /*1. tekstboks på introside*/
-    word-wrap: break-word; /*Tvinger teksten til å bryte, deretter legge neste ord på neste linje hvis den overstiger griden*/
-    align-items: center; /*Sentrerer teksten vertikalt*/
-    padding-top: 100px; /*Øker padding på toppen for å få mer mellomrom*/
-    padding-bottom: 100px; /*Øker padding på bunnen for å få mer mellomrom*/
+    /*Sentrerer teksten vertikalt*/
+    align-items: center;
+
+    /*Øker innvending marg*/
+    padding: 5rem;
+
+    /*Øker høyden i grid-boks*/
+    height: 74vh;
 }
+
 .ToStudenter{ /*1.Bilde på introside*/
     width: 600px;  /*Endrer bredden*/
     height: auto; /*Setter høyde til auto, slik at bilde skal bli best mulig i forhold til bredde*/
@@ -80,10 +86,20 @@ body{
     height: 600px;
 }
 .grid-item-felles{ /*Oppretter en felles grid-item-gruppe, for å effektivisere kode og forhindre dublikater*/
-    line-height: 1.5; /*Endrer linjehøyde*/
-    text-align: center; /*Sentrerer teksten*/
-    font-size: 20px; /*Endrer tekststørrelsen*/
+    /*Sentrerer teksten og skriftstørrelse for bedre lesbarhet*/
+    text-align: center;
+    font-size: 20px;
+    /*Endrer innvendig marg for mer luft*/
     padding: 16px;
+}
+
+.grid-felles-2kol-1rad {
+    /*Benytter grid-bokser for å legge ting inn i rader og kolonner - siden dette gjøres ofte, lagde jeg en felles for å effektivisere kode*/
+    display: grid;
+
+    /*Kolonner og rader: to kolonner og en rad*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 @media (min-width: 1999px) {
@@ -207,7 +223,6 @@ section{
     margin: 5%;
     margin-left: 10%;
     margin-right: 10%;
-    
 }
 
 .datatorget2{
