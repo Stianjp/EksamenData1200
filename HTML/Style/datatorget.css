@@ -44,18 +44,18 @@ body{
 }
 /*CSS FOR NAVBAR SLUTT*/
 
-.bakgrunn-intro-container{
+.bakgrunn-intro-container-datatorget{
     background-image: url(../Media/Datatorget/Datatorget.jpg);/*Bilde tatt selv med mobiltelefonen*/
     background-position: center; /*vil plassere bildet i midten av elementet*/
     background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
     background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
-    height:90vh;
+    height:100vh;
 }
 
-.IntroContainer{
+.IntroContainer-datatorget{
     color: white;/*Endrer farge på tekst til hvit for å øke kontraster*/
     background-color: rgba(0, 0, 0, 0.591); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
-    height: 90vh;
+    height: 100vh;
 }
 
 .introTekst{ /*1. tekstboks på introside*/
@@ -160,6 +160,11 @@ body{
     height: 350px;
 }
 
+.Introside-bilde-responsiv{
+    width: 90%;
+    height: auto;
+}
+
 .datatorget_start_bildet{
     background-image: url(/HTML/Media/Datatorget/Datatorget.jpg);
     background-size:cover;
@@ -204,7 +209,7 @@ body{
 }
 
 section{
-    height:75vh;
+    height:80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,8 +255,7 @@ section{
     background-position: center; /*vil plassere bildet i midten av elementet*/
     background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
     background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
-    height: 90vh;
-    
+    height:100vh;
 
 }
 
@@ -326,7 +330,7 @@ section{
     }
 
     .databilder{
-        height: 40vh;
+        max-height: 40vh;
     }
 
 }
