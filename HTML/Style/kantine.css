@@ -110,6 +110,7 @@
     background-color: green;
 }
 
+
 /*CSS FOR MAIN START*/
 .kantineIntro{
     text-align: center; /* Spesifiserer hvor tektsen skal plasseres innad i elementet*/
@@ -145,10 +146,11 @@
 .kantineContainer{
     display: grid;/* Setter innholdet i et rutenettsystem */
     place-items: center; /*Sentrerer selve gridden på nettsiden*/
-    grid-template-columns: 1fr 1fr 1fr; /* Tillater å plassere 3 elementer i 1fr-størrelse horisontalt */
+    grid-template-columns: 1fr 1fr; /* Tillater å plassere 3 elementer i 1fr-størrelse horisontalt */
     grid-gap: 25px 10px;/* Gir oss mer space mellom hvert grid-elemtnt (top, right) */
     padding: 10px;/* Gir større plass rundt innholdet innad i grid-elementet */
     overflow: hidden;
+    margin: 5%;
 } 
   
 .kantineBilder{
@@ -171,7 +173,7 @@
 }
 
 .kantineItem:hover{
-    box-shadow: 5px 5px 5px 2px grey;
+    box-shadow: 2px 2px 2px 1px;
 }
 
 #pin{
