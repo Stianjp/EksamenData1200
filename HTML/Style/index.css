@@ -639,8 +639,92 @@ body{
 
 /* ----- Endring av kantine.html START ----- */
 
-/* ----- Endring av kantine.html SLUTT ----- */
+/*CSS FOR MAIN START*/
+.kantineIntro{
+    text-align: center; /* Spesifiserer hvor tektsen skal plasseres innad i elementet*/
+    margin: 5%;/* Definerer plass utenfor elementes grense */
+    padding: 50px;/* Gir større plass rundt innholdet i elementet*/
+    overflow-wrap: break-word; /*Bryter ordene dersom teksten går utenfor tillatt område*/
+}
 
+.filter{
+    text-align: center; /*Sentrerer teksten horisontalt*/
+}
+.filter-option{
+    padding: 10px; /*Gir avstand mellom filter-boksene */
+    width: 200px; /*Setter bredden for filter-boksene*/
+}
+.filter-option:hover{
+    background-color: #ccc; /*Filter-boksene markeres mørkere når de hovres over, lettere å se hvilken boks man eventuelt klikker på*/
+}
+
+.hidden{
+    display: none; /*Skjuler de elementene som ikke inneholder valgte filter */
+}
+.myBtnContainer{
+    button[data-filter="veg"]:focus ~ div:not([class*="veg"]) { /* Fokuserer på alle elementer som er tagget med 'veg'*/
+      display:none; /* Gjemmer alle elementer som ikke er tagget med 'veg' */
+    }
+    
+    button[data-filter="studRab"]:focus ~ div:not([class*="studRab"]) { /* Fokuserer på alle elementer som er tagget med 'studRab'*/
+      display:none; /* Gjemmer alle elementer som ikke er tagget med 'studRab' */
+    }
+  }
+
+.kantineContainer{
+    display: grid;/* Setter innholdet i Grid (rutenettsystem) */
+    place-items: center; /*Sentrerer selve gridden på nettsiden*/
+    grid-template-columns: 1fr 1fr; /* Tillater å plassere 3 elementer i 1fr-størrelse horisontalt */
+    grid-row-gap: 25px;/* Gir oss mer space mellom hvert grid-element */
+    padding: 10px;/* Gir større plass rundt innholdet innad i grid-elementet */
+    overflow: hidden; /*Skjuler innholdet som går utenfor gjeldene element*/
+    margin: 5%; /*Gir avstand mellom hvert grid-element innad container*/
+} 
+  
+.kantineBilder{
+    width: 100%;/* Setter bredde 300px på bildene*/
+    height: auto;/* Setter høyde 220px på bildene*/
+    border-top-right-radius: 30px; /* Avrunder øverst-høyre hjørne */
+    border-top-left-radius: 30px; /* Avrunder øverst-venstre hjørne */
+    max-width: 100%; /* Tillater bildens bredde ta 100% av plassen */
+    max-height: 100%; /* Tillater bildens høyde ta 100% av plassen */
+}
+
+.kantineItem{
+    text-align: center;/* Spesifiserer posisjonering horisontalt av tekst innad i grid-elementet*/
+    box-shadow: 0px 2px 2px 0px; /* Angir skyggeboks størrelse*/
+    border-radius: 30px;/* Definerer kant rundt innholdet - danner en boks*/
+    width: 400px; /* Tillater elementet å kunne ta 100% bredde  */
+    line-height: 60px; /* Setter distanse mellom linjer med tekst*/
+}
+
+.kantineItem:hover{
+    box-shadow: 2px 2px 2px 1px; /* Bytter skygge størrelse ved hover */
+}
+
+#pin{
+    width: 20px; /* Definerer bredde på location-pin elementene */
+    height: 20px;/* Definerer høyde på location-pin elementene */
+}
+/* ----- Endring av kantine.html SLUTT ----- */
+/* ----- Responsivt design for accessibility-siden START----- */
+
+@media (max-width:1024px){ /* Nettbrett (liggende) størrelse */
+    .kantineItem{
+        width: 75%; /* Setter alle kantineItem-elementer til 75% for bedre tilpasning til mindre skjermer*/
+    }
+}
+
+@media (max-width: 768px) { /* Nettbrett (stående) størrelse */
+    .kantineContainer{
+        grid-template-columns: 1fr; /* Endrer til enkelt-kolonner som tilpasses mindre skjermer bedre*/
+    }
+    .filter-option{
+        text-align: center; /* Sentrerer filter-valgene - disse legges itillegg under hverandre når skjermen når denne størrelsen*/
+        width: 50%; /* Filter-valgene brer seg ut til 50% av skjermen*/
+    }
+}
+/* ----- Responsivt design for accessibility-siden SLUTT----- */
 
 /* ----- Endring av datatorget.html START ----- */
 
@@ -654,13 +738,17 @@ body{
     right: 0;
 }
 .dark-mode{
-    background-color: #333; /*Mørk bakgrunnsfarge*/
+    background-color: #4c4b4b; /*Mørk bakgrunnsfarge*/
     color: white; /*Lys tekstfarge*/
 }
+
+.dark-mode .kantineContainer a{ /* Ved dark-mode endres kart-linkene i kantineside til hvit skrift for bedre kontrast */
+    color: white;
+}
 #dark-mode-toggle{
-    background-color: #333; /*Bakgrunnsfarge*/
+    background-color: #4c4b4b; /*Bakgrunnsfarge*/
     color: white; /* Tekstfarge */ 
-    border: 1px solid #333; /* Ramme, tykkelse, type og farge */
+    border: 1px solid #4c4b4b; /* Ramme, tykkelse, type og farge */
     padding: 10px 20px; /* Innvendig marg venstre og topp*/
     border-radius: 5px; 
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
