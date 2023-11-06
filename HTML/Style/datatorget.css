@@ -290,12 +290,29 @@ body{
 
 }
 
+@media (max-width: 19900px){
+    .grid-felles{
+        height: 000px;
+    }
+
+}
+
+
 @media (max-width: 1999px){
 
     .databilder{
         max-height: 45vh;
     }
-    
+
+    .mindre-margin{
+        
+    }
+
+    .grid-felles{
+        height: 600px;
+    }
+
+
 }
 
 
