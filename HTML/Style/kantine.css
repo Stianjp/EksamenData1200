@@ -22,6 +22,7 @@
     padding: 16px;
 }
 /*Globkale styles SLUTT*/
+
 /*Desktop 1200px -> er grunninnstilling*/
 /*CSS FOR NAVBAR START*/
 .navbar{
@@ -74,9 +75,14 @@
     right: 0;
 }
 .dark-mode{
-    background-color: #333; /*Mørk bakgrunnsfarge*/
+    background-color: #504e4e; /*Mørk bakgrunnsfarge*/
     color: white; /*Lys tekstfarge*/
 }
+
+.dark-mode .kantineItem a{
+    color: white;
+}
+
 #dark-mode-toggle{
     background-color: #333; /*Bakgrunnsfarge*/
     color: white; /* Tekstfarge */ 
@@ -160,11 +166,10 @@
     border-radius: 30px;/* Definerer kant rundt innholdet - danner en boks*/
     width: 400px; /* Tillater elementet å kunne ta 100% bredde  */
     line-height: 60px; /* Setter distanse mellom linjer med tekst*/
-    color: black;/* Setter svart farge teskten i innholdet*/
     text-align: center;
     box-shadow: grey;
-
 }
+
 .kantineItem:hover{
     box-shadow: 5px 5px 5px 2px grey;
 }
@@ -234,7 +239,7 @@
 
 
 /*Nettbrett stående 320-768*/
-@media (max-width:1250px){
+@media (max-width:1024px){
     .kantineContainer{
         grid-template-columns: 1fr 1fr;
     }
