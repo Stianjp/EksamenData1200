@@ -782,6 +782,11 @@ body{
     background-color: green;
 }
 
+/*Beholder footer-farge på teksten ved dark-mode aktivert*/
+body.dark-mode footer{
+    color: black;
+}
+
 /*Introteksten til accessibility-siden:*/
 .accessibility-intro{
     /*Øker utvendig marg top:*/
