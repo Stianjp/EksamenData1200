@@ -134,12 +134,12 @@
     display: none; /*Skjuler de elementene som ikke inneholder valgte filter */
 }
 .myBtnContainer{
-    button[data-filter="veg"]:focus ~ div:not([class*="veg"]) {
-      display:none;
+    button[data-filter="veg"]:focus ~ div:not([class*="veg"]) { /* Fokuserer på alle elementer som er tagget med 'veg'*/
+      display:none; /* Gjemmer alle elementer som ikke er tagget med 'veg' */
     }
     
-    button[data-filter="studRab"]:focus ~ div:not([class*="studRab"]) {
-      display:none;
+    button[data-filter="studRab"]:focus ~ div:not([class*="studRab"]) { /* Fokuserer på alle elementer som er tagget med 'studRab'*/
+      display:none; /* Gjemmer alle elementer som ikke er tagget med 'studRab' */
     }
   }
 
@@ -156,24 +156,22 @@
 .kantineBilder{
     width: 100%;/* Setter bredde 300px på bildene*/
     height: auto;/* Setter høyde 220px på bildene*/
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-    max-width: 100%;
-    max-height: 100%;
+    border-top-right-radius: 30px; /* Avrunder øverst-høyre hjørne */
+    border-top-left-radius: 30px; /* Avrunder øverst-venstre hjørne */
+    max-width: 100%; /* Tillater bildens bredde ta 100% av plassen */
+    max-height: 100%; /* Tillater bildens høyde ta 100% av plassen */
 }
 
 .kantineItem{
     text-align: center;/* Spesifiserer posisjonering horisontalt av tekst innad i grid-elementet*/
-    box-shadow: 0px 5px 5px 0px grey;
+    box-shadow: 0px 2px 2px 0px; /* Angir skyggeboks størrelse*/
     border-radius: 30px;/* Definerer kant rundt innholdet - danner en boks*/
     width: 400px; /* Tillater elementet å kunne ta 100% bredde  */
     line-height: 60px; /* Setter distanse mellom linjer med tekst*/
-    text-align: center;
-    box-shadow: grey;
 }
 
 .kantineItem:hover{
-    box-shadow: 2px 2px 2px 1px;
+    box-shadow: 2px 2px 2px 1px; /* Bytter skygge størrelse ved hover */
 }
 
 #pin{
