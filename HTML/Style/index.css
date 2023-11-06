@@ -523,13 +523,14 @@ body{
 }
 
 /* ----- Footer START (felles for flere sider) -----*/
+.Footer-gul{
+    background-color: #ffdb01;
+}
+
 .grid-footer-container {
     /*Bruker grid, med 3 kolonner som er like store*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
-    /*Endrer bakgrunnsfarge på footer*/
-    background-color: #ffdb01;
     
     /*Øker innvendig marg*/
     padding: 15px;
@@ -579,6 +580,15 @@ body{
     /*Bytter bakgrunnsfarge og endrer fra musepeker til hånd*/
     background-color: #0056b3;
     cursor: pointer;
+}
+
+/*Style til Copyright*/
+.footer-copyright{
+    /*Endrer skriftstørrelse*/
+    font-size: 10px;
+    
+    /*Sentrerer tekst*/
+    text-align: center;
 }
 
 /*Style til linker til sosiale medier*/
