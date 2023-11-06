@@ -1,4 +1,4 @@
-/* ----- JAVASCRIPT FOR INDEX.html ---- */
+/* ----- JAVASCRIPT FOR HJEM-SIDEN ---- */
 /* Javascript for tilbakemeldingsboksen */
 function sendMelding(){
             var meldingsboks = document.getElementById("melding"); 
@@ -23,7 +23,7 @@ document.getElementById("menyToggle").addEventListener("click", toggleMobilMeny)
 document.getElementById("lukkMeny").addEventListener("click", toggleMobilMeny);
 
 
-/* ----- JAVASCRIPT FOR ACCESSIBILITY.html ---- */
+/* ----- JAVASCRIPT FOR DARKMODE ---- */
 // Hent knappen og body elementet 
 const darkModeToggle = document.getElementById("dark-mode-toggle");
 const darkModeDot = document.getElementById("dark-mode-dot")
@@ -42,3 +42,21 @@ darkModeToggle.addEventListener("click", function(){
         darkModeDot.classList.add("green-dot"); //Legger til den grønne prikken
     }
 });
+
+
+/* ----- Javascript for kantine.html ----- */
+/*Filtrerer kantineelementer*/
+function filtrerSok(e){
+    const spiseSted = document.querySelectorAll(".kantineContainer div");
+    let filter = e.target.dataset.filter;
+    if (filter === '*') {
+      spiseSted.forEach(spiseSted => spiseSted.classList.remove('hidden'));
+    }  
+    else {
+      spiseSted.forEach(spiseSted => {
+        spiseSted.classList.contains(filter) ? 
+        spiseSted.classList.remove('hidden') : 
+        spiseSted.classList.add('hidden');
+      });
+    };
+};
