@@ -116,22 +116,22 @@
     text-align: center; /* Spesifiserer hvor tektsen skal plasseres innad i elementet*/
     margin: 5%;/* Definerer plass utenfor elementes grense */
     padding: 50px;/* Gir større plass rundt innholdet i elementet*/
-    overflow-wrap: break-word;
+    overflow-wrap: break-word; /*Bryter ordene dersom teksten går utenfor tillatt område*/
 }
 
 .filter{
-    text-align: center;
+    text-align: center; /*Sentrerer teksten horisontalt*/
 }
 .filter-option{
-    padding: 10px;
-    width: 200px;
+    padding: 10px; /*Gir avstand mellom filter-boksene */
+    width: 200px; /*Setter bredden for filter-boksene*/
 }
 .filter-option:hover{
-    background-color: #ccc;
+    background-color: #ccc; /*Filter-boksene markeres mørkere når de hovres over, lettere å se hvilken boks man eventuelt klikker på*/
 }
 
 .hidden{
-    display: none;
+    display: none; /*Skjuler de elementene som ikke inneholder valgte filter */
 }
 .myBtnContainer{
     button[data-filter="veg"]:focus ~ div:not([class*="veg"]) {
@@ -144,13 +144,13 @@
   }
 
 .kantineContainer{
-    display: grid;/* Setter innholdet i et rutenettsystem */
+    display: grid;/* Setter innholdet i Grid (rutenettsystem) */
     place-items: center; /*Sentrerer selve gridden på nettsiden*/
     grid-template-columns: 1fr 1fr; /* Tillater å plassere 3 elementer i 1fr-størrelse horisontalt */
-    grid-gap: 25px 10px;/* Gir oss mer space mellom hvert grid-elemtnt (top, right) */
+    grid-row-gap: 25px;/* Gir oss mer space mellom hvert grid-element */
     padding: 10px;/* Gir større plass rundt innholdet innad i grid-elementet */
-    overflow: hidden;
-    margin: 5%;
+    overflow: hidden; /*Skjuler innholdet som går utenfor gjeldene element*/
+    margin: 5%; /*Gir avstand mellom hvert grid-element innad container*/
 } 
   
 .kantineBilder{
@@ -241,17 +241,17 @@
 
 @media (max-width:1024px){
     .kantineItem{
-        width: 75%;
+        width: 75%; /* Setter alle kantineItem-elementer til 75% for bedre tilpasning til mindre skjermer*/
     }
 }
 
 @media (max-width: 768px) {
     .kantineContainer{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Endrer til enkelt-kolonner som tilpasses mindre skjermer bedre*/
     }
     .filter-option{
-        text-align: center;
-        width: 50%;
+        text-align: center; /* Sentrerer filter-valgene - disse legges itillegg under hverandre når skjermen når denne størrelsen*/
+        width: 50%; /* Filter-valgene brer seg ut til 50% av skjermen*/
     }
 }
 
