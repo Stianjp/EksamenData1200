@@ -154,12 +154,12 @@
 } 
   
 .kantineBilder{
-    width: 400px;/* Setter bredde 300px på bildene*/
+    width: 100%;/* Setter bredde 300px på bildene*/
     height: auto;/* Setter høyde 220px på bildene*/
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    max-width: 400px;
-    max-height: 250px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .kantineItem{
@@ -236,14 +236,22 @@
 
 /*Media Query START*/
 /*Responsiv design*/
-
 /*Mobil 320-500px*/
 
 
-/*Nettbrett stående 320-768*/
 @media (max-width:1024px){
+    .kantineItem{
+        width: 75%;
+    }
+}
+
+@media (max-width: 768px) {
     .kantineContainer{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .filter-option{
+        text-align: center;
+        width: 50%;
     }
 }
 
