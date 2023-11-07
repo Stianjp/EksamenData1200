@@ -18,14 +18,14 @@
     <header>
         <!--Navigasjonsbar START-->
         <nav class="navbar">
-            <a href="/HTML/Norsk/Hjem/index.html" class="logo"><img src="/HTML/Media/Navbar/OsloMetLogo.webp" alt="OsloMet Logo"></a>
+            <a href="/HTML/Norsk/Hjem/index.html" class="logo"><img src="/HTML/Media/Navbar/OsloMetLogo.webp" alt="OsloMet Logo" aria-label="Tilbake til start-siden"></a>
             <!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
 
             <!--Standrad navigasjonsmeny for større skjermer-->
             <div class="NavElementer">
                 <!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
                 <!--Flex-boks 1-->
-                <a href="/HTML/Norsk/Hjem/index.html">Hjem</a>
+                <a href="/HTML/Norsk/Hjem/index.html" aria-label="Knapp for å gå til hjem">Hjem</a>
 
                 <!--Flex-boks 2-->
                 <a href="/HTML/Norsk/Topical/index.html">Topical</a>
@@ -158,10 +158,10 @@
 
             <!--Tekst som vises på skjermer mindre enn 1024px bred-->
             <div class="responsiv-tekst">
-                <h2 class="InnføringCampus-tekst-felles padding-20px">
+                <h2 class="padding-20px">
                     Pilestredet 52
                 </h2>
-                <p class="InnføringCampus-tekst-felles padding-20px">
+                <p class="padding-20px">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eaque!
                 </p>
             </div>
@@ -170,14 +170,14 @@
         <!--Tekst til venstre med tilhørende bilde for mindre skjerm: grid-boks 3-->
         <div class="grid-item-innføringCampus-venstre">
             <!--Teksten er kun synlig ved større enn 1025px bredde-->
-            <h2 class="Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
+            <h2 class="Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre padding-20px">
                 Pilestredet 52 
             </h2>
-            <p class="Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
+            <p class="Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre padding-20px">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eaque!
             </p>
             <p
-                class="grid-item-innføringCampus-skille farge-hvit Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
+                class="grid-item-innføringCampus-skille farge-hvit Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre  padding-20px">
             </p>
 
             <!--Bilde som vises på skjermer mindre enn 1024px bredde-->
@@ -188,17 +188,17 @@
         <!--Tekst til høyre: grid-boks 4-->
         <div class="grid-item-innføringCampus-høyre margin-bottom-100px">
             <!--grid-boks 4-->
-            <h2 class="InnføringCampus-tekst-felles padding-20px">
+            <h2 class="padding-20px">
                 Pilestredet 35
             </h2>
-            <p class="InnføringCampus-tekst-felles padding-20px">
+            <p class="padding-20px">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eaque!
             </p>
-            <p class="grid-item-innføringCampus-skille Fjernes-ved-liten-skjerm InnføringCampus-tekst-felles padding-20px"></p>
+            <p class="grid-item-innføringCampus-skille Fjernes-ved-liten-skjerm padding-20px"></p>
         </div>
 
         <!--Artikkel til venstre: grid-boks 5-->
-        <div class="grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
+        <div class="grid-item-innføringCampus-venstre padding-20px">
             <!--grid-boks 5-->
             <h3>
                 Flere studenter velger økonomi, helse og kreative fag ved OsloMet
@@ -215,7 +215,7 @@
         </div>
 
         <!--Artikkel til høyre: grid-boks 6-->
-        <div class="grid-item-innføringCampus-høyre margin-bottom-100px InnføringCampus-tekst-felles padding-20px">
+        <div class="grid-item-innføringCampus-høyre margin-bottom-100px padding-20px">
             <!--grid-boks 6-->
             <h3>
                 Slik finner du studentbolig i Oslo
@@ -309,8 +309,8 @@
         </p>
     </footer>
 
-    <!--Linker javascript-filen til HTML-->
-    <script src="/HTML/Style/index.js"></script>
+    <!--Linker javascript-filen til HTML. Denne lastes ikke inn før HTML er parsret-->
+    <script src="/HTML/Style/index.js" defer></script>
 </body>
 
 </html>

@@ -295,12 +295,6 @@ body{
     border: solid #150c4b;
 }
 
-/*Fellesklasse for de to tekstene under bilde*/ 
-.InnføringCampus-tekst-felles{
-    /*Endrer tekststørrelse og tekstplassering*/
-    text-align: justify;
-}
-
 /*Tekst-boks under bilde på venstre side (Pilestredet 52)*/
 .grid-item-innføringCampus-venstre {
     /*Endrer bakgrunnsfarge på andre del av introside*/
@@ -794,17 +788,26 @@ body.dark-mode footer{
     /*Setter teksten i midten av siden*/
     text-align: center;
 }
+
 .accessibility-tester-container{
     margin: 10px;
 }
+
 .tester-bilder{
     width: 28rem
 }
+
 .margin-20px{
     margin: 20px;
 }
+
 .lighthouse-bilder{
     width: 35rem;
+}
+
+.Tekst-Link{
+    text-decoration: underline;
+    
 }
 
 /* ----- Responsivt design for accessibility-siden ----- */
