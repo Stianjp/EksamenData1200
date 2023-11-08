@@ -120,6 +120,12 @@ body{
     visibility: hidden;
 }
 
+.logo{
+    /*Endrer størrelse på logoen*/
+    width: 120px;
+    height: auto
+}
+
 /* ----- Responsiv design Navbar: Liten skjerm 1025-1999px ----- */
 @media (max-width: 1999px) {
     .navbar {
@@ -149,7 +155,6 @@ body{
 
 /* ----- Responsivt design for Navbar: Nettbrett liggende 769-1024px ----- */
 @media (max-width: 1024px) {
-
     /*Viser hamburger-ikonet for mindre skjermer*/
     .fa-bars {
         display: inline-block;
@@ -229,9 +234,20 @@ body{
         background-color: rgba(255, 255, 255, 0.3);
     }
 
+/* ----- Responsivt design for Navbar: Nettbrett liggende 420-769px ----- */
     @media (max-width: 768px){
         .fa-bars{
             right: 20%;
+        }
+        .logo{
+            width: 100px;
+        }
+    }
+
+    /* ----- Responsivt design for Navbar: Nettbrett liggende 320-419px ----- */
+    @media(max-width: 419px){
+        .logo{
+            width: 75px;
         }
     }
 }
