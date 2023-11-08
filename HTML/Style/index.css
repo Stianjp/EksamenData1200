@@ -10,6 +10,11 @@
     margin: 0;
     padding: 0;
 }
+/*Gjør scrolling mer smooth
+Kode er hentet fra: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1 */
+html {
+    scroll-behavior:smooth;
+  }
 /*Standard lys modus*/
 body {
     background-color: white;
@@ -45,7 +50,7 @@ body {
 .farge-hvit {
     border-color: white;
     color: white;
-    background-color: rgba(0, 0, 0, 0.733);
+   /* background-color: rgba(0, 0, 0, 0.733);*/
 }
 
 
@@ -65,22 +70,17 @@ body {
     /*Endrer navbaren sin høyde til å være 7% av skjermens synsfelt og posisjko*/
     height: 7vh;
 
-    /*Posisjonerer navbaren i henhold til sin normale posisjon i dokumentstrømmen*/
-    position: relative;
+    /*Posisjonerer navbaren øverst på siden hele tiden*/
+    position: fixed;
+    width: 100%;
 
     /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
-    background-color: #ffdb01;
+    background-color: rgba(0, 0, 0, 0.70);
 
     /*Endring av tekst: fet skrift, større skriftstørrelse og skygge*/
     font-weight: bold;
     font-size: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-/*Logoen sin høyde til å være 80 px og bredde til automatisk*/
-.logo img {
-    height: 100%;
-    width: auto;
 }
 
 .NavElementer {
@@ -94,13 +94,13 @@ body {
 
 .NavElementer a {
     /*Endrer farge på teksten i hvert element i navbar*/
-    color: black;
+    color: #ffdb01;
 }
 
 .navbar a:hover {
     /*Benytter andre farger når man hovrer over linker for å øke kontrasten*/
-    color: #555;
-    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .navbar .logo:hover {
@@ -122,11 +122,6 @@ body {
 
 /* ----- Responsiv design Navbar: Liten skjerm 1025-1999px ----- */
 @media (max-width: 1999px) {
-    .logo img {
-        /*Setter høyden til logoen*/
-        height: 60px;
-    }
-
     .navbar {
         /*Endrer skriftstørrelse til 25px*/
         font-size: 25px;
@@ -138,11 +133,6 @@ body {
     /*Øker skriftstørrelse i navbar*/
     .navbar{
         font-size: 30px;
-    }
-
-    /*Øker størrelse på logo*/
-    .logo img {
-        height: 7vh;
     }
     .grid-item-innføringCampus-venstre{
         font-size: 2rem;
@@ -164,6 +154,9 @@ body {
     .fa-bars {
         display: inline-block;
         visibility: visible;
+        color: #ffdb01;
+        position: absolute;
+        right: 10%;
     }
 
     /*Fjerner standard navigasjonselementer for små skjermer*/
@@ -182,15 +175,15 @@ body {
         position: absolute;
 
         /*Plassering av menyen og setter bredde til 100% for å dekke hele*/
-        top: 100%;
-        left: 0%;
+        top:100%;
         width: 100%;
+        left: -40px;
 
         /*Benytter samme farge som opprinnelig navbar*/
-        background-color: #ffdb01;
+        background-color: #ffd901;
 
         /*Plasserer elementene i mobil-nav i midten*/
-        align-items: center;
+        /*align-items: center;*/
 
         z-index: 1;
     }
@@ -223,17 +216,23 @@ body {
 
     /*Stil for lukk-knapp i mobil navigasjon*/
     #lukkMeny {
-        /*Endrer utvendig og innvendig marg*/
-        margin: 30px;
-        padding: 10px;
-
+        margin-bottom: 2%;
+        width: 25%;
+        align-self: center;
         /*Øker tekststørrelse*/
         font-size: 20px;
+
     }
 
     #lukkMeny:hover {
         /*For å øke kontrasten når man hovrer*/
         background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 768px){
+        .fa-bars{
+            right: 20%;
+        }
     }
 }
 /* ----- NAVBAR SLUTT ----- */
@@ -247,7 +246,11 @@ body {
     /*Endring av bildet: plasserer bildet i midten av elementet, unngår at den gjentar seg og dekker hele siden*/
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
+}
+/* Oppretter et mørkere filter over bakgrunnsbilde for å fremheve konstraster */
+.bakgrunn-intro-shadow-container{
+    background-color: rgba(0, 0, 0, 0.600);
 }
 
 /*1. tekstboks på introside - sammen med bilde: ToStudenter*/
@@ -390,11 +393,11 @@ body {
         display: flex;
         flex-direction: column;
     }
-    .bakgrunn-intro-container{
-        height: 110vh;
-    }
+   
     .IntroContainer{
-        height: 110vh;
+        height: 100%;
+        align-items: center;
+        padding-top: 10%;
     }
 
     /*Øker mellomrom mellom bilde og tekst på intro- og campuscontainer*/
@@ -475,11 +478,7 @@ body {
         /*Endrer størrelse på bilde*/
         max-width: 20rem;
     }
-    .introTekst{
-        row-gap: 1rem;
-        padding: 30px;
-        height: 80vh;
-    }
+  
 
     /*Minker skriftstørrelse*/
     .grid-item-felles{
@@ -487,11 +486,13 @@ body {
     }
     .CampusContainer{
         padding: 30px;
-        height: 70vh;
-        row-gap: 0;
+        height: 70%;
     }
     .Introside-bilde-responsiv{
         max-width: 20rem;
+    }
+    .IntroContainer{
+        padding-top: 25%;
     }
 }
 
@@ -510,9 +511,6 @@ body {
     }
     .Introside-bilde-responsiv{
         width: 34vh;
-    }
-    .bakgrunn-intro-container{
-        height: 114vh;
     }
 }
 
@@ -604,13 +602,6 @@ body {
 
 /*Endrer effekter til knappen når musen er over den*/
 .fa:hover {
-    /*Endring av tekst: underlinje og farge*/
-    text-decoration: underline;
-    color: rgb(255, 255, 255);
-    
-    /*Endrer bakgrunnsfarge*/
-    background-color: rgba(0, 0, 0, 0.47);
-    
     /*Gjør hjørnene noe rundere*/
     border-radius: 4px;
 }
@@ -812,7 +803,7 @@ kantineItem.dark-mode {
 
 .Tekst-Link{
     text-decoration: underline;
-    
+
 }
 
 /* ----- Responsivt design for accessibility-siden ----- */
@@ -833,3 +824,4 @@ kantineItem.dark-mode {
 }
 
 /* ----- Endring av accessibility.html SLUTT ----- */
+
