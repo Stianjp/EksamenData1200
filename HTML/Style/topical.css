@@ -20,28 +20,10 @@
     font-size: 20px; /*Endrer tekststørrelsen*/
     padding: 16px;
 }
-.grid-image-1 {
+.grid-image {
     width: 100%;
     max-width: 100%;
     height: auto; /*Bruk Auto for rett format*/
-    margin-bottom: 10px;
-}
-.grid-image-2 {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-.grid-image-3 {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-.grid-image-4 {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
     margin-bottom: 10px;
 }
 /*Globkale styles SLUTT*/
