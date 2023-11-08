@@ -10,8 +10,13 @@
     margin: 0;
     padding: 0;
 }
+/*Gjør scrolling mer smooth
+Kode er hentet fra: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1 */
+html {
+    scroll-behavior:smooth;
+  }
 /*Standard lys modus*/
-body{
+body {
     background-color: white;
     color: black;
 }
@@ -78,12 +83,6 @@ body{
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/*Logoen sin høyde til å være 80 px og bredde til automatisk*/
-.logo img {
-    /*height: 100%;
-    width: auto;*/
-}
-
 .NavElementer {
     /*Benytter flex for å legge elementene på en horisontal linje og tar opp 80% av navbaren - slik at det er plass til logo*/
     display: flex;
@@ -121,13 +120,14 @@ body{
     visibility: hidden;
 }
 
+.logo{
+    /*Endrer størrelse på logoen*/
+    width: 120px;
+    height: auto
+}
+
 /* ----- Responsiv design Navbar: Liten skjerm 1025-1999px ----- */
 @media (max-width: 1999px) {
-    .logo img {
-        /*Setter høyden til logoen*/
-        height: 60px;
-    }
-
     .navbar {
         /*Endrer skriftstørrelse til 25px*/
         font-size: 25px;
@@ -139,11 +139,6 @@ body{
     /*Øker skriftstørrelse i navbar*/
     .navbar{
         font-size: 30px;
-    }
-
-    /*Øker størrelse på logo*/
-    .logo img {
-        height: 7vh;
     }
     .grid-item-innføringCampus-venstre{
         font-size: 2rem;
@@ -160,7 +155,6 @@ body{
 
 /* ----- Responsivt design for Navbar: Nettbrett liggende 769-1024px ----- */
 @media (max-width: 1024px) {
-
     /*Viser hamburger-ikonet for mindre skjermer*/
     .fa-bars {
         display: inline-block;
@@ -240,9 +234,20 @@ body{
         background-color: rgba(255, 255, 255, 0.3);
     }
 
+/* ----- Responsivt design for Navbar: Nettbrett liggende 420-769px ----- */
     @media (max-width: 768px){
         .fa-bars{
             right: 20%;
+        }
+        .logo{
+            width: 100px;
+        }
+    }
+
+    /* ----- Responsivt design for Navbar: Nettbrett liggende 320-419px ----- */
+    @media(max-width: 419px){
+        .logo{
+            width: 75px;
         }
     }
 }
@@ -404,9 +409,7 @@ body{
         display: flex;
         flex-direction: column;
     }
-    .bakgrunn-intro-container{
-        /*height: 100%;*/
-    }
+   
     .IntroContainer{
         height: 100%;
         align-items: center;
@@ -524,9 +527,6 @@ body{
     }
     .Introside-bilde-responsiv{
         width: 34vh;
-    }
-    .bakgrunn-intro-container{
-        /*height: 114vh;*/
     }
 }
 
@@ -749,7 +749,7 @@ body{
     right: 0;
 }
 .dark-mode{
-    background-color: #4c4b4b; /*Mørk bakgrunnsfarge*/
+    background-color: #0A0A0A; /*Mørk bakgrunnsfarge*/
     color: white; /*Lys tekstfarge*/
 }
 
@@ -787,6 +787,11 @@ body{
 body.dark-mode footer{
     color: black;
 }
+
+kantineItem.dark-mode {
+    background-color: #0A0A0A;
+}
+
 
 /*Introteksten til accessibility-siden:*/
 .accessibility-intro{
