@@ -23,25 +23,25 @@
 .grid-image-1 {
     width: 100%;
     max-width: 100%;
-    height: 350px; /*Bruk Auto for rett format*/
+    height: auto; /*Bruk Auto for rett format*/
     margin-bottom: 10px;
 }
 .grid-image-2 {
     width: 100%;
     max-width: 100%;
-    height: 350px;
+    height: auto;
     margin-bottom: 10px;
 }
 .grid-image-3 {
     width: 100%;
     max-width: 100%;
-    height: 350px;
+    height: auto;
     margin-bottom: 10px;
 }
 .grid-image-4 {
     width: 100%;
     max-width: 100%;
-    height: 350px;
+    height: auto;
     margin-bottom: 10px;
 }
 /*Globkale styles SLUTT*/
@@ -97,6 +97,59 @@
     width: 300px;
     height: auto;
 }
+
+/* Media query for mobil */
+@media screen and (max-width: 425px) {
+    .grid-felles {
+        grid-template-columns: 1fr;
+    }
+    .grid-container {
+        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 768px */
+    }
+    .main-content {
+        grid-column: 1; 
+        grid-row: 1; /* Flytt main content over sidebar */
+    }
+    .sidebar {
+        grid-column: 1; 
+        grid-row: 2; /* Flytt sidebar under main content */
+
+    }
+}
+/* Media query for nettbrett stående */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .grid-felles {
+        grid-template-columns: 1fr;
+    }
+    .grid-container {
+        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 768px */
+    }
+    .main-content {
+        grid-column: 1; 
+        grid-row: 1; /* Flytt main content over sidebar */
+    }
+    .sidebar {
+        grid-column: 1; 
+        grid-row: 2;  /* Flytt sidebar under main content */
+    }
+    
+}
+/* Media query for nettbrett liggende */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .main-content {
+        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 900px */
+        grid-row: 1;
+    }
+    .sidebar{
+        grid-template-columns: 1fr;
+        grid-row: 2;
+    }
+
+}
+
 /* -------- Header: Navbar (felles for alle sider)  ---------------------*/
 /* ------Responsivt design: Desktop 1200px -> 2000px er grunninnstilling ----- */
 .navbar {
