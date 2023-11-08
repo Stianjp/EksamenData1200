@@ -13,7 +13,7 @@
     <header>
         <!--Navigasjonsbar START-->
         <nav class="navbar">
-            <a href="index.html" class="logo"><img src="/HTML/Media/Navbar/OsloMetLogo.webp" alt="OsloMet Logo"></a><!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
+            <a href="/HTML/Norsk/Hjem/index.html" class="logo"><img src="/HTML/Media/Navbar/OsloMetLogo.webp" alt="OsloMet Logo"></a><!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
             
             <!--Standrad navigasjonsmeny for større skjermer-->
             <div class="NavElementer"><!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
@@ -35,32 +35,32 @@
 
                     <!--Link til index siden: grid-boks 1-->
                     <div class="meny-knapp">
-                        <a href="index.html">Hjem </a>
+                        <a href="/HTML/Norsk/Hjem/">Hjem </a>
                     </div>
 
                     <!--Link til topical siden: grid-boks 2-->
                     <div class="meny-knapp">
-                        <a href="topical.html">Topical </a>
+                        <a href="/HTML/Norsk/Topical/index.html">Topical </a>
                     </div>
 
                     <!--Link til kantine siden: grid-boks 3-->
                     <div>
-                        <a href="kantine.html">Kantine</a>
+                        <a href="/HTML/Norsk/Kantine/index.html">Kantine</a>
                     </div>
 
                     <!--Link til datatorget siden: grid-boks 4-->
                     <div>
-                        <a href="datatorget.html">Datatorget</a>
+                        <a href="/HTML/Norsk/datatorget/index.html">Datatorget</a>
                     </div>
 
                     <!--Link til accessibility siden: grid-boks 5-->
                     <div>
-                        <a href="accessibility.html">Accessibility</a>
+                        <a href="/HTML/Norsk/Tilgjengelighet/index.html">Accessibility</a>
                     </div>
 
                     <!--Link til den engelske siden som man befinner seg på: grid-boks 6-->
                     <div>
-                        <a href="ENindex.html">EN</a>
+                        <a href="/HTML/English/Cafeteria/index.html">EN</a>
                     </div>
                 </div>
 
@@ -171,7 +171,7 @@
         <!--Kantine main SLUTT-->
 
         <!--Footer START-->
-    <footer>
+    <footer class="Footer-gul">
         <div class="grid-footer-container">
             <div class="grid-item-felles"><!--Grid-boks 1: spørsmål/tilbakemeldingsboks-->
                 <h4>Send oss spørsmål eller tilbakemelding</h4>
@@ -204,9 +204,12 @@
                 </div>
             </div>
         </div>
-        <script src="/HTML/Style/index.js"></script> <!--Linker javascript-filen til HTML-->
-
+        <p class="footer-copyright">
+            Copyright © 2023 Lorem ipsum dolor
+        </p>
+        
     </footer>
     <!--Footer SLUTT-->
+    <script src="/HTML/Style/index.js"></script> <!--Linker javascript-filen til HTML-->
 </body>
 </html>

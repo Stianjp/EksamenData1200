@@ -15,14 +15,14 @@
 <header>
     <!--Navigasjonsbar START-->
     <nav class="navbar">
-        <a href="index.html" class="logo"><img src="/HTML/Media/Navbar/OsloMetLogo.webp" alt="OsloMet Logo" loading="lazy"></a>
+        <a href="index.html" class="logo"><img src="/HTML/Media/Navbar/OsloMetLogo.webp" alt="OsloMet Logo" loading="lazy" aria-label="Tilbake til start-siden"></a>
         <!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
 
         <!--Standrad navigasjonsmeny for større skjermer-->
         <div class="NavElementer">
             <!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
             <!--Flex-boks 1-->
-            <a href="/HTML/Norsk/Hjem/index.html">Hjem</a>
+            <a href="/HTML/Norsk/Hjem/index.html" aria-label="Knapp for å gå til hjem">Hjem</a>
 
             <!--Flex-boks 2-->
             <a href="/HTML/Norsk/Topical/index.html">Topical</a>
@@ -86,39 +86,44 @@
             Dark Mode
         </button>
     </div>
-    
+    <!--Introtekst-->
     <div class="accessibility-intro">
         <h1>Generelt om accessibility i eksamen</h1>
-        <p>Vi har sett på flere elementer ved å få siden universell utformet for en best mulig brukeropplevelse og tilgjengelighet.</p>
+        <p>Universell utforming er essensielt for å skape et inkluderende miljø. Vi har tatt for oss flere elementer ved universell utforming for å oppnå en best mulig brukeropplevelse og tilgjengelighet.</p>
+        <p>Vi tok for oss å skrive om hjem-siden med tanke på tilgjengelighet. Alle andre sider ble også kjørt igjennom testene som er beskrevet nedenfor.</p>
+        <p>I tillegg til testene som er gjennomført, ble det også spurt andre med-studenter og familie om de kunne teste ut nettsisden vår. Her ønsket vi tilbakemelding om alt var leslig, funket den optimalt på PC og mobil/nettbrett, om det gjort funn av noe "bugs" og om sidene var lett å navigere seg igjennom.</p>
+        <p>Her fikk vi tilbakemeldinger på at det var kult med en knapp for dark-mode på noen av sidene. Teksten var leslig og lett å navigere mellom sidene. Det ble ikke rapportert om problemer med å trykke på linker. Da vi hadde tatt høyde for å ha nok mellomrom mellom knapper i navbar.</p>
         <br>
         <p>Det ble benyttet tester for å se på generelle errors, kontrast-feil, feiler og mangler på hver side</p>
         <h2>Tester som ble benyttet:</h2>
     </div>
+
+    <!--Kort intro om testene vi har brukt-->
     <div class="accessibility-tester-container">
         <div class="grid-felles-2kol-1rad">
             <!--Grid-boks 1: WAVE-->
             <div>
                 <h3>WAVE Evulation tool</h3>
-                <p>Wave bruker en automatisert tilgjengelighetskontroll av nettsider og generer rapporter som viser eventuelle feil og mangler</p>
+                <p><a href="https://wave.webaim.org/" class="Tekst-Link">Wave</a> bruker en automatisert tilgjengelighetskontroll av nettsider og generer rapporter som viser eventuelle feil og mangler</p>
                 <figure>
-                    <img class="tester-bilder" src="/HTML/Media/Accebility/Skjermbilde 2023-10-30 kl. 11.44.29 2.png" 
-                    alt="Skjermbilde av Wave Evulation tool. Viser 0 errors, 0 kontrast errors, 13 alerts, 8 features og 13 structural elements">
+                    <img class="tester-bilder" src="/HTML/Media/Accebility/Skjermbilde 2023-10-30 kl. 11.44.webp" 
+                    alt="Skjermbilde av Wave Evulation tool.">
                     <figcaption>Generelt bilde av hvordan oversiktsrapport ser ut fra WAVE</figcaption>
                 </figure>
             </div>
             <!--Grid boks 2: Lighthouse-->
             <div>
                 <h3>Lighthouse</h3>
-                <p>Lighthouse sjekker tilgjengelighet, ytelse- og beste praksis-analyser for nettsider</p>
+                <p><a href="https://developer.chrome.com/docs/lighthouse/overview/" class="Tekst-Link">Lighthouse</a> sjekker tilgjengelighet, ytelse- og beste praksis-analyser for nettsider</p>
                 <figure>
-                    <img class="tester-bilder" src="/HTML/Media/Accebility/Skjermbilde av LightHouse.png" alt="Skjermbilde av hvordan Lighthouse rapport ser ut.">
+                    <img class="tester-bilder" src="/HTML/Media/Accebility/Skjermbilde av LightHouse.webp" alt="Skjermbilde av hvordan Lighthouse rapport ser ut.">
                     <figcaption>Generelt bilde av hvordan rapport fra Lighthouse ser ut</figcaption>
                 </figure>
             </div>
         </div>
     </div>
     
-    
+    <!--Resultater fra testene-->
     <h4 class="accessibility-intro">Felles for alle sider: Header og Footer</h4>
     <div class="grid-felles-2kol-1rad margin-20px">
             <!--Grid boks 1: Header-->
@@ -126,11 +131,11 @@
                 <h5>Header</h5>
                 <p>Feiler som kommer etter WAVE</p>
                 <ul>
-                    <li>Redudant link - Gjelder for hver side, at i navbar vil man kunne trykke på samme side man er på. Dette ble ikke endret på.</li>
+                    <li>Redudant link - Gjelder for hver side. Kommer av at begge linker går til samme sted. Ikke kritisk feil, så ble lagt til aria-label for å gi distinkt beskrivelse. Det å ha logo og hjem-knapp som går til samme sted (hjem-siden) er vanlig praksis på mange nettsteder.</li>
                 </ul>
             </div>
             <figure>
-                <img class="tester-bilder" src="/HTML/Media/Accebility/Skjermbilde av WAVE på Header.png" alt="Skjermbilde av WAVE rapport på header/navbar" loading="lazy">
+                <img class="tester-bilder" src="/HTML/Media/Accebility/Skjermbilde av WAVE på Header.webp" alt="Skjermbilde av WAVE rapport på header/navbar" loading="lazy">
                 <figcaption>Skjermbilde av WAVE rapport på header</figcaption>
             </figure>
             <!--Grid boks 3: Footer-->
@@ -144,7 +149,7 @@
             </div>
             <!--Grid boks 4: Skjermdump av WAVE-->
             <figure>
-                <img class="tester-bilder" src="/HTML/Media/Accebility/Skjermbilde av WAVE på footer.png" alt="Skjermbilde av WAVE rapport på footer" loading="lazy">
+                <img class="tester-bilder" src="/HTML/Media/Accebility/Skjermbilde av WAVE på footer.webp" alt="Skjermbilde av WAVE rapport på footer" loading="lazy">
                 <figcaption>Skjermbilde av WAVE rapport på footer</figcaption>
             </figure>
     </div>
@@ -153,52 +158,36 @@
     <!--Grid boks 1: Liste -->
     <div>
         <ul>
-            <li>WAVE har ingen errors eller konstrastfeil.</li>
-            <li>Lighthouse ga SEO 90%, det ble lagt inn meta beskrivelse, og da 100%</li>
-            <li>Lighthouse for mobil: Komprimert bilder for å bedre ytelse, økte 4%, og etter at man endret til % på width ble gikk den opp ytterligere 4%.</li>
-            <li>Ble også benyttet lazy-laoding på bilder som er lengre ned på siden, for å forbedre ytelsen til nettisden. Dette økte siden med 5% ytelse</li>
-            <li>83% ytelse kan komme av dårlig responsive bilder, fa-fabars, font-awsome (for å få hamburger-ikonet)</li>
-            
-            
+            <li><b>WAVE:</b> Ingen feil eller kontrastfeil ble funnet. Det er totalt 13 advarsler. Én av disse er liten tekst. Dette ble ikke gjort noe med siden det kun er copytight-teksten helt nederst på siden. 11 av disse feilmeldingene var advarsel om justify-tekst. Her ble klassen som gjorde noe tekst justifyet, fjernet. Dette ga ingen endring i brukeropplevelse på siden, og kunne deretter fjerne 12 klasser fra HTML og 1 klasse fra CSS.</li>
+            <li><b>Lighthouse:</b> Etter det ble lagt inn en meta-beskrivelse, oppnådde vi en SEO-score på 100%. For mobilversjonen ble det forbedret ytelse ved å komprimere bilder (endre filene til WEBP-format), samt bruke prosentvis bredde, noe som resulterte i en 4% forbedring. I tillegg ble det innført "lazy-loading" på bilder lengre ned på siden og dette økte ytelsen ytterligere 5%. </li>
+            <li>86% ytelse kan komme av dårlig responsive bilder, fa-fabars, font-awsome (for å få hamburger-ikonet)</li>
         </ul>
     </div>
     <!--Grid boks 2: Lighthouse desktop -->
     <figure>
-        <img class="lighthouse-bilder" src="/HTML/Media/Accebility/Skjermbilde av desktop rapport etter endring.png" alt="Skjerbilde av lighthouse desktop rapport" loading="lazy">
+        <img class="lighthouse-bilder" src="/HTML/Media/Accebility/Skjermbilde av desktop etter end.webp" alt="Skjerbilde av lighthouse desktop rapport" loading="lazy">
         <figcaption>Skjermbilde av lighthouse av desktop forsiden</figcaption>
     </figure>
     <!--Grid boks 3: tom-->
     <p></p>
     <!--Grid boks 4: Lighthouse mobil-->
     <figure>
-        <img class="lighthouse-bilder" src="/HTML/Media/Accebility/Skjermbilde av mobilrapport etter endring.png" alt="Skjermbilde av lighthouse mobil rapport" loading="lazy">
+        <img class="lighthouse-bilder" src="/HTML/Media/Accebility/Lighthouse-skjermbilde-mobil-rap.webp" alt="Skjermbilde av lighthouse mobil rapport" loading="lazy">
         <figcaption>Skjermbilde av lighhouse sin mobil rapport</figcaption>
+    </figure>
+    <!--Grid boks 5: WAVE feilmeldinger-->
+    <figure>
+        <img class="tester-bilder" src="/HTML/Media/Accebility/WAVE-skjermbilde-før-endring.webp" alt="Skjermbilde av WAVE tool på hjem-siden før endring. 13 alerts." loading="lazy">
+        <figcaption>Skjermbilde av WAVE sine alerts på hjem-siden</figcaption>
+    </figure>
+    <!--Grid-boks 6: Wave etter retting av feilmeldinger-->
+    <figure>
+        <img class="tester-bilder" src="/HTML/Media/Accebility/WAVE-skjermbilde-etter-endring.webp" alt="Skjermbilde av WAVE tool på hjem-siden etter endring. 2 alerts." loading="lazy">
+        <figcaption>Skjermbilde av WAVE etter retting av siden</figcaption>
     </figure>
     </div>
 
-    <h4 class="accessibility-intro">Datatorget</h4>
-    <div class="grid-felles-2kol-1rad margin-20px">
-        <!--Grid boks 1: -->
-        <div>
-            
-        </div>
-        <!--Grid boks 2: -->
-        
-        </div>
-
-    <h4 class="accessibility-intro">Kantine</h4>
-    <div class="grid-felles-2kol-1rad margin-20px">
-        <!--Grid boks 1: -->
-        <div>
-    
-        </div>
-        <!--Grid boks 2: -->
-        
-        </div>
-    <h4 class="accessibility-intro">Topical</h4>
-    
-    
-<!--Linker javascript-filen til HTML-->
-<script src="/HTML/Style/index.js"></script>
+<!--Linker javascript-filen til HTML. Denne lastes ikke inn før HTML er parsret-->
+<script src="/HTML/Style/index.js" defer></script>
 </body>
 </html>
