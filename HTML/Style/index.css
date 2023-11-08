@@ -11,7 +11,7 @@
     padding: 0;
 }
 /*Standard lys modus*/
-body{
+body {
     background-color: white;
     color: black;
 }
@@ -742,7 +742,7 @@ body{
     right: 0;
 }
 .dark-mode{
-    background-color: #4c4b4b; /*Mørk bakgrunnsfarge*/
+    background-color: #0A0A0A; /*Mørk bakgrunnsfarge*/
     color: white; /*Lys tekstfarge*/
 }
 
@@ -780,6 +780,11 @@ body{
 body.dark-mode footer{
     color: black;
 }
+
+kantineItem.dark-mode {
+    background-color: #0A0A0A;
+}
+
 
 /*Introteksten til accessibility-siden:*/
 .accessibility-intro{
