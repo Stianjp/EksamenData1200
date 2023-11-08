@@ -83,12 +83,6 @@ body{
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/*Logoen sin høyde til å være 80 px og bredde til automatisk*/
-.logo img {
-    /*height: 100%;
-    width: auto;*/
-}
-
 .NavElementer {
     /*Benytter flex for å legge elementene på en horisontal linje og tar opp 80% av navbaren - slik at det er plass til logo*/
     display: flex;
@@ -128,11 +122,6 @@ body{
 
 /* ----- Responsiv design Navbar: Liten skjerm 1025-1999px ----- */
 @media (max-width: 1999px) {
-    .logo img {
-        /*Setter høyden til logoen*/
-        height: 60px;
-    }
-
     .navbar {
         /*Endrer skriftstørrelse til 25px*/
         font-size: 25px;
@@ -144,11 +133,6 @@ body{
     /*Øker skriftstørrelse i navbar*/
     .navbar{
         font-size: 30px;
-    }
-
-    /*Øker størrelse på logo*/
-    .logo img {
-        height: 7vh;
     }
     .grid-item-innføringCampus-venstre{
         font-size: 2rem;
@@ -409,9 +393,7 @@ body{
         display: flex;
         flex-direction: column;
     }
-    .bakgrunn-intro-container{
-        /*height: 100%;*/
-    }
+   
     .IntroContainer{
         height: 100%;
         align-items: center;
@@ -529,9 +511,6 @@ body{
     }
     .Introside-bilde-responsiv{
         width: 34vh;
-    }
-    .bakgrunn-intro-container{
-        /*height: 114vh;*/
     }
 }
 
