@@ -10,6 +10,11 @@
     margin: 0;
     padding: 0;
 }
+/*Gjør scrolling mer smooth
+Kode er hentet fra: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1 */
+html {
+    scroll-behavior:smooth;
+  }
 /*Standard lys modus*/
 body{
     background-color: white;
