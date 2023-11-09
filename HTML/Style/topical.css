@@ -19,6 +19,7 @@
     text-align: center; /*Sentrerer teksten*/
     font-size: 20px; /*Endrer tekststørrelsen*/
     padding: 16px;
+    min-width: 200px;
 }
 .grid-image {
     width: 100%;
