@@ -659,6 +659,7 @@ body {
     margin: 5%;/* Definerer plass utenfor elementes grense */
     padding: 50px;/* Gir større plass rundt innholdet i elementet*/
     overflow-wrap: break-word; /*Bryter ordene dersom teksten går utenfor tillatt område*/
+    margin-top: 10%;
 }
 
 .filter{
