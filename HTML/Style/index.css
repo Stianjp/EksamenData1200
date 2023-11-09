@@ -67,12 +67,12 @@ body {
     /*Setter innvendig marg til å ha 14px på topp,  36px på høyre side*/
     padding: 14px 36px;
 
-    /*Endrer navbaren sin høyde til å være 7% av skjermens synsfelt og posisjko*/
-    height: 7vh;
-
     /*Posisjonerer navbaren øverst på siden hele tiden*/
     position: fixed;
     width: 100%;
+
+    /*Endrer høyde på navbar*/
+    height: 80px;
 
     /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
     background-color: rgba(0, 0, 0, 0.70);
@@ -188,7 +188,7 @@ body {
         background-color: #ffd901;
 
         /* Plasserer mobil-nav fremst*/
-        z-index: 1;
+        z-index: 2;
     }
 
     /*Spesifikke stiler for lenker inni mobil navigasjon*/
@@ -656,10 +656,9 @@ body {
 /*CSS FOR MAIN START*/
 .kantineIntro{
     text-align: center; /* Spesifiserer hvor tektsen skal plasseres innad i elementet*/
-    margin: 5%;/* Definerer plass utenfor elementes grense */
     padding: 50px;/* Gir større plass rundt innholdet i elementet*/
     overflow-wrap: break-word; /*Bryter ordene dersom teksten går utenfor tillatt område*/
-    margin-top: 10%;
+    padding-top: 15%;
 }
 
 .filter{
@@ -751,6 +750,7 @@ body {
 .dark-mode-container{
     position:absolute;
     right: 0;
+    top: 108px;
 }
 .dark-mode{
     background-color: #0A0A0A; /*Mørk bakgrunnsfarge*/

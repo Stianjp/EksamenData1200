@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +8,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Link til sosiale medier knapper-->
     <title>OsloMet</title>
 </head>
+
 <body>
     <!--Header START-->
     <header>
         <!--Navigasjonsbar START-->
         <nav class="navbar">
-            <a href="/HTML/Norsk/Hjem/index.html" class="logo"><img class="logo"  src="/HTML/Media/Navbar/Logomedsignatur_gul_OsloMet-01.png" alt="OsloMet Logo"></a><!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
-            
+            <a href="/HTML/Norsk/Hjem/index.html" class="logo"><img class="logo" src="/HTML/Media/Navbar/Logomedsignatur_gul_OsloMet-01.png" alt="OsloMet Logo" aria-label="Tilbake til start-siden"></a>
+
+            <!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
+
             <!--Standrad navigasjonsmeny for større skjermer-->
-            <div class="NavElementer"><!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
-                <a href="/HTML/Norsk/Hjem/index.html">Hjem</a><!--Flex-boks 1-->
-                <a href="/HTML/Norsk/Topical/index.html">Topical</a><!--Flex-boks 2-->
-                <a href="/HTML/Norsk/Kantine/index.html">Kantine</a><!--Flex-boks 3-->
-                <a href="/HTML/Norsk/datatorget/index.html">Datatorget</a><!--Flex-boks 4-->
-                <a href="/HTML/Norsk/Tilgjengelighet/index.html">Accessibility</a><!--Flex-boks 5-->
-                <a href="/HTML/English/Cafeteria/index.html">EN</a><!--Flex-boks 6-->
+            <div class="NavElementer">
+                <!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
+                <!--Flex-boks 1-->
+                <a href="/HTML/Norsk/Hjem/index.html" aria-label="Knapp for å gå til hjem">Hjem</a>
+
+                <!--Flex-boks 2-->
+                <a href="/HTML/Norsk/Topical/index.html">Topical</a>
+
+                <!--Flex-boks 3-->
+                <a href="/HTML/Norsk/Kantine/index.html">Kantine</a>
+
+                <!--Flex-boks 4-->
+                <a href="/HTML/Norsk/datatorget/index.html">Datatorget</a>
+
+                <!--Flex-boks 5-->
+                <a href="/HTML/Norsk/Tilgjengelighet/index.html">Accessibility</a>
+
+                <!--Flex-boks 6-->
+                <a href="/HTML/English/HomePage/index.html">EN</a>
             </div>
 
             <!--Standard naviasjonsmeny for mindre skjermer enn 1024px bredde-->
@@ -35,7 +50,7 @@
 
                     <!--Link til index siden: grid-boks 1-->
                     <div class="meny-knapp">
-                        <a href="/HTML/Norsk/Hjem/">Hjem </a>
+                        <a href="/HTML/Norsk/Hjem/index.html">Hjem </a>
                     </div>
 
                     <!--Link til topical siden: grid-boks 2-->
@@ -60,7 +75,7 @@
 
                     <!--Link til den engelske siden som man befinner seg på: grid-boks 6-->
                     <div>
-                        <a href="/HTML/English/Cafeteria/index.html">EN</a>
+                        <a href="/HTML/English/HomePage/index.html">EN</a>
                     </div>
                 </div>
 
@@ -69,8 +84,11 @@
             </div>
         </nav>
         <!--Navigasjonsbar SLUTT-->
+        <!--Avslutter header for å starte på body-->
+    </header>
+        <!--Navigasjonsbar SLUTT-->
         
-           <!--Dark-mode knapp-->
+    <!--Dark-mode knapp-->
     <div class="dark-mode-container">
         <button id="dark-mode-toggle" class="dark-mode-knapp">
             <span id="dark-mode-dot" class="red-dot"></span>
