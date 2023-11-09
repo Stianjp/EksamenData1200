@@ -64,15 +64,12 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    /*Setter innvendig marg til å ha 14px på topp,  36px på høyre side*/
-    padding: 14px 36px;
-
     /*Posisjonerer navbaren øverst på siden hele tiden*/
     position: fixed;
     width: 100%;
 
     /*Endrer høyde på navbar*/
-    height: 80px;
+   /* height: 80px;*/
 
     /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
     background-color: rgba(0, 0, 0, 0.70);
@@ -123,7 +120,8 @@ body {
 .logo{
     /*Endrer størrelse på logoen*/
     width: 120px;
-    height: auto
+    height: auto;
+    padding: 5px 
 }
 
 /* ----- Responsiv design Navbar: Liten skjerm 1025-1999px ----- */
@@ -180,13 +178,12 @@ body {
         /*Plassering av menyen og setter bredde til 100% for å dekke hele*/
         top:100%;
         width: 100%;
-        left: -40px;
 
         /*Benytter samme farge som opprinnelig navbar*/
         background-color: #ffd901;
 
         /* Plasserer mobil-nav fremst*/
-        z-index: 2;
+        z-index: 1;
     }
 
     /*Spesifikke stiler for lenker inni mobil navigasjon*/
@@ -746,13 +743,16 @@ body {
 .dark-mode-container{
     position:absolute;
     right: 0;
-    top: 108px;
+    top: 100%
 }
 .dark-mode{
     background-color: #0A0A0A; /*Mørk bakgrunnsfarge*/
     color: white; /*Lys tekstfarge*/
 }
 
+.dark-mode a {
+    color: yellow;
+}
 .dark-mode .kantineContainer a{ /* Ved dark-mode endres kart-linkene i kantineside til hvit skrift for bedre kontrast */
     color: white;
 }
@@ -788,7 +788,7 @@ body.dark-mode footer{
     color: black;
 }
 
-kantineItem.dark-mode {
+.kantineItem.dark-mode {
     background-color: #0A0A0A;
 }
 
