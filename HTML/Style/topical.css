@@ -377,20 +377,22 @@
 }
 /*FOOTER SLUTT*/
 
-
-
-/*
 footer {
     display: flex;
-    background-color: rgb(255, 217, 0);
+    background-color: #55d2ff;
     height: auto;
     color: white;
     text-align: left;
     align-items: center;
+    padding: 20px;
 }
 
 footer p {
     color: black;
     margin: auto;
 }
-*/
+
+.some-logo {
+    width:20px;
+    
+}
