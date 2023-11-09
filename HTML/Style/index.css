@@ -83,6 +83,15 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+<<<<<<< Updated upstream
+=======
+/*Logoen sin høyde til å være 80 px og bredde til automatisk*/
+.logo img {
+    /*height: 100%;
+    width: auto;*/
+}
+
+>>>>>>> Stashed changes
 .NavElementer {
     /*Benytter flex for å legge elementene på en horisontal linje og tar opp 80% av navbaren - slik at det er plass til logo*/
     display: flex;
@@ -234,11 +243,15 @@ body {
         background-color: rgba(255, 255, 255, 0.3);
     }
 
+<<<<<<< Updated upstream
 /* ----- Responsivt design for Navbar: Nettbrett liggende 420-769px ----- */
+=======
+>>>>>>> Stashed changes
     @media (max-width: 768px){
         .fa-bars{
             right: 20%;
         }
+<<<<<<< Updated upstream
         .logo{
             width: 100px;
         }
@@ -249,6 +262,8 @@ body {
         .logo{
             width: 75px;
         }
+=======
+>>>>>>> Stashed changes
     }
 }
 /* ----- NAVBAR SLUTT ----- */
@@ -409,7 +424,13 @@ body {
         display: flex;
         flex-direction: column;
     }
+<<<<<<< Updated upstream
    
+=======
+    .bakgrunn-intro-container{
+        /*height: 100%;*/
+    }
+>>>>>>> Stashed changes
     .IntroContainer{
         height: 100%;
         align-items: center;
@@ -528,6 +549,12 @@ body {
     .Introside-bilde-responsiv{
         width: 34vh;
     }
+<<<<<<< Updated upstream
+=======
+    .bakgrunn-intro-container{
+        /*height: 114vh;*/
+    }
+>>>>>>> Stashed changes
 }
 
 /* ----- Footer START (felles for flere sider) -----*/
