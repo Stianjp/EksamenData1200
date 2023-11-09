@@ -187,9 +187,7 @@ body {
         /*Benytter samme farge som opprinnelig navbar*/
         background-color: #ffd901;
 
-        /*Plasserer elementene i mobil-nav i midten*/
-        /*align-items: center;*/
-
+        /* Plasserer mobil-nav fremst*/
         z-index: 1;
     }
 
@@ -234,11 +232,15 @@ body {
         background-color: rgba(255, 255, 255, 0.3);
     }
 
+
 /* ----- Responsivt design for Navbar: Nettbrett liggende 420-769px ----- */
+
+
     @media (max-width: 768px){
         .fa-bars{
             right: 20%;
         }
+
         .logo{
             width: 100px;
         }
@@ -249,6 +251,7 @@ body {
         .logo{
             width: 75px;
         }
+
     }
 }
 /* ----- NAVBAR SLUTT ----- */
@@ -409,7 +412,7 @@ body {
         display: flex;
         flex-direction: column;
     }
-   
+
     .IntroContainer{
         height: 100%;
         align-items: center;
@@ -656,6 +659,7 @@ body {
     margin: 5%;/* Definerer plass utenfor elementes grense */
     padding: 50px;/* Gir større plass rundt innholdet i elementet*/
     overflow-wrap: break-word; /*Bryter ordene dersom teksten går utenfor tillatt område*/
+    margin-top: 10%;
 }
 
 .filter{

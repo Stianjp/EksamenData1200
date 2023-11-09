@@ -14,11 +14,20 @@
     text-align: center; /* Sentrerer teksten */
     line-height: 1.5; /* Endrer linjehøyde */
 }
+<<<<<<< HEAD
 .grid-item-felles{ /* Oppretter en felles grid-item-gruppe, for å effektivisere kode og forhindre dublikater */
     line-height: 1.5; /* Endrer linjehøyde */
     text-align: center; /* Sentrerer teksten */
     font-size: 20px; /* Endrer tekststørrelsen */
     padding: 16px; /* Setter padding til 16px */
+=======
+.grid-item-felles{ /*Oppretter en felles grid-item-gruppe, for å effektivisere kode og forhindre dublikater*/
+    line-height: 1.5; /*Endrer linjehøyde*/
+    text-align: center; /*Sentrerer teksten*/
+    font-size: 20px; /*Endrer tekststørrelsen*/
+    padding: 16px;
+    min-width: 200px;
+>>>>>>> 43990b89849fe60286a73fa07253b9d63c1fe1b3
 }
 .grid-image {
     width: 100%; /* Gjør bredden til bildet 100% */
@@ -371,3 +380,19 @@
 /*FOOTER SLUTT*/
 
 
+
+/*
+footer {
+    display: flex;
+    background-color: rgb(255, 217, 0);
+    height: auto;
+    color: white;
+    text-align: left;
+    align-items: center;
+}
+
+footer p {
+    color: black;
+    margin: auto;
+}
+*/
