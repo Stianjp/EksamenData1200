@@ -146,11 +146,9 @@ body {
     .grid-item-innføringCampus-høyre{
         font-size: 2rem;
     }
-    
     .grid-item-knapp{
         font-size: 1.5rem;
     }
-
 }
 
 /* ----- Responsivt design for Navbar: Nettbrett liggende 769-1024px ----- */
@@ -280,8 +278,9 @@ body {
     /*Øker innvending marg*/
     padding: 5rem;
 
-    /*Øker høyden i grid-boks*/
-    height: 100vh;
+    /*Øker innendig marg top*/
+    padding-top: 150px; 
+
 }
 
 /*Bilde av ToStudenter (1.bilde på introside)*/
@@ -425,7 +424,6 @@ body {
     }
     .introTekst{
         row-gap: 1rem;
-        height: 70vh;
     }
     .Introside-bilde-responsiv{
         width: 50vh;
@@ -483,7 +481,6 @@ body {
     .responsiv-tekst {
         display: grid;
         color: white;
-        text-align: justify;
         padding: 15px;
         background-color: #150c4b;
         padding-bottom: 100px;
@@ -521,12 +518,11 @@ body {
     .introTekst{
         row-gap: 0.5rem;
         padding: 5px;
-        height: 80vh;
+        padding-top: 20%;
     }
     .CampusContainer{
         row-gap: 0.5rem;
         padding: 10px;
-        height: 80vh;
     }
     .Introside-bilde-responsiv{
         width: 34vh;
@@ -799,10 +795,10 @@ kantineItem.dark-mode {
 
 /*Introteksten til accessibility-siden:*/
 .accessibility-intro{
-    /*Øker utvendig marg top:*/
-    margin-top: 3em;
     /*Setter teksten i midten av siden*/
     text-align: center;
+
+    padding-top: 150px;
 }
 
 .accessibility-tester-container{
