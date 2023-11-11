@@ -302,9 +302,6 @@ body {
     
     /*Sentrerer teksten vertikalt*/
     align-items: center;
-
-    /*Øker høyden til container til 84 viewpoint*/ 
-    height: 84vh;
 }
 
 /*2.bilde på introside*/
