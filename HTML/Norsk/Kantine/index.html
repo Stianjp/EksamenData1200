@@ -162,21 +162,21 @@
                         <h5>08:00-15:30</h5>
                 </div>
                 <div class="kantineItem studRab">
-                    <img class="kantineBilder" src="/HTML/Media/Kantine/rios.jpg" alt="SIO buffet i kantinen"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-palmer-planter-anlegg-799869/-->
+                    <img class="kantineBilder" src="/HTML/Media/Kantine/rios.jpg" alt="Rio's kaffebar sett utenfra"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-palmer-planter-anlegg-799869/-->
                     <h3>Rio's coffee bar</h3>
                     <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://maps.app.goo.gl/jXr5eVSRjTC1yNQ6A">Hegdehaugsveien 15</a>
                     <h5>08:00-14:30</h5>
                 </div>
                 <div class="kantineItem studRab veg">
-                    <img class="kantineBilder" src="/HTML/Media/Kantine/kantine.jpg" alt="SIO buffet i kantinen"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-arkitektur-interiordesign-reise-2449455/-->
+                    <img class="kantineBilder" src="/HTML/Media/Kantine/kantine.jpg" alt="Store kantina sett utenfra gjennom vinduene"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-arkitektur-interiordesign-reise-2449455/-->
                     <h3>Store kantina</h3>
                     <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://maps.app.goo.gl/c9RpjLSDVaHwbW7T9">Holbergs plass 2</a>
                     <h5>07:00-16:00</h5>
                 </div>
                 <div class="kantineItem studRab veg">
-                    <img class="kantineBilder" src="/HTML/Media/Kantine/kroa.jpg" alt="SIO buffet i kantinen"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-interiordesign-inne-virksomhet-3465604/-->
+                    <img class="kantineBilder" src="/HTML/Media/Kantine/kroa.jpg" alt="Meny og kassen på Kroa"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-interiordesign-inne-virksomhet-3465604/-->
                     <h3>Kroa</h3>
                     <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://maps.app.goo.gl/bSkYBRSjKq5YxeYo9">Pilestredet 52</a>
@@ -188,36 +188,74 @@
     </main>
         <!--Kantine main SLUTT-->
 
-        <!--Footer START-->
     <footer class="Footer-gul">
+        <!--Container for footer-->
         <div class="grid-footer-container">
-            <div class="grid-item-felles"><!--Grid-boks 1: spørsmål/tilbakemeldingsboks-->
-                <h4>Send oss spørsmål eller tilbakemelding</h4>
-                <textarea id="melding" class="tilbakemelding-textarea" placeholder="Skriv din melding her..."></textarea><!--Unik klasse for tekstområdet-->
-                <button class="tilbakemelding-knapp" onclick="sendMelding()">Send</button><!--Unik klasse for send-knappen - Legger også til en javascri-->
+
+            <!--Feedback boks: grid-boks  1-->
+            <div class="grid-item-felles">
+                <label for="melding">Send oss spørsmål eller tilbakemelding</label>
+                <textarea id="melding" class="tilbakemelding-textarea"
+                    placeholder="Skriv din melding her..."></textarea>
+                <!-- Unik klasse for tekstområdet -->
+                <button class="tilbakemelding-knapp" onclick="sendMelding()">
+                    Send
+                </button>
+                <!--Unik klasse for send-knappen - Legger også til en javascript-->
             </div>
-            <div class="grid-item-felles"><!--Grid-boks 2: adresseinfo-->
-                <h3>OSLO METROPOLITAN UNIVERSITY</h3>
-                <h4>STORBYUNIVERSITETET</h4>
-                <p>Postboks 4 St. Olavs plass, 0130 Oslo</p>
-                <p>Telefon: 67 23 50 00</p>
-                <p>E-post:
-                    <a href="mailto:someone@example.com">someone@example.com</a>
+
+            <!--Adresseinfo: grid-boks 2-->
+            <div class="grid-item-felles">
+                <h3>
+                    OSLO METROPOLITAN UNIVERSITY
+                </h3>
+                <h4>
+                    STORBYUNIVERSITETET
+                </h4>
+                <p>
+                    Postboks 4 St. Olavs plass, 0130 Oslo
+                </p>
+                <p>
+                    Telefon: 67 23 50 00
+                </p>
+                <p>
+                    E-post:
+                    <a href="mailto:someone@example.com">
+                        someone@example.com
+                    </a>
                 </p>
             </div>
-            <div class="grid-item-felles"><!--Grid-boks 3: Sosiale medier-->
+
+            <!--Sosiale medier: grid-boks 3-->
+            <div class="grid-item-felles">
                 <div class="grid-footer-some">
                     <div class="inline-footer-some">
-                        <a href="https://www.facebook.com/oslomet/" class="fa fa-facebook"><p>Facebook</p></a>
+                        <a href="https://www.facebook.com/oslomet/" class="fa fa-facebook">
+                            <p>
+                                Facebook
+                            </p>
+                        </a>
                     </div>
                     <div class="inline-footer-some">
-                        <a href="https://twitter.com/oslomet" class="fa fa-twitter"><p>X</p></a>
+                        <a href="https://twitter.com/oslomet" class="fa fa-twitter">
+                            <p>
+                                X
+                            </p>
+                        </a>
                     </div>
                     <div class="inline-footer-some">
-                        <a href="https://www.linkedin.com/school/oslomet/?originalSubdomain=no" class="fa fa-linkedin"><p>LinkedIn</p></a>
+                        <a href="https://www.linkedin.com/school/oslomet/?originalSubdomain=no" class="fa fa-linkedin">
+                            <p>
+                                LinkedIn
+                            </p>
+                        </a>
                     </div>
                     <div class="inline-footer-some">
-                        <a href="https://www.instagram.com/oslomet/?hl=nb" class="fa fa-instagram"><p>Instagram</p></a>
+                        <a href="https://www.instagram.com/oslomet/?hl=nb" class="fa fa-instagram">
+                            <p>
+                                Instagram
+                            </p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -225,9 +263,10 @@
         <p class="footer-copyright">
             Copyright © 2023 Lorem ipsum dolor
         </p>
-        
     </footer>
-    <!--Footer SLUTT-->
-    <script src="/HTML/Style/index.js"></script> <!--Linker javascript-filen til HTML-->
+
+    <!--Linker javascript-filen til HTML. Denne lastes ikke inn før HTML er parsret-->
+    <script src="/HTML/Style/index.js" defer></script>
 </body>
 </html>
+    
