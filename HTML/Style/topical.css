@@ -118,15 +118,15 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .grid-container {
         grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 1024px */
+        align-items: center;
     }
     .main-content {
-        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 1024px */
         grid-row: 1; /* Flytt main content over sidebar */
+        margin-bottom: auto;
     }
     .sidebar{
-        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 1024px */
         grid-row: 2; /* Flytt sidebar under main content */
-    
+        margin-bottom: auto;
     }
 
 }
