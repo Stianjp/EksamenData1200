@@ -724,7 +724,167 @@ body {
 }
 /* ----- Responsivt design for kantine-siden SLUTT----- */
 
-/* ----- Endring av datatorget.html START ----- */
+                                /* ----- Endring av datatorget.html START ----- */
+.bakgrunn-intro-container-datatorget{
+    background-image: url(../Media/Datatorget/Datatorget.jpg);/*Bilde tatt selv med mobiltelefonen*/
+    background-position: center; /*vil plassere bildet i midten av elementet*/
+    background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
+    background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
+    height:100vh; /*setter høyden til 100 visual hight for å dekke hele skjermen*/
+}
+
+.IntroContainer-datatorget{
+    color: white;/*Endrer farge på tekst til hvit for å øke kontraster*/
+    background-color: rgba(0, 0, 0, 0.591); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
+    height: 100vh; /*setter høyden til 100 visual hight for å dekke hele skjermen*/
+}
+
+.bakgrunn-intro-container-datatorget{
+    background-image: url(../Media/Datatorget/Datatorget.jpg);/*Bilde tatt selv med mobiltelefonen*/
+    background-position: center; /*vil plassere bildet i midten av elementet*/
+    background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
+    background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
+    height:100vh; /*setter høyden til 100 visual hight for å dekke hele skjermen*/
+}
+
+.fasiliteterDatatorget{
+    text-align: center; /*Sentrerer overskriften*/
+    font-size: 30px; /*setter størelsen på teksten til 30px*/
+    color: #ffd901; /*setter fargen til svart*/
+    margin-top: 50px; /*legger til et mellomrom mellom introdelen og denne delen*/
+}
+
+.fasilitetstekst{ 
+    text-align: center; /*sentrerer teksten*/
+    font-size: 25px; /*setter størelsen til 25px*/
+    color: #ffd901; /*setter fargen til svart*/
+    padding-top: 10px; /*mellomrom mellom overskriften og teksten*/
+}
+
+.bakgrunn_data{
+    background-color: #2d241b;
+}
+
+.datatorgetflex{
+    scroll-snap-type: y mandatory; /*koden kontrollerer scrollingen på siden som gjør at den "hopper" til bestemte plasser*/
+    overflow-y: scroll; /*oppretter en vertikal rullefelt som en kreativ løsning på et slideshow*/
+    height: 75vh; /*setter hver bokst til å være 75% av visual highten */
+    margin: 5%; /*legger inn en margin rundt boksen*/
+    margin-left: 10%; /*legger boksen mer mot midten*/
+    margin-right: 10%; /*legger boksen mer mot midten*/
+}
+
+.section-fasiliteter{
+    height:75vh; /*hver side i boksen er like stor som boksen selv*/
+    scroll-snap-align: start; /*tvinger hver side til å "hoppe" ned eller opp 75%vh hver gang man scroller*/
+}
+
+
+.databilder{
+    height: 65vh; /*setter bildene på boksen til å være 65vh*/
+    border: solid; /*legger en border rundt bildene*/
+    border-color: #000000; /*setter border fargen til svart*/
+}
+
+.databilder2{
+    height: 65vh; /*setter bildene på boksen til å være 65vh*/
+    border: solid; /*legger en border rundt bildene*/
+    border-color: #ffd901; /*setter border fargen til svart*/
+}
+
+/*legger på unike farger per side i boksen*/
+.datatorget1{
+    background-color: #ffd901; 
+}
+
+.datatorget2{
+    background-color: rgb(0, 0, 0);
+}
+
+.datatekst2{
+    color: #ffd901;
+}
+
+.gradering{
+    background-image: url(/HTML/Media/Datatorget/klasserom\ 1.jpg); /*bakgrunn for klasserom-siden. Bildet er tatt privat*/
+    background-position: center; /*vil plassere bildet i midten av elementet*/
+    background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
+    background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
+    height:100vh; /*setter høyden på siden til 100& visual hight*/
+
+}
+
+/*Mobil 320-425px*/
+@media (max-width: 425px){
+
+    .databilder{
+        max-height: 35vh;
+    }
+
+    .mindre-margin{
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+/*Nettbrett stående 426-768*/
+@media (max-width: 768px){
+    .grid-item-felles{
+        font-size: 20px;
+    }
+
+    .databilder{
+        max-height: 35vh;
+    }
+
+    .mindre-margin{
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+/*Nettbrett liggende 769-1024*/
+@media (max-width: 1024px) {
+    .fa-bars{
+        visibility:visible;
+    }
+    .NavElementer{
+        visibility:hidden;
+    }
+
+    .databilder{
+        max-height: 45vh;
+    }
+
+    .mindre-margin{
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+
+@media (max-width: 1999px){
+
+    .databilder{
+        max-height: 45vh;
+    }
+
+    .mindre-margin{
+        
+    }
+
+    .grid-felles{
+        height: 600px;
+    }
+
+
+}
+
+
+
 
 /* ----- Endring av datatorget.html SLUTT ----- */
 
