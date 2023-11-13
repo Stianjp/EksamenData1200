@@ -332,16 +332,17 @@ footer {
     display: flex;
     background-color: #6D9DC5;
     height: auto;
-    color: white;
+    color: black;
     text-align: left;
     align-items: center;
     padding: 20px;
+    list-style:none;
+    list-style-type: none;
 }
 
 footer p {
-    color: black;
     margin: auto;
-    
+    text-align: center;
 }
 
 .some-logo {
