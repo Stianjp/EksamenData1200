@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/HTML/Style/index.css"><!--Linker CSS-filen til HTML-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Link til sosiale medier knapper-->
+    <title>OsloMet</title>
+</head>
+
+<body>
+    <!--Header START-->
+    <header>
+        <!--Navigasjonsbar START-->
+        <nav class="navbar">
+            <a href="/HTML/Norsk/Hjem/index.html" class="logo"><img class="logo" src="/HTML/Media/Navbar/Logomedsignatur_gul_OsloMet-01.png" alt="OsloMet Logo" aria-label="Back to home page"></a>
+            <!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
+
+            <!--Standrad navigasjonsmeny for større skjermer-->
+            <div class="NavElementer">
+                <!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
+                <!--Flex-boks 1-->
+                <a href="/HTML/English/HomePage/index.html">Home</a>
+
+                <!--Flex-boks 2-->
+                <a href="/HTML/English/Topical/index.html">Topical</a>
+
+                <!--Flex-boks 3-->
+                <a href="/HTML/English/Cafeteria/index.html">Cafeteria</a>
+
+                <!--Flex-boks 4-->
+                <a href="/HTML/English/Data square/index.html">Data square</a>
+
+                <!--Flex-boks 5-->
+                <a href="/HTML/Norsk/Tilgjengelighet/index.html">Accessibility</a> <!--Ikke laget engelsk side-->
+
+                <!--Flex-boks 6-->
+                <a href="/HTML/Norsk/Hjem/index.html">NO</a>
+            </div>
+
+            <!--Standard naviasjonsmeny for mindre skjermer enn 1024px bredde-->
+            <!--Legger til hamburger-ikonet-->
+            <i id="menyToggle" class="fa fa-bars"></i>
+
+            <!--Meny for når man trykker på hamburger-ikonet-->
+            <div class="mobil-nav" id="mobilmeny">
+                <div class="grid-meny-mobil">
+
+                    <!--Link til index siden: grid-boks 1-->
+                    <div class="meny-knapp">
+                        <a href="/HTML/index.html">Home</a>
+                    </div>
+
+                    <!--Link til topical siden: grid-boks 2-->
+                    <div class="meny-knapp">
+                        <a href="topical.html">Topical</a>
+                    </div>
+
+                    <!--Link til kantine siden: grid-boks 3-->
+                    <div>
+                        <a href="kantine.html">Cafeteria</a>
+                    </div>
+
+                    <!--Link til datatorget siden: grid-boks 4-->
+                    <div>
+                        <a href="datatorget.html">Data square</a>
+                    </div>
+
+                    <!--Link til accessibility siden: grid-boks 5-->
+                    <div>
+                        <a href="accessibility.html">Accessibility</a>
+                    </div>
+
+                    <!--Link til den engelske siden som man befinner seg på: grid-boks 6-->
+                    <div>
+                        <a href="index.html">NO</a>
+                    </div>
+                </div>
+
+                <!--Knapp for å lukke menyen-->
+                <button id="lukkMeny">Close</button>
+            </div>
+        </nav>
+        <!--Navigasjonsbar SLUTT-->
+        <!--Avslutter header for å starte på body-->
+    </header>
+        
+
+        <!--Kantine main START-->
+    <main>
+        <div class="kantineIntro">
+            <H1>Food and beverage</H1>
+                <br>
+            <h3>Remember: An apple a day - keeps the doctor away!</h3>
+                <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam voluptates provident 
+                deserunt aliquam corrupti dolor laudantium voluptatibus ex id nihil rem, ab officiis, 
+                blanditiis quas consequatur suscipit voluptatem excepturi iste. Lorem ipsum dolor sit 
+                amet consectetur adipisicing elit. Excepturi et dolorem at non aliquid, odit sed ut quas 
+                eos laudantium, in quae molestias nostrum quod repellat porro possimus, beatae eum.
+            </p>
+        </div>
+
+        <div class="filter">
+            <button class="filter-option" data-filter="*" onclick=filtrerSok(event)>Show All</button>
+            <button class="filter-option" data-filter="veg" onclick=filtrerSok(event)>Vegetarian</button>
+            <button class="filter-option" data-filter="studRab" onclick=filtrerSok(event)>Student deals</button>
+            <!-- inspirasjon: https://dev.to/dhintz89/simple-filters-in-css-or-js-185k-->
+        </div>
+           
+            <div class="kantineContainer">
+                <div class="kantineItem studRab">
+                    <img class="kantineBilder" src="/HTML/Media/Kantine/retro.jpg" alt="Inside Retro pub"> <!--Bilde hentet fra: salat : https://www.pexels.com/nb-no/bilde/hus-anlegg-plante-gryte-1579739/-->
+                    <h3>Retro pub</h3>
+                    <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                    <a href="https://goo.gl/maps/cFZ4RByWFTMdGpNk9">Pilestredet 32</a>
+                    <h5>09:00-15:00</h5>
+                </div>
+                <div class="kantineItem">
+                    <img class="kantineBilder" src="/HTML/Media/Kantine/coffeeshop.jpg" alt="Inside cafè Henry"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-stoler-gruppe-butikk-2159065/-->
+                    <h3>Kafé Henry</h3>
+                    <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                    <a href="https://goo.gl/maps/AkKVBMpxWtqwLSTa9">Pilestredet 46</a>
+                    <h5>08:00-14:00</h5>
+                </div>
+                <div class="kantineItem studRab">
+                        <img class="kantineBilder" src="/HTML/Media/Kantine/ellas.jpg" alt="Ellas dining"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-planter-anlegg-bord-601169/-->
+                        <h3>Ella's spiseri</h3>
+                        <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                        <a href="https://goo.gl/maps/RJZ83k1EHpLw9cRa9">Pilestredet 44</a>
+                        <h5>07:30-15:00</h5>
+                </div>
+                <div class="kantineItem veg">
+                        <img class="kantineBilder" src="/HTML/Media/Kantine/recharge+.jpg" alt="Recharge+ cafè"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/sunn-mat-frukt-pynt-stilleben-8230023/-->
+                        <h3>Recharge+</h3>
+                        <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                        <a href="https://goo.gl/maps/ZbYzY3BnPKG8oeYL6">Pilestredet 48</a>
+                        <h5>09:00-17:00</h5>
+                </div>
+                <div class="kantineItem">
+                        <img class="kantineBilder" src="/HTML/Media/Kantine/olesKafe.jpg" alt="Ole's coffeshop"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/koselig-kafe-interiordesign-inne-1307698/-->
+                        <h3>Ole's kaffesjappe</h3>
+                        <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                        <a href="https://goo.gl/maps/yqqj28mnK1fK93U96">Pilestredet 31</a>
+                        <h5>09:00-14:30</h5>
+                </div>
+                <div class="kantineItem studRab veg">
+                        <img class="kantineBilder" src="/HTML/Media/Kantine/buffet.jpg" alt="SIO bufet in the cafeteria"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/valg-matfotografering-buffet-gronnsaker-17965451/-->
+                        <h3>Cafeteria in P35</h3>
+                        <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                        <a href="https://goo.gl/maps/46piMFJ5gBG5u1NQ9">Pilestredet 35</a>
+                        <h5>08:00-15:30</h5>
+                </div>
+                <div class="kantineItem studRab">
+                    <img class="kantineBilder" src="/HTML/Media/Kantine/rios.jpg" alt="Rio's coffeshop seen from outside"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-palmer-planter-anlegg-799869/-->
+                    <h3>Rio's coffee bar</h3>
+                    <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                    <a href="https://maps.app.goo.gl/jXr5eVSRjTC1yNQ6A">Hegdehaugsveien 15</a>
+                    <h5>08:00-14:30</h5>
+                </div>
+                <div class="kantineItem studRab veg">
+                    <img class="kantineBilder" src="/HTML/Media/Kantine/kantine.jpg" alt="The big cafeteria seen from outside through the window"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-arkitektur-interiordesign-reise-2449455/-->
+                    <h3>Store kantina</h3>
+                    <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                    <a href="https://maps.app.goo.gl/c9RpjLSDVaHwbW7T9">Holbergs plass 2</a>
+                    <h5>07:00-16:00</h5>
+                </div>
+                <div class="kantineItem studRab veg">
+                    <img class="kantineBilder" src="/HTML/Media/Kantine/kroa.jpg" alt="Kroa's menu and cashier"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-interiordesign-inne-virksomhet-3465604/-->
+                    <h3>Kroa</h3>
+                    <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
+                    <a href="https://maps.app.goo.gl/bSkYBRSjKq5YxeYo9">Pilestredet 52</a>
+                    <h5>13:00-17:00</h5>
+                </div>
+            </div>
+        </div>
+        <script src="Style/kantine.js"></script>
+    </main>
+        <!--Kantine main SLUTT-->
+
+        <footer class="grid-item-felles">
+            <!--Container for footer-->
+            <div class="grid-footer-container">
+    
+                <!--Feedback boks: grid-boks  1-->
+                <div class="grid-item-felles">
+                    <label for="melding">Send us questions or feedback</label>
+                    <textarea id="melding" class="tilbakemelding-textarea"
+                        placeholder="Skriv din melding her..."></textarea>
+                    <!-- Unik klasse for tekstområdet -->
+                    <button class="tilbakemelding-knapp" onclick="sendMelding()">
+                        Send
+                    </button>
+                    <!--Unik klasse for send-knappen - Legger også til en javascript-->
+                </div>
+    
+                <!--Adresseinfo: grid-boks 2-->
+                <div class="grid-item-felles">
+                    <h3>
+                        OSLO METROPOLITAN UNIVERSITY
+                    </h3>
+                    <h4>
+                        STORBYUNIVERSITETET
+                    </h4>
+                    <p>
+                        Postboks 4 St. Olavs plass, 0130 Oslo
+                    </p>
+                    <p>
+                        Telephone: +47 67 23 50 00
+                    </p>
+                    <p>
+                        E-post:
+                        <a href="mailto:someone@example.com">
+                            someone@example.com
+                        </a>
+                    </p>
+                </div>
+    
+                <!--Sosiale medier: grid-boks 3-->
+                <div class="grid-item-felles">
+                    <div class="grid-footer-some">
+                        <div class="inline-footer-some">
+                            <a href="https://www.facebook.com/oslomet/" class="fa fa-facebook">
+                                <p>
+                                    Facebook
+                                </p>
+                            </a>
+                        </div>
+                        <div class="inline-footer-some">
+                            <a href="https://twitter.com/oslomet" class="fa fa-twitter">
+                                <p>
+                                    X
+                                </p>
+                            </a>
+                        </div>
+                        <div class="inline-footer-some">
+                            <a href="https://www.linkedin.com/school/oslomet/?originalSubdomain=no" class="fa fa-linkedin">
+                                <p>
+                                    LinkedIn
+                                </p>
+                            </a>
+                        </div>
+                        <div class="inline-footer-some">
+                            <a href="https://www.instagram.com/oslomet/?hl=nb" class="fa fa-instagram">
+                                <p>
+                                    Instagram
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="footer-copyright">
+                Copyright © 2023 Lorem ipsum dolor
+            </p>
+        </footer>
+    
+        <!--Linker javascript-filen til HTML-->
+        <script src="/HTML/Style/index.js"></script>
+    </body>
+    
+    </html>
