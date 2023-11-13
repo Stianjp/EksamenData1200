@@ -797,14 +797,14 @@ main{
 .red-dot{
     width: 10px;
     height: 10px;
-    background-color: red;
+    background-color: black;
     border-radius: 50%; /* Gjør prikken siruklær */
     display: inline-block;
     margin-right: 5px; /*Avstand fra teksten */
 }
 /*Grønn prikk når dark-mode er på*/
 .green-dot{
-    background-color: green;
+    background-color: white;
 }
 
 /*Beholder footer-farge på teksten ved dark-mode aktivert*/
