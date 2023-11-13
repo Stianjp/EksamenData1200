@@ -239,12 +239,22 @@ body {
         .logo{
             width: 100px;
         }
+
+        .grid-meny-mobil{
+            row-gap: 20px;
+        }
     }
 
     /* ----- Responsivt design for Navbar: Nettbrett liggende 320-419px ----- */
     @media(max-width: 419px){
         .logo{
             width: 75px;
+        }
+
+        /*Endrer skriftstørrelse og mellromrom mellom linker på mobilmeny*/
+        .grid-meny-mobil, #lukkMeny{
+            font-size: 16px;
+            row-gap: 15px;
         }
 
     }
