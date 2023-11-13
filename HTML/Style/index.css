@@ -667,6 +667,7 @@ body {
 .filter-option{
     padding: 10px; /*Gir avstand mellom filter-boksene */
     width: 200px; /*Setter bredden for filter-boksene*/
+    font-size: large;
 }
 .filter-option:hover{
     background-color: #ccc; /*Filter-boksene markeres mørkere når de hovres over, lettere å se hvilken boks man eventuelt klikker på*/
@@ -730,6 +731,9 @@ body {
 }
 
 @media (max-width: 768px) { /* Nettbrett (stående) størrelse */
+    .kantineIntro{
+        padding-top: 25%;
+    }
     .kantineContainer{
         grid-template-columns: 1fr; /* Endrer til enkelt-kolonner som tilpasses mindre skjermer bedre*/
     }
