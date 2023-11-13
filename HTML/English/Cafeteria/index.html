@@ -81,6 +81,13 @@
                 <!--Knapp for å lukke menyen-->
                 <button id="lukkMeny">Close</button>
             </div>
+             <!--Dark-mode knapp-->
+             <div class="dark-mode-container">
+                <button id="dark-mode-toggle" class="dark-mode-knapp">
+                <span id="dark-mode-dot" class="red-dot"></span>
+                Dark Mode
+                </button>
+            </div>
         </nav>
         <!--Navigasjonsbar SLUTT-->
         <!--Avslutter header for å starte på body-->
@@ -161,7 +168,7 @@
                 </div>
                 <div class="kantineItem studRab veg">
                     <img class="kantineBilder" src="/HTML/Media/Kantine/kantine.jpg" alt="The big cafeteria seen from outside through the window"> <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/kafe-arkitektur-interiordesign-reise-2449455/-->
-                    <h3>Store kantina</h3>
+                    <h3>Big cafeteria</h3>
                     <img id="pin" src="/HTML/Media/Kantine/pinIkon.png" alt="Lokasjons pin"><!-- https://www.pngwing.com/en/free-png-athop-->
                     <a href="https://maps.app.goo.gl/c9RpjLSDVaHwbW7T9">Holbergs plass 2</a>
                     <h5>07:00-16:00</h5>
@@ -178,22 +185,22 @@
         <script src="Style/kantine.js"></script>
     </main>
         <!--Kantine main SLUTT-->
-
-        <footer class="grid-item-felles">
-            <!--Container for footer-->
-            <div class="grid-footer-container">
     
-                <!--Feedback boks: grid-boks  1-->
-                <div class="grid-item-felles">
-                    <label for="melding">Send us questions or feedback</label>
-                    <textarea id="melding" class="tilbakemelding-textarea"
-                        placeholder="Skriv din melding her..."></textarea>
-                    <!-- Unik klasse for tekstområdet -->
-                    <button class="tilbakemelding-knapp" onclick="sendMelding()">
-                        Send
-                    </button>
-                    <!--Unik klasse for send-knappen - Legger også til en javascript-->
-                </div>
+         <footer class="Footer-gul">
+        <!--Container for footer-->
+        <div class="grid-footer-container">
+
+            <!--Feedback boks: grid-boks  1-->
+            <div class="grid-item-felles">
+                <label for="melding">Send oss spørsmål eller tilbakemelding</label>
+                <textarea id="melding" class="tilbakemelding-textarea"
+                    placeholder="Skriv din melding her..."></textarea>
+                <!-- Unik klasse for tekstområdet -->
+                <button class="tilbakemelding-knapp" onclick="sendMelding()">
+                    Send
+                </button>
+                <!--Unik klasse for send-knappen - Legger også til en javascript-->
+            </div>
     
                 <!--Adresseinfo: grid-boks 2-->
                 <div class="grid-item-felles">
@@ -255,7 +262,7 @@
                 Copyright © 2023 Lorem ipsum dolor
             </p>
         </footer>
-    
+
         <!--Linker javascript-filen til HTML-->
         <script src="/HTML/Style/index.js"></script>
     </body>
