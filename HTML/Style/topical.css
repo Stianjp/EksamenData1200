@@ -19,13 +19,16 @@
     text-align: center; /* Sentrerer teksten */
     font-size: 20px; /* Endrer tekststørrelsen */
     padding: 16px; /* Setter padding til 16px */
+    
 }
+
 .grid-image {
     width: 100%; /* Gjør bredden til bildet 100% */
     max-width: 100%; /* Gjør max bredden til bildet 100% */
     height: auto; /* Bruker Auto for rett format */
     margin-bottom: 10px; /* Setter 10px mellomrom under bilde */
 }
+
 /* Globkale styles SLUTT */
 
 .grid-container {
@@ -178,7 +181,13 @@
 .navbar a:hover {
     /*Benytter andre farger når man hovrer over linker for å øke kontrasten*/
     color: #555;
-    background-color: rgba(255, 255, 255, 0.3);
+    
+      animation: bounce 1.8s ease infinite;
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	35% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }
 
 .navbar .logo:hover {
