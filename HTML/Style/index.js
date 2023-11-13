@@ -60,3 +60,7 @@ function filtrerSok(e){
       });
     };
 };
+
+/* ----- Javascript for datatorget.html ----- */
+
+

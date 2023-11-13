@@ -58,6 +58,12 @@ body{
     color: white;/*Endrer farge på tekst til hvit for å øke kontraster*/
     background-color: rgba(0, 0, 0, 0.591); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
     height: 100vh; /*setter høyden til 100 visual hight for å dekke hele skjermen*/
+
+
+
+        background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 
 .introTekst{ /*1. tekstboks på introside*/
@@ -248,12 +254,7 @@ body{
 @media (max-width: 425px){
 
     .databilder{
-        max-height: 35vh;
-    }
-
-    .mindre-margin{
-        padding: 0;
-        margin: 0;
+        max-height: 20vh;
     }
 
 }
@@ -302,14 +303,9 @@ body{
         max-height: 45vh;
     }
 
-    .mindre-margin{
-        
-    }
-
     .grid-felles{
         height: 600px;
     }
-
 
 }
 
