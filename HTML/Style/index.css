@@ -50,7 +50,6 @@ body {
 .farge-hvit {
     border-color: white;
     color: white;
-   /* background-color: rgba(0, 0, 0, 0.733);*/
 }
 
 
@@ -67,9 +66,6 @@ body {
     /*Posisjonerer navbaren øverst på siden hele tiden*/
     position: fixed;
     width: 100%;
-
-    /*Endrer høyde på navbar*/
-   /* height: 80px;*/
 
     /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
     background-color: rgba(0, 0, 0, 0.70);
@@ -203,27 +199,26 @@ body {
         text-align: center;
         font-size: 30px;
 
-        /*Øker utvendig marg på toppen, for å få mer luft*/
+        /* Øker utvendig marg på toppen, for å få mer luft */
         margin-top: 20px;
     }
 
     .grid-meny-mobil a:hover {
-        /*Lager en zoome-effekt når man hovrer over for økt lesbarhet*/
+        /* Lager en zoome-effekt når man hovrer over for økt lesbarhet */
         font-size: 32px;
     }
 
     /*Stil for lukk-knapp i mobil navigasjon*/
     #lukkMeny {
-        margin-bottom: 2%;
-        width: 25%;
-        align-self: center;
-        /*Øker tekststørrelse*/
-        font-size: 20px;
+        margin-bottom: 2%; /* Setter margin på bunn for å få luft */
+        width: 25%; /* Setter bredde til 25% */
+        align-self: center; /* Sentrerer knappen */
+        font-size: 20px; /* Øker tekststørrelse */
 
     }
 
     #lukkMeny:hover {
-        /*For å øke kontrasten når man hovrer*/
+        /* For å øke kontrasten når man hovrer */
         background-color: rgba(255, 255, 255, 0.3);
     }
 
@@ -233,7 +228,7 @@ body {
 
     @media (max-width: 768px){
         .fa-bars{
-            right: 20%;
+            right: 20%; 
         }
 
         .logo{
@@ -641,18 +636,7 @@ body {
 } 
 /* ----- Endring av index.html SLUTT ----- */
 
-/* ----- Endring av topical.html START ----- */
-
-
-
-/* ----- Endring av topical.html SLUTT ----- */
-
-
-
-
-
 /* ----- Endring av kantine.html START ----- */
-
 /*CSS FOR MAIN START*/
 .kantineIntro{
     text-align: center; /* Spesifiserer hvor tektsen skal plasseres innad i elementet*/
@@ -667,7 +651,6 @@ body {
 .filter-option{
     padding: 10px; /*Gir avstand mellom filter-boksene */
     width: 200px; /*Setter bredden for filter-boksene*/
-    font-size: large;
 }
 .filter-option:hover{
     background-color: #ccc; /*Filter-boksene markeres mørkere når de hovres over, lettere å se hvilken boks man eventuelt klikker på*/
@@ -731,9 +714,6 @@ body {
 }
 
 @media (max-width: 768px) { /* Nettbrett (stående) størrelse */
-    .kantineIntro{
-        padding-top: 25%;
-    }
     .kantineContainer{
         grid-template-columns: 1fr; /* Endrer til enkelt-kolonner som tilpasses mindre skjermer bedre*/
     }
@@ -742,7 +722,7 @@ body {
         width: 50%; /* Filter-valgene brer seg ut til 50% av skjermen*/
     }
 }
-/* ----- Responsivt design for accessibility-siden SLUTT----- */
+/* ----- Responsivt design for kantine-siden SLUTT----- */
 
 /* ----- Endring av datatorget.html START ----- */
 
@@ -849,6 +829,4 @@ body.dark-mode footer{
     }
     
 }
-
 /* ----- Endring av accessibility.html SLUTT ----- */
-
