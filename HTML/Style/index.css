@@ -1,761 +1,750 @@
 /* ----- Globale stiler for hele nettsiden ----- */
 * {
-    /*Endring av tekst: font, dekorasjon og orddelling og linjehøyde*/
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    word-wrap: break-word;
-    line-height: 1.5;
+  /*Endring av tekst: font, dekorasjon og orddelling og linjehøyde*/
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  word-wrap: break-word;
+  line-height: 1.5;
 
-    /*Innvendig og utvendig marg fjernes*/
-    margin: 0;
-    padding: 0;
+  /*Innvendig og utvendig marg fjernes*/
+  margin: 0;
+  padding: 0;
 }
 /*Gjør scrolling mer smooth
 Kode er hentet fra: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1 */
 html {
-    scroll-behavior:smooth;
-  }
+  scroll-behavior: smooth;
+}
 /*Standard lys modus*/
 body {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 /* ----- Felles-klasser ----- */
 .grid-felles-2kol-1rad {
-    /*Benytter grid-bokser for å legge ting inn i rader og kolonner - siden dette gjøres ofte, lagde jeg en felles for å effektivisere kode*/
-    display: grid;
+  /*Benytter grid-bokser for å legge ting inn i rader og kolonner - siden dette gjøres ofte, lagde jeg en felles for å effektivisere kode*/
+  display: grid;
 
-    /*Kolonner og rader: to kolonner og en rad*/
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+  /*Kolonner og rader: to kolonner og en rad*/
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
-.padding-20px{
-    /*Øker innvendig marg for mer luft*/
-    padding: 20px;
+.padding-20px {
+  /*Øker innvendig marg for mer luft*/
+  padding: 20px;
 }
 
 /*Oppretter en felles grid-item-gruppe, for å effektivisere kode og forhindre dublikater*/
 .grid-item-felles {
-    /*Sentrerer teksten og skriftstørrelse for bedre lesbarhet*/
-    text-align: center;
-    font-size: 20px;
+  /*Sentrerer teksten og skriftstørrelse for bedre lesbarhet*/
+  text-align: center;
+  font-size: 20px;
 
-    /*Endrer innvendig marg for mer luft*/
-    padding: 16px;
+  /*Endrer innvendig marg for mer luft*/
+  padding: 16px;
 }
 
 /*Klasse for å endre farge til hvit*/
 .farge-hvit {
-    border-color: white;
-    color: white;
-   /* background-color: rgba(0, 0, 0, 0.733);*/
+  border-color: white;
+  color: white;
+  /* background-color: rgba(0, 0, 0, 0.733);*/
 }
-
 
 /* -------- Header: Navbar (felles for alle sider)  ---------------------*/
 /* ------Responsivt design: Desktop 1200px -> 2000px er grunninnstilling ----- */
 .navbar {
-    /*Benytter flex for å legge elementene på en horisontal linje*/
-    display: flex;
+  /*Benytter flex for å legge elementene på en horisontal linje*/
+  display: flex;
 
-    /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen, alt sentreres i sin boks*/
-    justify-content: space-between;
-    align-items: center;
+  /*To stk kolonner, der første kolonnenen er så bred som logoen, og andre kollonne fyller resten av plassen, alt sentreres i sin boks*/
+  justify-content: space-between;
+  align-items: center;
 
-    /*Posisjonerer navbaren øverst på siden hele tiden*/
-    position: fixed;
-    width: 100%;
+  /*Posisjonerer navbaren øverst på siden hele tiden*/
+  position: fixed;
+  width: 100%;
 
-    /*Endrer høyde på navbar*/
-   /* height: 80px;*/
+  /*Endrer høyde på navbar*/
+  /* height: 80px;*/
 
-    /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
-    background-color: rgba(0, 0, 0, 0.70);
+  /*Endrer bakgrunnsfarge på startside, samme farge som orginal logo */
+  background-color: rgba(0, 0, 0, 0.7);
 
-    /*Endring av tekst: fet skrift, større skriftstørrelse og skygge*/
-    font-weight: bold;
-    font-size: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  /*Endring av tekst: fet skrift, større skriftstørrelse og skygge*/
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .NavElementer {
-    /*Benytter flex for å legge elementene på en horisontal linje og tar opp 80% av navbaren - slik at det er plass til logo*/
-    display: flex;
-    width: 80%;
+  /*Benytter flex for å legge elementene på en horisontal linje og tar opp 80% av navbaren - slik at det er plass til logo*/
+  display: flex;
+  width: 80%;
 
-    /*Plasserer elementene med lik avstand mellom seg*/
-    justify-content: space-between;
+  /*Plasserer elementene med lik avstand mellom seg*/
+  justify-content: space-between;
 }
 
 .NavElementer a {
-    /*Endrer farge på teksten i hvert element i navbar*/
-    color: #ffdb01;
+  /*Endrer farge på teksten i hvert element i navbar*/
+  color: #ffdb01;
 }
 
 .navbar a:hover {
-    /*Benytter andre farger når man hovrer over linker for å øke kontrasten*/
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.25);
+  /*Benytter andre farger når man hovrer over linker for å øke kontrasten*/
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .navbar .logo:hover {
-    /*Unngår å få bakgrunnsfargre når man hovrer over logo*/
-    background-color: transparent;
+  /*Unngår å få bakgrunnsfargre når man hovrer over logo*/
+  background-color: transparent;
 }
 
 /*Fjerner mobil-visning av navbar og oppretter at det skal være kolonner*/
 .mobil-nav {
-    display: none;
-    flex-direction: column;
+  display: none;
+  flex-direction: column;
 }
 
 /*Fjerner hamburger-ikon på navbar ved stor-skjerm-oppløsning*/
 .fa-bars {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 
-.logo{
-    /*Endrer størrelse på logoen*/
-    width: 120px;
-    height: auto;
-    padding: 5px 
+.logo {
+  /*Endrer størrelse på logoen*/
+  width: 120px;
+  height: auto;
+  padding: 5px;
 }
 
 /* ----- Responsiv design Navbar: Liten skjerm 1025-1999px ----- */
 @media (max-width: 1999px) {
-    .navbar {
-        /*Endrer skriftstørrelse til 25px*/
-        font-size: 25px;
-    }
+  .navbar {
+    /*Endrer skriftstørrelse til 25px*/
+    font-size: 25px;
+  }
 }
 
 /* ----- Responsivt design for Navbar: Store skjermer 2000px --> ----- */
 @media (min-width: 1999px) {
-    /*Øker skriftstørrelse i navbar*/
-    .navbar{
-        font-size: 30px;
-    }
-    .grid-item-innføringCampus-venstre{
-        font-size: 2rem;
-    }
-    .grid-item-innføringCampus-høyre{
-        font-size: 2rem;
-    }
-    .grid-item-knapp{
-        font-size: 1.5rem;
-    }
+  /*Øker skriftstørrelse i navbar*/
+  .navbar {
+    font-size: 30px;
+  }
+  .grid-item-innføringCampus-venstre {
+    font-size: 2rem;
+  }
+  .grid-item-innføringCampus-høyre {
+    font-size: 2rem;
+  }
+  .grid-item-knapp {
+    font-size: 1.5rem;
+  }
 }
 
 /* ----- Responsivt design for Navbar: Nettbrett liggende 769-1024px ----- */
 @media (max-width: 1024px) {
-    /*Viser hamburger-ikonet for mindre skjermer*/
+  /*Viser hamburger-ikonet for mindre skjermer*/
+  .fa-bars {
+    display: inline-block;
+    visibility: visible;
+    color: #ffdb01;
+    position: absolute;
+    right: 10%;
+  }
+
+  /*Fjerner standard navigasjonselementer for små skjermer*/
+  .NavElementer {
+    display: none;
+  }
+
+  /*Viser navbar for liten skjerm når den er aktiv*/
+  .mobil-nav.active {
+    display: flex;
+  }
+
+  /*Generelle stiler for navbaren for mindre skjermer*/
+  .mobil-nav {
+    /*Plassert i forhold til nærmeste posisjonerte forfader*/
+    position: absolute;
+
+    /*Plassering av menyen og setter bredde til 100% for å dekke hele*/
+    top: 100%;
+    width: 100%;
+
+    /*Benytter samme farge som opprinnelig navbar*/
+    background-color: #ffd901;
+
+    /* Plasserer mobil-nav fremst*/
+    z-index: 1;
+  }
+
+  /*Spesifikke stiler for lenker inni mobil navigasjon*/
+  .mobil-nav .grid-meny-mobil a {
+    /*Endrer farge på tekst*/
+    color: black;
+  }
+
+  /*Setter opp grid-layout for mobilmenyen*/
+  .grid-meny-mobil {
+    /*Benytter flex-layout og legger dem i rader*/
+    display: flex;
+    flex-direction: column;
+
+    /*Endring av mellomrom mellom radene, sentrerer tekst og øker skriftstørrelse*/
+    row-gap: 40px;
+    text-align: center;
+    font-size: 30px;
+
+    /*Øker utvendig marg på toppen, for å få mer luft*/
+    margin-top: 20px;
+  }
+
+  .grid-meny-mobil a:hover {
+    /*Lager en zoome-effekt når man hovrer over for økt lesbarhet*/
+    font-size: 32px;
+  }
+
+  /*Stil for lukk-knapp i mobil navigasjon*/
+  #lukkMeny {
+    margin-bottom: 2%;
+    width: 25%;
+    align-self: center;
+    /*Øker tekststørrelse*/
+    font-size: 20px;
+  }
+
+  #lukkMeny:hover {
+    /*For å øke kontrasten når man hovrer*/
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* ----- Responsivt design for Navbar: Nettbrett liggende 420-769px ----- */
+
+  @media (max-width: 768px) {
     .fa-bars {
-        display: inline-block;
-        visibility: visible;
-        color: #ffdb01;
-        position: absolute;
-        right: 10%;
+      right: 20%;
     }
 
-    /*Fjerner standard navigasjonselementer for små skjermer*/
-    .NavElementer {
-        display: none;
+    .logo {
+      width: 100px;
     }
 
-    /*Viser navbar for liten skjerm når den er aktiv*/
-    .mobil-nav.active {
-        display: flex;
-    }
-
-    /*Generelle stiler for navbaren for mindre skjermer*/
-    .mobil-nav {
-        /*Plassert i forhold til nærmeste posisjonerte forfader*/
-        position: absolute;
-
-        /*Plassering av menyen og setter bredde til 100% for å dekke hele*/
-        top:100%;
-        width: 100%;
-
-        /*Benytter samme farge som opprinnelig navbar*/
-        background-color: #ffd901;
-
-        /* Plasserer mobil-nav fremst*/
-        z-index: 1;
-    }
-
-    /*Spesifikke stiler for lenker inni mobil navigasjon*/
-    .mobil-nav .grid-meny-mobil a {
-        /*Endrer farge på tekst*/
-        color: black;
-    }
-
-    /*Setter opp grid-layout for mobilmenyen*/
     .grid-meny-mobil {
-        /*Benytter flex-layout og legger dem i rader*/
-        display: flex;
-        flex-direction: column;
+      row-gap: 20px;
+    }
+  }
 
-        /*Endring av mellomrom mellom radene, sentrerer tekst og øker skriftstørrelse*/
-        row-gap: 40px;
-        text-align: center;
-        font-size: 30px;
-
-        /*Øker utvendig marg på toppen, for å få mer luft*/
-        margin-top: 20px;
+  /* ----- Responsivt design for Navbar: Nettbrett liggende 320-419px ----- */
+  @media (max-width: 419px) {
+    .logo {
+      width: 75px;
     }
 
-    .grid-meny-mobil a:hover {
-        /*Lager en zoome-effekt når man hovrer over for økt lesbarhet*/
-        font-size: 32px;
-    }
-
-    /*Stil for lukk-knapp i mobil navigasjon*/
+    /*Endrer skriftstørrelse og mellromrom mellom linker på mobilmeny*/
+    .grid-meny-mobil,
     #lukkMeny {
-        margin-bottom: 2%;
-        width: 25%;
-        align-self: center;
-        /*Øker tekststørrelse*/
-        font-size: 20px;
-
+      font-size: 16px;
+      row-gap: 15px;
     }
-
-    #lukkMeny:hover {
-        /*For å øke kontrasten når man hovrer*/
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-
-
-/* ----- Responsivt design for Navbar: Nettbrett liggende 420-769px ----- */
-
-
-    @media (max-width: 768px){
-        .fa-bars{
-            right: 20%;
-        }
-
-        .logo{
-            width: 100px;
-        }
-
-        .grid-meny-mobil{
-            row-gap: 20px;
-        }
-    }
-
-    /* ----- Responsivt design for Navbar: Nettbrett liggende 320-419px ----- */
-    @media(max-width: 419px){
-        .logo{
-            width: 75px;
-        }
-
-        /*Endrer skriftstørrelse og mellromrom mellom linker på mobilmeny*/
-        .grid-meny-mobil, #lukkMeny{
-            font-size: 16px;
-            row-gap: 15px;
-        }
-
-    }
+  }
 }
 /* ----- NAVBAR SLUTT ----- */
 
 /* ----- Introside ----- */
 /*CSS FOR INTROSIDE START*/
 .bakgrunn-intro-container {
-    /*Bilde tatt selv med mobiltelefonen*/
-    background-image: url(../Media/Introside/Bakgrunn-intro.webp);
-    
-    /*Endring av bildet: plasserer bildet i midten av elementet, unngår at den gjentar seg og dekker hele siden*/
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
+  /*Bilde tatt selv med mobiltelefonen*/
+  background-image: url(../Media/Introside/Bakgrunn-intro.webp);
+
+  /*Endring av bildet: plasserer bildet i midten av elementet, unngår at den gjentar seg og dekker hele siden*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* Oppretter et mørkere filter over bakgrunnsbilde for å fremheve konstraster */
-.bakgrunn-intro-shadow-container{
-    background-color: rgba(0, 0, 0, 0.600);
+.bakgrunn-intro-shadow-container {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /*1. tekstboks på introside - sammen med bilde: ToStudenter*/
 .introTekst {
-    /*Sentrerer teksten vertikalt*/
-    align-items: center;
+  /*Sentrerer teksten vertikalt*/
+  align-items: center;
 
-    /*Øker innvending marg*/
-    padding: 5rem;
+  /*Øker innvending marg*/
+  padding: 5rem;
 
-    /*Øker innendig marg top*/
-    padding-top: 150px; 
-
+  /*Øker innendig marg top*/
+  padding-top: 150px;
 }
 
 /*Bilde av ToStudenter (1.bilde på introside)*/
 .ToStudenter {
-    /*Legger til en marg rundt bilde for å fremheve, samt bytter farge på marg til gul*/
-    border: solid;
-    border-color: #ffdb01;
+  /*Legger til en marg rundt bilde for å fremheve, samt bytter farge på marg til gul*/
+  border: solid;
+  border-color: #ffdb01;
 }
 /*Fellesklasse for endring av størrlese på bildene på introsiden*/
-.Introside-bilde-responsiv{
-    width: 90%;
-    height: auto;
+.Introside-bilde-responsiv {
+  width: 90%;
+  height: auto;
 }
 
 /*Tekstboks nr. 2 på introside - sammen med bilde av to mennesker som går over en bro*/
 .CampusContainer {
-    /*Endrer bakgrunnsfarge på andre del av introside*/
-    background-color: #54c7da;
+  /*Endrer bakgrunnsfarge på andre del av introside*/
+  background-color: #54c7da;
 
-    /*Øker innvendig marg på toppen og bunn*/
-    padding: 5rem;
-    
-    /*Sentrerer teksten vertikalt*/
-    align-items: center;
+  /*Øker innvendig marg på toppen og bunn*/
+  padding: 5rem;
+
+  /*Sentrerer teksten vertikalt*/
+  align-items: center;
 }
 
 /*2.bilde på introside*/
 .campusBilde {
-    /*Legger til en marg rundt bilde for å fremheve, samt bytter farge på marg*/
-    border: solid #150c4b;
+  /*Legger til en marg rundt bilde for å fremheve, samt bytter farge på marg*/
+  border: solid #150c4b;
 }
 
 /*Tekst-boks under bilde på venstre side (Pilestredet 52)*/
 .grid-item-innføringCampus-venstre {
-    /*Endrer bakgrunnsfarge på andre del av introside*/
-    background-color: #150c4b;
+  /*Endrer bakgrunnsfarge på andre del av introside*/
+  background-color: #150c4b;
 
-    /*Endring av teksten: farge*/
-    color: white;
+  /*Endring av teksten: farge*/
+  color: white;
 }
 
 /*Bilder som står vedsiden av hverandre*/
 .grid-img-innføringcampus {
-    /*Setter bredde og høyde til 100% for at skal få samme størrelse*/
-    width: 100%;
-    height: 100%;
+  /*Setter bredde og høyde til 100% for at skal få samme størrelse*/
+  width: 100%;
+  height: 100%;
 
-    /*Fyller hele containeren med bilde*/
-    object-fit: cover;
+  /*Fyller hele containeren med bilde*/
+  object-fit: cover;
 }
 
 /*Klasse for mindre skjerm, blir fjernet når skjerm er stor*/
 .responsiv-tekst {
-    display: none;
+  display: none;
 }
 .responsive-img {
-    display: none;
+  display: none;
 }
 
 /*Skille mellom tekst de to tekstene under bildet*/
 .grid-item-innføringCampus-skille {
-    /*Oppretter en strek på bunnen*/
-    border-bottom: 1px solid;
-    
-    /*Øker margin for mer mellomrom: topp, høyre, bunn, venstre*/
-    margin: 100px 50px 100px 50px;
+  /*Oppretter en strek på bunnen*/
+  border-bottom: 1px solid;
+
+  /*Øker margin for mer mellomrom: topp, høyre, bunn, venstre*/
+  margin: 100px 50px 100px 50px;
 }
 
 .grid-item-innføringCampus-høyre {
-    /*For tekstboksene under bilde på høyre side*/
-    background-color: white;
+  /*For tekstboksene under bilde på høyre side*/
+  background-color: white;
 }
 
 /*For knapp som er under tekstene*/
-.grid-item-knapp{
-    /*Gjør at knappen ikke tar hele linjen*/
-    display: inline-block;
+.grid-item-knapp {
+  /*Gjør at knappen ikke tar hele linjen*/
+  display: inline-block;
 
-    /*Endring av tekst: Farge, skriftstørrelse, bakgrunnsfarge, plassering*/
-    color: white;
-    font-size: 1rem;
-    background-color: black;
-    text-align: center;
-    
-    /*Endrer musepeker til hånd*/
-    cursor: pointer;
+  /*Endring av tekst: Farge, skriftstørrelse, bakgrunnsfarge, plassering*/
+  color: white;
+  font-size: 1rem;
+  background-color: black;
+  text-align: center;
 
-    /*Gjør hjørnene til knappen noe rundere*/
-    border-radius: 8px;
-    
-   /*Øker innvendig marg på topp og bunn til 10px og til høyre og venstre til 20px*/
-    padding: 10px 20px;
-    
-    /*Øker utvendig marg på topp og bunn til 10px sa,t høyre og venstre side 2px*/
-    margin: 10px 2px;
+  /*Endrer musepeker til hånd*/
+  cursor: pointer;
+
+  /*Gjør hjørnene til knappen noe rundere*/
+  border-radius: 8px;
+
+  /*Øker innvendig marg på topp og bunn til 10px og til høyre og venstre til 20px*/
+  padding: 10px 20px;
+
+  /*Øker utvendig marg på topp og bunn til 10px sa,t høyre og venstre side 2px*/
+  margin: 10px 2px;
 }
 
 /*Effekt når man har musepeker over kanpp under tekstene*/
 .grid-item-knapp:hover {
-    /*Endrer bakgrunnsfarge på linker, slik at det skal se ut som en knapp og tekstfarge svart*/
-    background-color: #ffdb01;
-    color: black;
-    
-    /*Gjør teksten tykkere*/
-    font-weight: bolder;
+  /*Endrer bakgrunnsfarge på linker, slik at det skal se ut som en knapp og tekstfarge svart*/
+  background-color: #ffdb01;
+  color: black;
+
+  /*Gjør teksten tykkere*/
+  font-weight: bolder;
 }
 
 /* ----- Responsivt design for introside: Store skjermer 2000->3000px ----- */
 @media (min-width: 1999px) {
-    .grid-item-felles{
-        font-size: 2rem;
-    }
-    .grid-item-knapp{
-        font-size: 1.5rem;
-    }
-    .Introside-bilde-responsiv{
-        width: 100%;
-    }
+  .grid-item-felles {
+    font-size: 2rem;
+  }
+  .grid-item-knapp {
+    font-size: 1.5rem;
+  }
+  .Introside-bilde-responsiv {
+    width: 100%;
+  }
 }
 
 /* ----- Responsiv design introside: Nettbrett liggende 769-1024px  ----- */
 @media (max-width: 1024px) {
-    /* Gjør at alle grid-elementene stables vertikalt på mindre skjermer */
-    .grid-felles-2kol-1rad {
-        display: flex;
-        flex-direction: column;
-    }
+  /* Gjør at alle grid-elementene stables vertikalt på mindre skjermer */
+  .grid-felles-2kol-1rad {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .IntroContainer{
-        height: 100%;
-        align-items: center;
-        padding-top: 10%;
-    }
+  .IntroContainer {
+    height: 100%;
+    align-items: center;
+    padding-top: 10%;
+  }
 
-    /*Øker mellomrom mellom bilde og tekst på intro- og campuscontainer*/
-    .CampusContainer{
-        row-gap: 5rem;
-    }
-    .introTekst{
-        row-gap: 1rem;
-    }
-    .Introside-bilde-responsiv{
-        width: 50vh;
-    }
+  /*Øker mellomrom mellom bilde og tekst på intro- og campuscontainer*/
+  .CampusContainer {
+    row-gap: 5rem;
+  }
+  .introTekst {
+    row-gap: 1rem;
+  }
+  .Introside-bilde-responsiv {
+    width: 50vh;
+  }
 
-    /*Oppnår full bredde på bildet alt="Bilde av P35 fra avstand med dammen"*/
-    .grid-item-innføringCampus-venstre .responsive-img[src*="img-bilde-innføringcampus-høyre.jpeg"]{
-        width: 100%;
-    }
+  /*Oppnår full bredde på bildet alt="Bilde av P35 fra avstand med dammen"*/
+  .grid-item-innføringCampus-venstre
+    .responsive-img[src*="img-bilde-innføringcampus-høyre.jpeg"] {
+    width: 100%;
+  }
 
-    /*Endrer rekkefølgen på bildene i flex-containeren for mindre skjermer fra og med 1024px bredde*/
-    .InnføringCampusContainer img[alt="Hovedinngangen til bygning P52"] {
-        order: 1;
-    }
+  /*Endrer rekkefølgen på bildene i flex-containeren for mindre skjermer fra og med 1024px bredde*/
+  .InnføringCampusContainer img[alt="Hovedinngangen til bygning P52"] {
+    order: 1;
+  }
 
-    .InnføringCampusContainer img[alt="Bilde av P35 fra avstand med dammen"] {
-        order: 3;
-    }
+  .InnføringCampusContainer img[alt="Bilde av P35 fra avstand med dammen"] {
+    order: 3;
+  }
 
-    /*Optimaliserer bildevisning for responivt deisgn*/ 
-    .responsive-img {
-        display: flex;
-        object-fit: cover;
-        max-width: 100%;
-    }
+  /*Optimaliserer bildevisning for responivt deisgn*/
+  .responsive-img {
+    display: flex;
+    object-fit: cover;
+    max-width: 100%;
+  }
 
-    /*Endrer til flex-display*/
-    .responsiv-img-1 {
-        display: flex;
-    }
+  /*Endrer til flex-display*/
+  .responsiv-img-1 {
+    display: flex;
+  }
 
-    /*Fellesklasser for å endre styling*/
-    /*Endrer utvendig marg på bunn*/
-    .margin-bottom-100px {
-        margin-bottom: 100px;
-    }
+  /*Fellesklasser for å endre styling*/
+  /*Endrer utvendig marg på bunn*/
+  .margin-bottom-100px {
+    margin-bottom: 100px;
+  }
 
-    /*Endrer utvendig marg*/
-    .grid-item-knapp {
-        margin-top: 1rem; 
-    }
+  /*Endrer utvendig marg*/
+  .grid-item-knapp {
+    margin-top: 1rem;
+  }
 
-    /*Endrer bakgrunnsfarge til hvit og svart tekst*/
-    .bakgrunnsfarge-hvit-svart-tekst {
-        color: black;
-        background-color: white;
-    }
+  /*Endrer bakgrunnsfarge til hvit og svart tekst*/
+  .bakgrunnsfarge-hvit-svart-tekst {
+    color: black;
+    background-color: white;
+  }
 
-    /*Skjuler elementer ved liten skjerm*/
-    .Fjernes-ved-liten-skjerm {
-        display: none;
-    }
+  /*Skjuler elementer ved liten skjerm*/
+  .Fjernes-ved-liten-skjerm {
+    display: none;
+  }
 
-    /*Setter stil for responsive tekst med hvit farge, justert tekst, padding og en mørk bakgrunn*/
-    .responsiv-tekst {
-        display: grid;
-        color: white;
-        padding: 15px;
-        background-color: #150c4b;
-        padding-bottom: 100px;
-    }
+  /*Setter stil for responsive tekst med hvit farge, justert tekst, padding og en mørk bakgrunn*/
+  .responsiv-tekst {
+    display: grid;
+    color: white;
+    padding: 15px;
+    background-color: #150c4b;
+    padding-bottom: 100px;
+  }
 }
 
 /* ----- Responsiv design introside: Mindre nettbrett 431-768px -----*/
 @media (max-width: 768px) {
-    /*Endring av index.html START*/
-    .responsiv-img-min426px {
-        /*Endrer størrelse på bilde*/
-        max-width: 20rem;
-    }
-  
+  /*Endring av index.html START*/
+  .responsiv-img-min426px {
+    /*Endrer størrelse på bilde*/
+    max-width: 20rem;
+  }
 
-    /*Minker skriftstørrelse*/
-    .grid-item-felles{
-        font-size: 1rem;
-    }
-    .CampusContainer{
-        padding: 30px;
-        height: 70%;
-    }
-    .Introside-bilde-responsiv{
-        max-width: 20rem;
-    }
-    .IntroContainer{
-        padding-top: 25%;
-    }
+  /*Minker skriftstørrelse*/
+  .grid-item-felles {
+    font-size: 1rem;
+  }
+  .CampusContainer {
+    padding: 30px;
+    height: 70%;
+  }
+  .Introside-bilde-responsiv {
+    max-width: 20rem;
+  }
+  .IntroContainer {
+    padding-top: 25%;
+  }
 }
 
 /* ----- Responsiv design introside: Mobil 320-430px -----*/
 @media (max-width: 430px) {
-    /*Minker skriftstørrelse*/
-    .introTekst{
-        row-gap: 0.5rem;
-        padding: 5px;
-        padding-top: 20%;
-    }
-    .CampusContainer{
-        row-gap: 0.5rem;
-        padding: 10px;
-    }
-    .Introside-bilde-responsiv{
-        width: 34vh;
-    }
+  /*Minker skriftstørrelse*/
+  .introTekst {
+    row-gap: 0.5rem;
+    padding: 5px;
+    padding-top: 20%;
+  }
+  .CampusContainer {
+    row-gap: 0.5rem;
+    padding: 10px;
+  }
+  .Introside-bilde-responsiv {
+    width: 34vh;
+  }
 }
 
 /* ----- Footer START (felles for flere sider) -----*/
-.Footer-gul{
-    background-color: #ffdb01;
+.Footer-gul {
+  background-color: #ffdb01;
 }
 
 .grid-footer-container {
-    /*Bruker grid, med 3 kolonner som er like store*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
-    /*Øker innvendig marg*/
-    padding: 15px;
-    
-    /*Øker skriftstørrelse -> lettere å lese*/
-    font-size: 20px;
+  /*Bruker grid, med 3 kolonner som er like store*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /*Øker innvendig marg*/
+  padding: 15px;
+
+  /*Øker skriftstørrelse -> lettere å lese*/
+  font-size: 20px;
 }
 
 /*Style til tilbakemeldingsboksen*/
 .tilbakemelding-textarea {
-    /*Gir tekstområdet 75% bredde av grid-området*/
-    width: 75%;
-    
-    /*Endrer innvendig marg og utvendig marg*/
-    padding: 10px;
-    margin-bottom: 10px;
- 
-    /*Setter en grense rundt tekstområdet, grensen er solid, og har endret farge*/
-    border: 1px solid #ddd;
+  /*Gir tekstområdet 75% bredde av grid-området*/
+  width: 75%;
 
-    /*Gjør hjørnene på tekstområdet til litt rundere*/
-    border-radius: 5px;
-    
-    /*Endrer skriftstørrelse inne i boksen*/
-    font-size: 14px;
+  /*Endrer innvendig marg og utvendig marg*/
+  padding: 10px;
+  margin-bottom: 10px;
+
+  /*Setter en grense rundt tekstområdet, grensen er solid, og har endret farge*/
+  border: 1px solid #ddd;
+
+  /*Gjør hjørnene på tekstområdet til litt rundere*/
+  border-radius: 5px;
+
+  /*Endrer skriftstørrelse inne i boksen*/
+  font-size: 14px;
 }
 
 /*Style til tilbakemeldingsknappen*/
 .tilbakemelding-knapp {
-     /*Gir knappen 30% bredde av grid-området*/
-    width: 30%;
-    
-    /*Øker innvendig marg til 5px*/
-    padding: 5px;
-    
-     /*Endring av farge på knapp for bedre kontrast mot footerens bakgrunnsfarge*/
-     background-color: #333; /* Mørk bakgrunnsfarge for kontrast */
-     color: #ffdb01; /* Gul tekstfarge for kontrast mot mørk bakgrunn */
-   
-    /*Gjør hjørnene til knappen noe rundere og endrer skriftstørrelse*/
-    border-radius: 5px;
-    font-size: 18px;
+  /*Gir knappen 30% bredde av grid-området*/
+  width: 30%;
+
+  /*Øker innvendig marg til 5px*/
+  padding: 5px;
+
+  /*Endring av farge på knapp for bedre kontrast mot footerens bakgrunnsfarge*/
+  background-color: #333; /* Mørk bakgrunnsfarge for kontrast */
+  color: #ffdb01; /* Gul tekstfarge for kontrast mot mørk bakgrunn */
+
+  /*Gjør hjørnene til knappen noe rundere og endrer skriftstørrelse*/
+  border-radius: 5px;
+  font-size: 18px;
 }
 
 /*Endrer effekter til knappen når musen er over den*/
 .tilbakemelding-knapp:hover {
-    /*Bytter bakgrunnsfarge og endrer fra musepeker til hånd*/
-    background-color: #0056b3;
-    cursor: pointer;
+  /*Bytter bakgrunnsfarge og endrer fra musepeker til hånd*/
+  background-color: #0056b3;
+  cursor: pointer;
 }
 
 /*Style til Copyright*/
-.footer-copyright{
-    /*Endrer skriftstørrelse*/
-    font-size: 10px;
-    
-    /*Sentrerer tekst*/
-    text-align: center;
+.footer-copyright {
+  /*Endrer skriftstørrelse*/
+  font-size: 10px;
+
+  /*Sentrerer tekst*/
+  text-align: center;
 }
 
 /*Style til linker til sosiale medier*/
 .grid-footer-some {
-     /*Oppretter grid med 1 kolonne*/
-    display: grid;
-    grid-template-columns: 1fr;
+  /*Oppretter grid med 1 kolonne*/
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .inline-footer-some .fa {
-    /*Endrer farge på symboler og tekst*/
-    color: black;
+  /*Endrer farge på symboler og tekst*/
+  color: black;
 }
 
 .grid-footer-some .inline-footer-some {
-    /*Øker utvendig marg på bunnen for å øke mellomrom*/
-    margin-bottom: 10px;
+  /*Øker utvendig marg på bunnen for å øke mellomrom*/
+  margin-bottom: 10px;
 }
 
 /*Endrer effekter til knappen når musen er over den*/
 .fa:hover {
-    /*Gjør hjørnene noe rundere*/
-    border-radius: 4px;
+  /*Gjør hjørnene noe rundere*/
+  border-radius: 4px;
 }
 
 /* ----- Responsiv design Footer: Små nettbrett og mobil 320-769px ----- */
 @media (max-width: 769px) {
-    .grid-footer-container {
-        /*Benytter flex for å få de tidligere grid-boksene til å komme under hverandre*/
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .tilbakemelding-textarea {
-        /*Endrer vidde på tekstboks og fjerner mulighet til å endre størrelse på den*/
-        max-width: 70%;
-        resize: none;
-    }   
-} 
+  .grid-footer-container {
+    /*Benytter flex for å få de tidligere grid-boksene til å komme under hverandre*/
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tilbakemelding-textarea {
+    /*Endrer vidde på tekstboks og fjerner mulighet til å endre størrelse på den*/
+    max-width: 70%;
+    resize: none;
+  }
+}
 /* ----- Endring av index.html SLUTT ----- */
 
 /* ----- Endring av topical.html START ----- */
 
-
-
 /* ----- Endring av topical.html SLUTT ----- */
 
-
-
-
-
 /* ----- Endring av kantine.html START ----- */
-<<<<<<< Updated upstream
-main{
-    background-image: url('/HTML/Media/Kantine/marmor4.jpg');
-    background-attachment: fixed;
-    background-size: cover;
+main {
+  background-image: url("/HTML/Media/Kantine/marmor4.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
-=======
->>>>>>> Stashed changes
+
 
 /*CSS FOR MAIN START*/
-.kantineIntro{
-    text-align: center; /* Spesifiserer hvor tektsen skal plasseres innad i elementet*/
-    padding: 50px;/* Gir større plass rundt innholdet i elementet*/
-    overflow-wrap: break-word; /*Bryter ordene dersom teksten går utenfor tillatt område*/
-    padding-top: 15%;
+.kantineIntro {
+  text-align: center; /* Spesifiserer hvor tektsen skal plasseres innad i elementet*/
+  padding: 50px; /* Gir større plass rundt innholdet i elementet*/
+  overflow-wrap: break-word; /*Bryter ordene dersom teksten går utenfor tillatt område*/
+  padding-top: 15%;
 }
 
-.filter{
-    text-align: center; /*Sentrerer teksten horisontalt*/
+.filter {
+  text-align: center; /*Sentrerer teksten horisontalt*/
 }
-.filter-option{
-    padding: 10px; /*Gir avstand mellom filter-boksene */
-    margin-bottom: 2%;
-    width: 200px; /*Setter bredden for filter-boksene*/
-    font-size: large;
+.filter-option {
+  padding: 10px; /*Gir avstand mellom filter-boksene */
+  margin-bottom: 2%;
+  width: 200px; /*Setter bredden for filter-boksene*/
+  font-size: large;
 }
-.filter-option:hover{
-    background-color: #ccc; /*Filter-boksene markeres mørkere når de hovres over, lettere å se hvilken boks man eventuelt klikker på*/
+.filter-option:hover {
+  background-color: #ccc; /*Filter-boksene markeres mørkere når de hovres over, lettere å se hvilken boks man eventuelt klikker på*/
 }
 
-.hidden{
-    display: none; /*Skjuler de elementene som ikke inneholder valgte filter */
+.hidden {
+  display: none; /*Skjuler de elementene som ikke inneholder valgte filter */
 }
-.myBtnContainer{
-    button[data-filter="veg"]:focus ~ div:not([class*="veg"]) { /* Fokuserer på alle elementer som er tagget med 'veg'*/
-      display:none; /* Gjemmer alle elementer som ikke er tagget med 'veg' */
-    }
-    
-    button[data-filter="studRab"]:focus ~ div:not([class*="studRab"]) { /* Fokuserer på alle elementer som er tagget med 'studRab'*/
-      display:none; /* Gjemmer alle elementer som ikke er tagget med 'studRab' */
-    }
+.myBtnContainer {
+  button[data-filter="veg"]:focus ~ div:not([class*="veg"]) {
+    /* Fokuserer på alle elementer som er tagget med 'veg'*/
+    display: none; /* Gjemmer alle elementer som ikke er tagget med 'veg' */
   }
 
-.kantineContainer{
-    display: grid;/* Setter innholdet i Grid (rutenettsystem) */
-    place-items: center; /*Sentrerer selve gridden på nettsiden*/
-    grid-template-columns: 1fr 1fr; /* Tillater å plassere 3 elementer i 1fr-størrelse horisontalt */
-    grid-row-gap: 25px;/* Gir oss mer space mellom hvert grid-element */
-    padding: 10px;/* Gir større plass rundt innholdet innad i grid-elementet */
-    overflow: hidden; /*Skjuler innholdet som går utenfor gjeldene element*/
-} 
-  
-.kantineBilder{
-    width: 100%;/* Setter bredde 300px på bildene*/
-    height: auto;/* Setter høyde 220px på bildene*/
-    border-top-right-radius: 30px; /* Avrunder øverst-høyre hjørne */
-    border-top-left-radius: 30px; /* Avrunder øverst-venstre hjørne */
-    max-width: 100%; /* Tillater bildens bredde ta 100% av plassen */
-    max-height: 100%; /* Tillater bildens høyde ta 100% av plassen */
+  button[data-filter="studRab"]:focus ~ div:not([class*="studRab"]) {
+    /* Fokuserer på alle elementer som er tagget med 'studRab'*/
+    display: none; /* Gjemmer alle elementer som ikke er tagget med 'studRab' */
+  }
 }
 
-.kantineItem{
-    text-align: center;/* Spesifiserer posisjonering horisontalt av tekst innad i grid-elementet*/
-    box-shadow: 0px 2px 2px 0px; /* Angir skyggeboks størrelse*/
-    border-radius: 30px;/* Definerer kant rundt innholdet - danner en boks*/
-    width: 400px; /* Tillater elementet å kunne ta 100% bredde  */
-    line-height: 60px; /* Setter distanse mellom linjer med tekst*/
-}
-.kantineItem a{
-    color: #0A0A0A;
+.kantineContainer {
+  display: grid; /* Setter innholdet i Grid (rutenettsystem) */
+  place-items: center; /*Sentrerer selve gridden på nettsiden*/
+  grid-template-columns: 1fr 1fr; /* Tillater å plassere 3 elementer i 1fr-størrelse horisontalt */
+  grid-row-gap: 25px; /* Gir oss mer space mellom hvert grid-element */
+  padding: 10px; /* Gir større plass rundt innholdet innad i grid-elementet */
+  overflow: hidden; /*Skjuler innholdet som går utenfor gjeldene element*/
 }
 
-.kantineItem:hover{
-    box-shadow: 2px 2px 2px 1px; /* Bytter skygge størrelse ved hover */
+.kantineBilder {
+  width: 100%; /* Setter bredde 300px på bildene*/
+  height: auto; /* Setter høyde 220px på bildene*/
+  border-top-right-radius: 30px; /* Avrunder øverst-høyre hjørne */
+  border-top-left-radius: 30px; /* Avrunder øverst-venstre hjørne */
+  max-width: 100%; /* Tillater bildens bredde ta 100% av plassen */
+  max-height: 100%; /* Tillater bildens høyde ta 100% av plassen */
 }
 
-#pin{
-    width: 20px; /* Definerer bredde på location-pin elementene */
-    height: 20px;/* Definerer høyde på location-pin elementene */
+.kantineItem {
+  text-align: center; /* Spesifiserer posisjonering horisontalt av tekst innad i grid-elementet*/
+  box-shadow: 0px 2px 2px 0px; /* Angir skyggeboks størrelse*/
+  border-radius: 30px; /* Definerer kant rundt innholdet - danner en boks*/
+  width: 400px; /* Tillater elementet å kunne ta 100% bredde  */
+  line-height: 60px; /* Setter distanse mellom linjer med tekst*/
+}
+.kantineItem a {
+  color: #0a0a0a;
+}
+
+.kantineItem:hover {
+  box-shadow: 2px 2px 2px 1px; /* Bytter skygge størrelse ved hover */
+}
+
+#pin {
+  width: 20px; /* Definerer bredde på location-pin elementene */
+  height: 20px; /* Definerer høyde på location-pin elementene */
 }
 /* ----- Endring av kantine.html SLUTT ----- */
 /* ----- Responsivt design for accessibility-siden START----- */
 
-@media (max-width:1024px){ /* Nettbrett (liggende) størrelse */
-    .kantineItem{
-        width: 75%; /* Setter alle kantineItem-elementer til 75% for bedre tilpasning til mindre skjermer*/
-    }
+@media (max-width: 1024px) {
+  /* Nettbrett (liggende) størrelse */
+  .kantineItem {
+    width: 75%; /* Setter alle kantineItem-elementer til 75% for bedre tilpasning til mindre skjermer*/
+  }
 }
 
-@media (max-width: 768px) { /* Nettbrett (stående) størrelse */
-    .kantineIntro{
-        padding-top: 25%;
-    }
-    .kantineContainer{
-        grid-template-columns: 1fr; /* Endrer til enkelt-kolonner som tilpasses mindre skjermer bedre*/
-    }
-    .filter-option{
-        text-align: center; /* Sentrerer filter-valgene - disse legges itillegg under hverandre når skjermen når denne størrelsen*/
-        width: 50%; /* Filter-valgene brer seg ut til 50% av skjermen*/
-    }
+@media (max-width: 768px) {
+  /* Nettbrett (stående) størrelse */
+  .kantineIntro {
+    padding-top: 25%;
+  }
+  .kantineContainer {
+    grid-template-columns: 1fr; /* Endrer til enkelt-kolonner som tilpasses mindre skjermer bedre*/
+  }
+  .filter-option {
+    text-align: center; /* Sentrerer filter-valgene - disse legges itillegg under hverandre når skjermen når denne størrelsen*/
+    width: 50%; /* Filter-valgene brer seg ut til 50% av skjermen*/
+  }
 }
 /* ----- Responsivt design for accessibility-siden SLUTT----- */
-<<<<<<< Updated upstream
-=======
 
                                 /* ----- Endring av datatorget.html START ----- */
 
@@ -772,286 +761,255 @@ main{
 
 
 
-.fasilitet_tekst{
-    align-items: center; /*Sentrerer teksten vertikalt*/
-    height: 74vh;         /*Øker høyden i grid-boks*/
-    place-items: center; /* setter bildet og teksen i center av gridboksene*/
+.fasilitet_tekst {
+  align-items: center; /*Sentrerer teksten vertikalt*/
+  height: 74vh; /*Øker høyden i grid-boks*/
+  place-items: center; /* setter bildet og teksen i center av gridboksene*/
 }
 
-
-
-
-.introBilde{ /*1.Bilde på introside*/
-    border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
-    border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kontrast og design*/
-    margin-top: 9%;
-}   
-
-.IntroContainer-datatorget{
-    color: white;/*Endrer farge på tekst til hvit for å øke kontraster*/
-    background-color: rgba(0, 0, 0, 0.591); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
+.introBilde {
+  /*1.Bilde på introside*/
+  border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
+  border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kontrast og design*/
+  margin-top: 9%;
 }
 
-.bakgrunn-intro-container-datatorget{
-    background-image: url(../Media/Datatorget/Datatorget.jpg);/*Bilde tatt selv med mobiltelefonen*/
-    background-position: center; /*vil plassere bildet i midten av elementet*/
-    background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
-    background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
+.IntroContainer-datatorget {
+  color: white; /*Endrer farge på tekst til hvit for å øke kontraster*/
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.591
+  ); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
 }
 
-.fasiliteterDatatorget{
-    text-align: center; /*Sentrerer overskriften*/
-    font-size: 30px; /*setter størelsen på teksten til 30px*/
-    color: #ffd901; /*setter fargen til svart*/
-    margin-top: 50px; /*legger til et mellomrom mellom introdelen og denne delen*/
+.bakgrunn-intro-container-datatorget {
+  background-image: url(../Media/Datatorget/Datatorget.jpg); /*Bilde tatt selv med mobiltelefonen*/
+  background-position: center; /*vil plassere bildet i midten av elementet*/
+  background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
+  background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
 }
 
-.fasilitetstekst{ 
-    text-align: center; /*sentrerer teksten*/
-    font-size: 25px; /*setter størelsen til 25px*/
-    color: #ffd901; /*setter fargen til svart*/
-    padding-top: 10px; /*mellomrom mellom overskriften og teksten*/
+.fasiliteterDatatorget {
+  text-align: center; /*Sentrerer overskriften*/
+  font-size: 30px; /*setter størelsen på teksten til 30px*/
+  color: #ffd901; /*setter fargen til svart*/
+  margin-top: 50px; /*legger til et mellomrom mellom introdelen og denne delen*/
 }
 
-.bakgrunn_data{
-    background-color: #2d241b;
+.fasilitetstekst {
+  text-align: center; /*sentrerer teksten*/
+  font-size: 25px; /*setter størelsen til 25px*/
+  color: #ffd901; /*setter fargen til svart*/
+  padding-top: 10px; /*mellomrom mellom overskriften og teksten*/
 }
 
-.datatorgetflex{
-    scroll-snap-type: y mandatory; /*koden kontrollerer scrollingen på siden som gjør at den "hopper" til bestemte plasser*/
-    overflow-y: scroll; /*oppretter en vertikal rullefelt som en kreativ løsning på et slideshow*/
-    height: 75vh; /*setter hver bokst til å være 75% av visual highten */
-    margin: 5%; /*legger inn en margin rundt boksen*/
-    margin-left: 10%; /*legger boksen mer mot midten*/
-    margin-right: 10%; /*legger boksen mer mot midten*/
+.bakgrunn_data {
+  background-color: #2d241b;
 }
 
-.section-fasiliteter{
-    height:75vh; /*hver side i boksen er like stor som boksen selv*/
-    scroll-snap-align: start; /*tvinger hver side til å "hoppe" ned eller opp 75%vh hver gang man scroller*/
+.datatorgetflex {
+  scroll-snap-type: y mandatory; /*koden kontrollerer scrollingen på siden som gjør at den "hopper" til bestemte plasser*/
+  overflow-y: scroll; /*oppretter en vertikal rullefelt som en kreativ løsning på et slideshow*/
+  height: 75vh; /*setter hver bokst til å være 75% av visual highten */
+  margin: 5%; /*legger inn en margin rundt boksen*/
+  margin-left: 10%; /*legger boksen mer mot midten*/
+  margin-right: 10%; /*legger boksen mer mot midten*/
 }
 
-
-.databilder{
-    height: 65vh; /*setter bildene på boksen til å være 65vh*/
-    border: solid; /*legger en border rundt bildene*/
-    border-color: #000000; /*setter border fargen til svart*/
+.section-fasiliteter {
+  height: 75vh; /*hver side i boksen er like stor som boksen selv*/
+  scroll-snap-align: start; /*tvinger hver side til å "hoppe" ned eller opp 75%vh hver gang man scroller*/
 }
 
-.databilder2{
-    height: 65vh; /*setter bildene på boksen til å være 65vh*/
-    border: solid; /*legger en border rundt bildene*/
-    border-color: #ffd901; /*setter border fargen til svart*/
+.databilder {
+  height: 65vh; /*setter bildene på boksen til å være 65vh*/
+  border: solid; /*legger en border rundt bildene*/
+  border-color: #000000; /*setter border fargen til svart*/
+}
+
+.databilder2 {
+  height: 65vh; /*setter bildene på boksen til å være 65vh*/
+  border: solid; /*legger en border rundt bildene*/
+  border-color: #ffd901; /*setter border fargen til svart*/
 }
 
 /*legger på unike farger per side i boksen*/
-.datatorget1{
-    background-color: #ffd901; 
+.datatorget1 {
+  background-color: #ffd901;
 }
 
-.datatorget2{
-    background-color: rgb(0, 0, 0);
+.datatorget2 {
+  background-color: rgb(0, 0, 0);
 }
 
-.datatekst2{
-    color: #ffd901;
+.datatekst2 {
+  color: #ffd901;
 }
 
-
-.hiddendata{
-    opacity: 0;
-    transition: all 2s;
+.hiddendata {
+  opacity: 0;
+  transition: all 2s;
 }
 
-.show{
-    opacity: 1;
+.show {
+  opacity: 1;
 }
 
-
-.gradering{
-    background-image: url(/HTML/Media/Datatorget/klasserom\ 1.jpg); /*bakgrunn for klasserom-siden. Bildet er tatt privat*/
-    background-position: center; /*vil plassere bildet i midten av elementet*/
-    background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
-    background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
+.gradering {
+  background-image: url(/HTML/Media/Datatorget/klasserom\ 1.jpg); /*bakgrunn for klasserom-siden. Bildet er tatt privat*/
+  background-position: center; /*vil plassere bildet i midten av elementet*/
+  background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
+  background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
 }
 
 /*Mobil 320-425px*/
-@media (max-width: 425px){
-
-    .databilder2{
-        max-height: 30vh;
-    }
-
-
+@media (max-width: 425px) {
+  .databilder2 {
+    max-height: 30vh;
+  }
 }
 
 /*Nettbrett stående 426-768*/
-@media (max-width: 768px){
-    .grid-item-felles{
-        font-size: 20px;
-    }
+@media (max-width: 768px) {
+  .grid-item-felles {
+    font-size: 20px;
+  }
 
-    .databilder{
-        max-height: 35vh;
-    }
-
-
+  .databilder {
+    max-height: 35vh;
+  }
 }
 
 /*Nettbrett liggende 769-1024*/
 @media (max-width: 1024px) {
-    .fa-bars{
-        visibility:visible;
-    }
-    .NavElementer{
-        visibility:hidden;
-    }
+  .fa-bars {
+    visibility: visible;
+  }
+  .NavElementer {
+    visibility: hidden;
+  }
 
-    .databilder{
-        max-height: 45vh;
-    }
-
-
+  .databilder {
+    max-height: 45vh;
+  }
 }
 
-
-@media (max-width: 1999px){
-
-    .databilder{
-        max-height: 45vh;
-    }
+@media (max-width: 1999px) {
+  .databilder {
+    max-height: 45vh;
+  }
 }
-
-
->>>>>>> Stashed changes
 
 /* ----- Endring av datatorget.html START ----- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ----- Endring av datatorget.html SLUTT ----- */
 
 
 /* ----- Endring av accessibility.html START ----- */
 /*Dark Mode*/
-.dark-mode-container{
-    position:absolute;
-    right: 0;
-    top: 100%
+.dark-mode-container {
+  position: absolute;
+  right: 0;
+  top: 100%;
 }
-.dark-mode{
-    background-color: #0A0A0A; /*Mørk bakgrunnsfarge*/
-    color: white; /*Lys tekstfarge*/
+.dark-mode {
+  background-color: #0a0a0a; /*Mørk bakgrunnsfarge*/
+  color: white; /*Lys tekstfarge*/
 }
 
 .dark-mode a {
-    color: yellow;
+  color: yellow;
 }
-.dark-mode main{
-        background-image: url('/HTML/Media/Kantine/marmor2.jpg');
-        background-attachment: fixed;
-        background-size: cover;
+.dark-mode main {
+  background-image: url("/HTML/Media/Kantine/marmor2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
-.dark-mode .kantineContainer a{ /* Ved dark-mode endres kart-linkene i kantineside til hvit skrift for bedre kontrast */
-    color: white;
+.dark-mode .kantineContainer a {
+  /* Ved dark-mode endres kart-linkene i kantineside til hvit skrift for bedre kontrast */
+  color: white;
 }
-#dark-mode-toggle{
-    background-color: #4c4b4b; /*Bakgrunnsfarge*/
-    color: white; /* Tekstfarge */ 
-    border: 1px solid #4c4b4b; /* Ramme, tykkelse, type og farge */
-    padding: 10px 20px; /* Innvendig marg venstre og topp*/
-    border-radius: 5px; 
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+#dark-mode-toggle {
+  background-color: #4c4b4b; /*Bakgrunnsfarge*/
+  color: white; /* Tekstfarge */
+  border: 1px solid #4c4b4b; /* Ramme, tykkelse, type og farge */
+  padding: 10px 20px; /* Innvendig marg venstre og topp*/
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
-#dark-mode-toggle:hover{
-    background-color: #00f; /* Endrer bakgrunnsfarge ved hover */ 
-    color: #fff; /*Endrer tekstfarge ved hover*/ 
-    box-shadow: 0 0 10px #00f; /*Legger til skygge ved hover */ 
+#dark-mode-toggle:hover {
+  background-color: #00f; /* Endrer bakgrunnsfarge ved hover */
+  color: #fff; /*Endrer tekstfarge ved hover*/
+  box-shadow: 0 0 10px #00f; /*Legger til skygge ved hover */
 }
 /*Rød prikk (standard når dark-mode er av*/
-.red-dot{
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    border-radius: 50%; /* Gjør prikken siruklær */
-    display: inline-block;
-    margin-right: 5px; /*Avstand fra teksten */
+.red-dot {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%; /* Gjør prikken siruklær */
+  display: inline-block;
+  margin-right: 5px; /*Avstand fra teksten */
 }
 /*Grønn prikk når dark-mode er på*/
-.green-dot{
-    background-color: white;
+.green-dot {
+  background-color: white;
 }
 
 /*Beholder footer-farge på teksten ved dark-mode aktivert*/
-body.dark-mode footer{
-    color: black;
+body.dark-mode footer {
+  color: black;
 }
 
 .dark-mode .kantineItem {
-    background-color: #53525274;
+  background-color: #53525274;
 }
-
 
 /*Introteksten til accessibility-siden:*/
-.accessibility-intro{
-    /*Setter teksten i midten av siden*/
-    text-align: center;
+.accessibility-intro {
+  /*Setter teksten i midten av siden*/
+  text-align: center;
 
-    padding-top: 150px;
+  padding-top: 150px;
 }
 
-.accessibility-tester-container{
-    margin: 10px;
+.accessibility-tester-container {
+  margin: 10px;
 }
 
-.tester-bilder{
-    width: 28rem
+.tester-bilder {
+  width: 28rem;
 }
 
-.margin-20px{
-    margin: 20px;
+.margin-20px {
+  margin: 20px;
 }
 
-.lighthouse-bilder{
-    width: 35rem;
+.lighthouse-bilder {
+  width: 35rem;
 }
 
-.Tekst-Link{
-    text-decoration: underline;
-
+.Tekst-Link {
+  text-decoration: underline;
 }
 
 /* ----- Responsivt design for accessibility-siden ----- */
 @media (max-width: 769px) {
-    .red-dot{
-        width: 5px;
-        height: 5px;
-    }
-    .tester-bilder, .lighthouse-bilder{
-        width: 20rem;
-    }
+  .red-dot {
+    width: 5px;
+    height: 5px;
+  }
+  .tester-bilder,
+  .lighthouse-bilder {
+    width: 20rem;
+  }
 }
 @media (max-width: 400px) {
-    .tester-bilder, .lighthouse-bilder{
-        width: 15rem;
-    }
-    
+  .tester-bilder,
+  .lighthouse-bilder {
+    width: 15rem;
+  }
 }
-
 /* ----- Endring av accessibility.html SLUTT ----- */
-
