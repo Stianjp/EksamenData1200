@@ -126,6 +126,7 @@
     .sidebar{
         grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 1024px */
         grid-row: 2; /* Flytt sidebar under main content */
+    
     }
 
 }
