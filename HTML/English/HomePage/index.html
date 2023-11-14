@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="/HTML/Style/index.css">
     <!--Link til sosiale meider knapper-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Legger til ikon i fanen-->
+    <link rel="shortcut icon" href="/HTML/Media/Navbar/Logomedsignatur_gul_OsloMet-01.png" type="image/x-icon">
     <!--Legger til metabeskrivelse-->
     <meta name="description" content="Website of Oslo Metropolitan University. Explore the campus, study opportunities, news and contact information. Get information about student life and what it's like to be a student at OsloMet.">
     <title>OsloMet</title>
 </head>
 
 <body>
+    <!--Container for bakgrunnsbilde som er øverst på siden-->
+    <div class="bakgrunn-intro-container">    
+        <div class="bakgrunn-intro-shadow-container">
     <!--Header START-->
     <header>
         <!--Navigasjonsbar START-->
@@ -34,7 +39,7 @@
                 <a href="/HTML/English/Cafeteria/index.html">Cafeteria</a>
 
                 <!--Flex-boks 4-->
-                <a href="/HTML/English/Data square/index.html">Data square</a>
+                <a href="/HTML/English/Data square/index.html">Datatorget</a>
 
                 <!--Flex-boks 5-->
                 <a href="/HTML/Norsk/Tilgjengelighet/index.html">Accessibility</a> <!--Ikke laget engelsk side-->
@@ -90,9 +95,6 @@
         <!--Avslutter header for å starte på body-->
     </header>
 
-    <!--Container for bakgrunnsbilde som er øverst på siden-->
-    <div class="bakgrunn-intro-container">
-
         <!--Container for tilhørende tekst og bilde øverst på siden-->
         <div class="IntroContainer">
             <div class="introTekst grid-felles-2kol-1rad padding-20px">
@@ -116,7 +118,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <!--Container om campus Oslo-->
     <div class="CampusContainer grid-felles-2kol-1rad padding-20px">
 
@@ -152,7 +154,7 @@
         <!--Bilde til høyre med tilhørende tekst for mindre skjermer: grid-boks 2-->
         <div>
             <img class="Fjernes-ved-liten-skjerm grid-img-innføringcampus"
-                src="/HTML/Media/Introside/img-bilde-innføringcampus-høyre.jpeg" alt="Bilde av P35 fra avstand med dammen" loading="lazy">
+                src="/HTML/Media/Introside/img-bilde-innføringcampus-høyre.webp" alt="Bilde av P35 fra avstand med dammen" loading="lazy">
             <!--Kilden til bilde: https://www.pexels.com/nb-no/bilde/skole-arkitektur-dam-refleksjon-11823038/-->
             <!--Bilde av P35 fra avstand med dammen vises på skjerm fra og med 1025px bredde og oppover-->
 
@@ -181,7 +183,7 @@
             </p>
 
             <!--Bilde som vises på skjermer mindre enn 1024px bredde-->
-            <img class="responsive-img" src="Media/Introside/img-bilde-innføringcampus-høyre.jpeg"
+            <img class="responsive-img" src="/HTML/Media/Introside/img-bilde-innføringcampus-høyre.webp"
                 alt="Bilde av P35 fra avstand med dammen">
         </div>
 
@@ -240,7 +242,7 @@
             <div class="grid-item-felles">
                 <label for="melding">Send us questions or feedback</label>
                 <textarea id="melding" class="tilbakemelding-textarea"
-                    placeholder="Skriv din melding her..."></textarea>
+                    placeholder="Type you´re message here..."></textarea>
                 <!-- Unik klasse for tekstområdet -->
                 <button class="tilbakemelding-knapp" onclick="sendMelding()">
                     Send
