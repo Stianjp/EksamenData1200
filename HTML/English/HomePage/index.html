@@ -1,51 +1,65 @@
 <!DOCTYPE html>
-<html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="EN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Linker CSS-filen til HTML-->
-    <link rel="stylesheet" href="/HTML/Style/index.css">
+    <link rel="stylesheet" href="/HTML/Style/index.css" />
     <!--Link til sosiale meider knapper-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <!--Legger til ikon i fanen-->
-    <link rel="shortcut icon" href="/HTML/Media/Navbar/Logomedsignatur_gul_OsloMet-01.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="/HTML/Media/Navbar/Logomedsignatur_gul_OsloMet-01.png"
+      type="image/x-icon"/>
     <!--Legger til metabeskrivelse-->
-    <meta name="description" content="Website of Oslo Metropolitan University. Explore the campus, study opportunities, news and contact information. Get information about student life and what it's like to be a student at OsloMet.">
+    <meta
+      name="description"
+      content="Website of Oslo Metropolitan University. Explore the campus, study opportunities, news and contact information. Get information about student life and what it's like to be a student at OsloMet."/>
     <title>OsloMet</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--Container for bakgrunnsbilde som er øverst på siden-->
-    <div class="bakgrunn-intro-container">    
-        <div class="bakgrunn-intro-shadow-container">
-    <!--Header START-->
-    <header>
-        <!--Navigasjonsbar START-->
-        <nav class="navbar">
-            <a href="/HTML/Norsk/Hjem/index.html" class="logo"><img class="logo" src="/HTML/Media/Navbar/Logomedsignatur_gul_OsloMet-01.png" alt="OsloMet Logo" aria-label="Back to home page"></a>
+    <div class="bakgrunn-intro-container">
+      <div class="bakgrunn-intro-shadow-container">
+        <!--Header START-->
+        <header>
+          <!--Navigasjonsbar START-->
+          <nav class="navbar">
+            <a href="/HTML/Norsk/Hjem/index.html" class="logo">
+                <img
+                class="logo"
+                src="/HTML/Media/Navbar/Logomedsignatur_gul_OsloMet-01.png"
+                alt="OsloMet Logo"
+                aria-label="Back to home page"/>
+            </a>
             <!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
 
             <!--Standrad navigasjonsmeny for større skjermer-->
             <div class="NavElementer">
-                <!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
-                <!--Flex-boks 1-->
-                <a href="/HTML/English/HomePage/index.html">Home</a>
+              <!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
+              <!--Flex-boks 1-->
+              <a href="/HTML/English/HomePage/index.html">Home</a>
 
-                <!--Flex-boks 2-->
-                <a href="/HTML/English/Topical/index.html">Topical</a>
+              <!--Flex-boks 2-->
+              <a href="/HTML/English/Topical/index.html">Topical</a>
 
-                <!--Flex-boks 3-->
-                <a href="/HTML/English/Cafeteria/index.html">Cafeteria</a>
+              <!--Flex-boks 3-->
+              <a href="/HTML/English/Cafeteria/index.html">Cafeteria</a>
 
-                <!--Flex-boks 4-->
-                <a href="/HTML/English/Data square/index.html">Datatorget</a>
+              <!--Flex-boks 4-->
+              <a href="/HTML/English/Data square/index.html">Datatorget</a>
 
-                <!--Flex-boks 5-->
-                <a href="/HTML/Norsk/Tilgjengelighet/index.html">Accessibility</a> <!--Ikke laget engelsk side-->
+              <!--Flex-boks 5-->
+              <a href="/HTML/Norsk/Tilgjengelighet/index.html">Accessibility</a>
+              <!--Ikke laget engelsk side-->
 
-                <!--Flex-boks 6-->
-                <a href="/HTML/Norsk/Hjem/index.html">NO</a>
+              <!--Flex-boks 6-->
+              <a href="/HTML/Norsk/Hjem/index.html">NO</a>
             </div>
 
             <!--Standard naviasjonsmeny for mindre skjermer enn 1024px bredde-->
@@ -54,265 +68,268 @@
 
             <!--Meny for når man trykker på hamburger-ikonet-->
             <div class="mobil-nav" id="mobilmeny">
-                <div class="grid-meny-mobil">
-
-                    <!--Link til index siden: grid-boks 1-->
-                    <div class="meny-knapp">
-                        <a href="/HTML/index.html">Home</a>
-                    </div>
-
-                    <!--Link til topical siden: grid-boks 2-->
-                    <div class="meny-knapp">
-                        <a href="topical.html">Topical</a>
-                    </div>
-
-                    <!--Link til kantine siden: grid-boks 3-->
-                    <div>
-                        <a href="kantine.html">Cafeteria</a>
-                    </div>
-
-                    <!--Link til datatorget siden: grid-boks 4-->
-                    <div>
-                        <a href="datatorget.html">Data square</a>
-                    </div>
-
-                    <!--Link til accessibility siden: grid-boks 5-->
-                    <div>
-                        <a href="accessibility.html">Accessibility</a>
-                    </div>
-
-                    <!--Link til den engelske siden som man befinner seg på: grid-boks 6-->
-                    <div>
-                        <a href="index.html">NO</a>
-                    </div>
+              <div class="grid-meny-mobil">
+                <!--Link til index siden: grid-boks 1-->
+                <div class="meny-knapp">
+                  <a href="/HTML/index.html">Home</a>
                 </div>
 
-                <!--Knapp for å lukke menyen-->
-                <button id="lukkMeny">Close</button>
+                <!--Link til topical siden: grid-boks 2-->
+                <div class="meny-knapp">
+                  <a href="topical.html">Topical</a>
+                </div>
+
+                <!--Link til kantine siden: grid-boks 3-->
+                <div>
+                  <a href="kantine.html">Cafeteria</a>
+                </div>
+
+                <!--Link til datatorget siden: grid-boks 4-->
+                <div>
+                  <a href="datatorget.html">Data square</a>
+                </div>
+
+                <!--Link til accessibility siden: grid-boks 5-->
+                <div>
+                  <a href="accessibility.html">Accessibility</a>
+                </div>
+
+                <!--Link til den engelske siden som man befinner seg på: grid-boks 6-->
+                <div>
+                  <a href="index.html">NO</a>
+                </div>
+              </div>
+
+              <!--Knapp for å lukke menyen-->
+              <button id="lukkMeny">Close</button>
             </div>
-        </nav>
-        <!--Navigasjonsbar SLUTT-->
-        <!--Avslutter header for å starte på body-->
-    </header>
+          </nav>
+          <!--Navigasjonsbar SLUTT-->
+          <!--Avslutter header for å starte på body-->
+        </header>
 
         <!--Container for tilhørende tekst og bilde øverst på siden-->
         <div class="IntroContainer">
-            <div class="introTekst grid-felles-2kol-1rad padding-20px">
-                <!--SE CSS-fil, diven er til for å gridde <p>-elementene nedenfor-->
+          <div class="introTekst grid-felles-2kol-1rad padding-20px">
+            <!--SE CSS-fil, diven er til for å gridde <p>-elementene nedenfor-->
 
-                <!--Bilde på venstre side: grid-boks 1-->
-                <div>
-                    <img class="responsiv-img-min426px ToStudenter Introside-bilde-responsiv" src="/HTML/Media/Introside/BildeAvToStudenter.webp"
-                        alt="To studenter som leser sammen">
-                    <!--Link til bilde: https://www.pexels.com/nb-no/bilde/blyant-samarbeid-forhold-tilkobling-5940845/-->
-                </div>
-
-                <!--Tekst på høyre side: grid-boks 2-->
-                <div class="grid-item-felles farge-hvit">
-                    <h1>What is it like to be a student at OsloMet?</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sit, expedita tempora
-                        <i>laboriosam aut perferendis!</i><!--Benytter kursiv tekst her--> Modi mollitia perspiciatis nesciunt maiores itaque at dolore,
-                        debitis quidem eaque id laborum quos culpa.
-                    </p>
-                </div>
+            <!--Bilde på venstre side: grid-boks 1-->
+            <div>
+              <img
+                class="responsiv-img-min426px ToStudenter Introside-bilde-responsiv"
+                src="/HTML/Media/Introside/BildeAvToStudenter.webp"
+                alt="To studenter som leser sammen"/>
+              <!--Link til bilde: https://www.pexels.com/nb-no/bilde/blyant-samarbeid-forhold-tilkobling-5940845/-->
             </div>
+
+            <!--Tekst på høyre side: grid-boks 2-->
+            <div class="grid-item-felles farge-hvit">
+              <h1>What is it like to be a student at OsloMet?</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
+                sit, expedita tempora <i>laboriosam aut perferendis!</i
+                ><!--Benytter kursiv tekst her-->
+                Modi mollitia perspiciatis nesciunt maiores itaque at dolore,
+                debitis quidem eaque id laborum quos culpa.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
     <!--Container om campus Oslo-->
     <div class="CampusContainer grid-felles-2kol-1rad padding-20px">
+      <!--Tekst til venstre for bilde: grid-boks 1-->
+      <div class="grid-item-felles">
+        <h2>Campus Oslo</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat,
+          eos voluptas aliquam nam voluptatibus nesciunt cum cumque ducimus,
+          minima est. Modi molestias quisquam eaque quibusdam cumque eius esse
+          nulla.
+        </p>
+      </div>
 
-        <!--Tekst til venstre for bilde: grid-boks 1-->
-        <div class="grid-item-felles">
-            <h2>
-                Campus Oslo
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat, eos voluptas aliquam nam voluptatibus
-                nesciunt cum cumque ducimus, minima est. Modi molestias quisquam eaque quibusdam cumque eius esse nulla.
-            </p>
-        </div>
-
-        <!--Bilde på høyre side: grid-boks 2-->
-        <div>
-            <img class="campusBilde Introside-bilde-responsiv" src="/HTML/Media/Introside/CampusBilde.webp"
-                alt="To studenter som går over en bru på campus Oslo" loading="lazy">
-            <!--Link til bilde: https://www.pexels.com/nb-no/bilde/prosjekt-ung-mappe-mote-5553037/-->
-        </div>
+      <!--Bilde på høyre side: grid-boks 2-->
+      <div>
+        <img
+          class="campusBilde Introside-bilde-responsiv"
+          src="/HTML/Media/Introside/CampusBilde.webp"
+          alt="To studenter som går over en bru på campus Oslo"
+          loading="lazy"/>
+        <!--Link til bilde: https://www.pexels.com/nb-no/bilde/prosjekt-ung-mappe-mote-5553037/-->
+      </div>
     </div>
 
     <!--Container for introduksjon til campus-->
     <div class="InnføringCampusContainer grid-felles-2kol-1rad">
+      <!--Bilde til venstre: grid-boks 1-->
+      <div>
+        <img
+          class="grid-img-innføringcampus responsiv-img-1"
+          src="/HTML/Media/Introside/img-bilde-venstre-innføringscamp.webp"
+          alt="Hovedinngangen til byggning P52"
+          loading="lazy"/>
+        <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/administrasjon-arkitektur-bibliotek-bygning-256490/-->
+      </div>
 
-        <!--Bilde til venstre: grid-boks 1-->
-        <div>
-            <img class="grid-img-innføringcampus responsiv-img-1"
-                src="/HTML/Media/Introside/img-bilde-venstre-innføringscamp.webp" alt="Hovedinngangen til byggning P52" loading="lazy">
-            <!--Bilde hentet fra: https://www.pexels.com/nb-no/bilde/administrasjon-arkitektur-bibliotek-bygning-256490/-->
+      <!--Bilde til høyre med tilhørende tekst for mindre skjermer: grid-boks 2-->
+      <div>
+        <img
+          class="Fjernes-ved-liten-skjerm grid-img-innføringcampus"
+          src="/HTML/Media/Introside/img-bilde-innføringcampus-høyre.webp"
+          alt="Bilde av P35 fra avstand med dammen"
+          loading="lazy"/>
+        <!--Kilden til bilde: https://www.pexels.com/nb-no/bilde/skole-arkitektur-dam-refleksjon-11823038/-->
+        <!--Bilde av P35 fra avstand med dammen vises på skjerm fra og med 1025px bredde og oppover-->
+
+        <!--Tekst som vises på skjermer mindre enn 1024px bred-->
+        <div class="responsiv-tekst">
+          <h2 class="InnføringCampus-tekst-felles padding-20px">
+            Pilestredet 52
+          </h2>
+          <p class="InnføringCampus-tekst-felles padding-20px">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,
+            eaque!
+          </p>
         </div>
+      </div>
 
-        <!--Bilde til høyre med tilhørende tekst for mindre skjermer: grid-boks 2-->
-        <div>
-            <img class="Fjernes-ved-liten-skjerm grid-img-innføringcampus"
-                src="/HTML/Media/Introside/img-bilde-innføringcampus-høyre.webp" alt="Bilde av P35 fra avstand med dammen" loading="lazy">
-            <!--Kilden til bilde: https://www.pexels.com/nb-no/bilde/skole-arkitektur-dam-refleksjon-11823038/-->
-            <!--Bilde av P35 fra avstand med dammen vises på skjerm fra og med 1025px bredde og oppover-->
+      <!--Tekst til venstre med tilhørende bilde for mindre skjerm: grid-boks 3-->
+      <div class="grid-item-innføringCampus-venstre">
+        <!--Teksten er kun synlig ved større enn 1025px bredde-->
+        <h2
+          class="Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
+          Pilestredet 52
+        </h2>
+        <p
+          class="Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,
+          eaque!
+        </p>
+        <p class="grid-item-innføringCampus-skille farge-hvit Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px"></p>
 
-            <!--Tekst som vises på skjermer mindre enn 1024px bred-->
-            <div class="responsiv-tekst">
-                <h2 class="InnføringCampus-tekst-felles padding-20px">
-                    Pilestredet 52
-                </h2>
-                <p class="InnføringCampus-tekst-felles padding-20px">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eaque!
-                </p>
-            </div>
-        </div>
+        <!--Bilde som vises på skjermer mindre enn 1024px bredde-->
+        <img
+          class="responsive-img"
+          src="/HTML/Media/Introside/img-bilde-innføringcampus-høyre.webp"
+          alt="Bilde av P35 fra avstand med dammen"/>
+      </div>
 
-        <!--Tekst til venstre med tilhørende bilde for mindre skjerm: grid-boks 3-->
-        <div class="grid-item-innføringCampus-venstre">
-            <!--Teksten er kun synlig ved større enn 1025px bredde-->
-            <h2 class="Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
-                Pilestredet 52 
-            </h2>
-            <p class="Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eaque!
-            </p>
-            <p
-                class="grid-item-innføringCampus-skille farge-hvit Fjernes-ved-liten-skjerm grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
-            </p>
+      <!--Tekst til høyre: grid-boks 4-->
+      <div class="grid-item-innføringCampus-høyre margin-bottom-100px">
+        <!--grid-boks 4-->
+        <h2 class="InnføringCampus-tekst-felles padding-20px">
+          Pilestredet 35
+        </h2>
+        <p class="InnføringCampus-tekst-felles padding-20px">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam,
+          eaque!
+        </p>
+        <p class="grid-item-innføringCampus-skille Fjernes-ved-liten-skjerm InnføringCampus-tekst-felles padding-20px"></p>
+      </div>
 
-            <!--Bilde som vises på skjermer mindre enn 1024px bredde-->
-            <img class="responsive-img" src="/HTML/Media/Introside/img-bilde-innføringcampus-høyre.webp"
-                alt="Bilde av P35 fra avstand med dammen">
-        </div>
+      <!--Artikkel til venstre: grid-boks 5-->
+      <div
+        class="grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
+        <!--grid-boks 5-->
+        <h3>
+          More students choose economics, health and creative subjects at
+          OsloMet
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, ad.
+        </p>
+        <p class="Les-mer-knapp">
+          <a
+            class="grid-item-knapp bakgrunnsfarge-hvit-svart-tekst"
+            href="https://www.oslomet.no/om/nyheter/okonomi-helse-kreative-fag-mest-populert"
+            >Read more here
+          </a>
+        </p>
+        <!--Link til OsloMet sine nyheter. Hentet 29.08.23-->
+      </div>
 
-        <!--Tekst til høyre: grid-boks 4-->
-        <div class="grid-item-innføringCampus-høyre margin-bottom-100px">
-            <!--grid-boks 4-->
-            <h2 class="InnføringCampus-tekst-felles padding-20px">
-                Pilestredet 35
-            </h2>
-            <p class="InnføringCampus-tekst-felles padding-20px">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eaque!
-            </p>
-            <p class="grid-item-innføringCampus-skille Fjernes-ved-liten-skjerm InnføringCampus-tekst-felles padding-20px"></p>
-        </div>
-
-        <!--Artikkel til venstre: grid-boks 5-->
-        <div class="grid-item-innføringCampus-venstre InnføringCampus-tekst-felles padding-20px">
-            <!--grid-boks 5-->
-            <h3>
-                More students choose economics, health and creative subjects at OsloMet
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, ad.
-            </p>
-            <p class="Les-mer-knapp">
-                <a class="grid-item-knapp bakgrunnsfarge-hvit-svart-tekst"
-                    href="https://www.oslomet.no/om/nyheter/okonomi-helse-kreative-fag-mest-populert">Read more here
-                </a>
-            </p>
-            <!--Link til OsloMet sine nyheter. Hentet 29.08.23-->
-        </div>
-
-        <!--Artikkel til høyre: grid-boks 6-->
-        <div class="grid-item-innføringCampus-høyre margin-bottom-100px InnføringCampus-tekst-felles padding-20px">
-            <!--grid-boks 6-->
-            <h3>
-                How to find student accommodation in Oslo
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut.
-            </p>
-            <p>
-                <a class="grid-item-knapp"
-                    href="https://www.oslomet.no/studier/studenthistorier/finn-studentbolig-i-oslo">Read more here
-                </a>
-            </p>
-            <!--Link til OsloMet sine nyheter. Hentet 29.08.23-->
-        </div>
+      <!--Artikkel til høyre: grid-boks 6-->
+      <div
+        class="grid-item-innføringCampus-høyre margin-bottom-100px InnføringCampus-tekst-felles padding-20px">
+        <!--grid-boks 6-->
+        <h3>How to find student accommodation in Oslo</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut.
+        </p>
+        <p>
+          <a
+            class="grid-item-knapp"
+            href="https://www.oslomet.no/studier/studenthistorier/finn-studentbolig-i-oslo">Read more here
+          </a>
+        </p>
+        <!--Link til OsloMet sine nyheter. Hentet 29.08.23-->
+      </div>
     </div>
 
     <footer class="Footer-gul">
-        <!--Container for footer-->
-        <div class="grid-footer-container">
-
-            <!--Feedback boks: grid-boks  1-->
-            <div class="grid-item-felles">
-                <label for="melding">Send us questions or feedback</label>
-                <textarea id="melding" class="tilbakemelding-textarea"
-                    placeholder="Type you´re message here..."></textarea>
-                <!-- Unik klasse for tekstområdet -->
-                <button class="tilbakemelding-knapp" onclick="sendMelding()">
-                    Send
-                </button>
-                <!--Unik klasse for send-knappen - Legger også til en javascript-->
-            </div>
-
-            <!--Adresseinfo: grid-boks 2-->
-            <div class="grid-item-felles">
-                <h3>
-                    OSLO METROPOLITAN UNIVERSITY
-                </h3>
-                <h4>
-                    STORBYUNIVERSITETET
-                </h4>
-                <p>
-                    Postboks 4 St. Olavs plass, 0130 Oslo
-                </p>
-                <p>
-                    Telephone: +47 67 23 50 00
-                </p>
-                <p>
-                    E-post:
-                    <a href="mailto:someone@example.com">
-                        someone@example.com
-                    </a>
-                </p>
-            </div>
-
-            <!--Sosiale medier: grid-boks 3-->
-            <div class="grid-item-felles">
-                <div class="grid-footer-some">
-                    <div class="inline-footer-some">
-                        <a href="https://www.facebook.com/oslomet/" class="fa fa-facebook">
-                            <p>
-                                Facebook
-                            </p>
-                        </a>
-                    </div>
-                    <div class="inline-footer-some">
-                        <a href="https://twitter.com/oslomet" class="fa fa-twitter">
-                            <p>
-                                X
-                            </p>
-                        </a>
-                    </div>
-                    <div class="inline-footer-some">
-                        <a href="https://www.linkedin.com/school/oslomet/?originalSubdomain=no" class="fa fa-linkedin">
-                            <p>
-                                LinkedIn
-                            </p>
-                        </a>
-                    </div>
-                    <div class="inline-footer-some">
-                        <a href="https://www.instagram.com/oslomet/?hl=nb" class="fa fa-instagram">
-                            <p>
-                                Instagram
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <!--Container for footer-->
+      <div class="grid-footer-container">
+        <!--Feedback boks: grid-boks  1-->
+        <div class="grid-item-felles">
+          <label for="melding">Send us questions or feedback</label>
+          <textarea id="melding" class="tilbakemelding-textarea" placeholder="Type you´re message here..."></textarea>
+          <!-- Unik klasse for tekstområdet -->
+          <button class="tilbakemelding-knapp" onclick="sendMelding()">
+            Send
+          </button>
+          <!--Unik klasse for send-knappen - Legger også til en javascript-->
         </div>
-        <p class="footer-copyright">
-            Copyright © 2023 Lorem ipsum dolor
-        </p>
+
+        <!--Adresseinfo: grid-boks 2-->
+        <div class="grid-item-felles">
+          <h3>OSLO METROPOLITAN UNIVERSITY</h3>
+          <h4>STORBYUNIVERSITETET</h4>
+          <p>Postboks 4 St. Olavs plass, 0130 Oslo</p>
+          <p>Telephone: +47 67 23 50 00</p>
+          <p>
+            E-post:
+            <a href="mailto:someone@example.com"> someone@example.com </a>
+          </p>
+        </div>
+
+        <!--Sosiale medier: grid-boks 3-->
+        <div class="grid-item-felles">
+          <div class="grid-footer-some">
+            <div class="inline-footer-some">
+              <a
+                href="https://www.facebook.com/oslomet/"
+                class="fa fa-facebook">
+                <p>Facebook</p>
+              </a>
+            </div>
+            <div class="inline-footer-some">
+              <a href="https://twitter.com/oslomet" class="fa fa-twitter">
+                <p>X</p>
+              </a>
+            </div>
+            <div class="inline-footer-some">
+              <a
+                href="https://www.linkedin.com/school/oslomet/?originalSubdomain=no"
+                class="fa fa-linkedin">
+                <p>LinkedIn</p>
+              </a>
+            </div>
+            <div class="inline-footer-some">
+              <a
+                href="https://www.instagram.com/oslomet/?hl=nb"
+                class="fa fa-instagram">
+                <p>Instagram</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copyright">Copyright © 2023 Lorem ipsum dolor</p>
     </footer>
 
     <!--Linker javascript-filen til HTML-->
     <script src="/HTML/Style/index.js"></script>
-</body>
-
+  </body>
 </html>
