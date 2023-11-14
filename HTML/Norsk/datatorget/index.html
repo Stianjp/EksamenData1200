@@ -7,13 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/HTML/Style/index.css" type="text/css">
+     <!--Link til sosiale meider knapper-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="shortcut icon" href="/HTML/Media/Navbar/Logomedsignatur_gul_OsloMet-01.png" type="image/x-icon">
+     <!--Legger til metabeskrivelse-->
 </head>
 
 <body>
-
     <!--Header START-->
     <header>
-          <!--Navigasjonsbar START-->
+        <!--Navigasjonsbar START-->
         <nav class="navbar">
             <a href="/HTML/Norsk/Hjem/index.html" class="logo"><img class="logo" src="/HTML/Media/Navbar/Logomedsignatur_gul_OsloMet-01.png" alt="OsloMet Logo" aria-label="Tilbake til start-siden"></a>
 
@@ -38,7 +41,7 @@
                 <a href="/HTML/Norsk/Tilgjengelighet/index.html">Accessibility</a>
 
                 <!--Flex-boks 6-->
-                <a href="/HTML/English/HomePage/index.html">EN</a>
+                <a href="/HTML/English/Datatorget/index.html">EN</a>
             </div>
 
             <!--Standard naviasjonsmeny for mindre skjermer enn 1024px bredde-->
@@ -76,7 +79,7 @@
 
                     <!--Link til den engelske siden som man befinner seg på: grid-boks 6-->
                     <div>
-                        <a href="/HTML/English/HomePage/index.html">EN</a>
+                        <a href="/HTML/English/Datatorget/index.html">EN</a>
                     </div>
                 </div>
 
@@ -85,6 +88,7 @@
             </div>
         </nav>
         <!--Navigasjonsbar SLUTT-->
+        <!--Avslutter header for å starte på body-->
     </header> <!--Avslutter header for å starte på selve siden-->
     <div class="bakgrunn_data">
     <!--Div for å legge inn en bakgrunn-->
@@ -119,9 +123,9 @@
         <p class="fasilitetstekst">Scroll igjennom bildene for å se utvalget av tilbuder datatorget inneholder</p>
      
         <div class="datatorgetflex">
-            <section class="datatorget1 section-fasiliteter"> 
-                <div class="introTekst grid-felles grid-felles-2kol-1rad mindre-margin">
-                    <div class="grid-item-felles mindre-margin">
+            <section class="datatorget1 section-fasiliteter hiddendata"> 
+                <div class="fasilitet_tekst grid-felles grid-felles-2kol-1rad">
+                    <div class="grid-item-felles datatekst">
                         <h3>Grupperom</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aperiam quisquam labore eum rem 
@@ -133,25 +137,25 @@
                     </div>
                 </div>
             </section>    
-            <section class="datatorget2 section-fasiliteter mindre-margin">
-                <div class="introTekst grid-felles grid-felles-2kol-1rad">
-                    <div class="grid-item-felles mindre-margin datatekst2">
+            <section class="datatorget2 section-fasiliteter hiddendata">
+                <div class="fasilitet_tekst grid-felles grid-felles-2kol-1rad">
+                    <div class="grid-item-felles datatekst2">
                         <h3>Vanndispenser</h3>
-                        <p class="">
+                        <p class=>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aperiam quisquam labore eum rem 
                             consectetur. Aut maiores 
                         </p>
                     </div>
                     <div>
-                        <img class="databilder databilder2" src="/HTML/Media/Datatorget/vanndispenser.jpg" alt=""><!--Mangler alt tekst-->
+                        <img class="databilder" src="/HTML/Media/Datatorget/vanndispenser.jpg" alt=""><!--Mangler alt tekst-->
                     </div>
                 </div>
             </section> 
-            <section class="datatorget1 section-fasiliteter mindre-margin">
-                <div class="introTekst grid-felles grid-felles-2kol-1rad">
-                    <div class="grid-item-felles mindre-margin">
+            <section class="datatorget1 section-fasiliteter hiddendata">
+                <div class="fasilitet_tekst grid-felles grid-felles-2kol-1rad">
+                    <div class="grid-item-felles datatekst">
                         <h3>Printer</h3>
-                        <p>
+                        <p class=>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aperiam quisquam labore eum rem 
                             consectetur. Aut maiores 
                         </p>
@@ -161,17 +165,17 @@
                     </div>
                 </div>
             </section>
-            <section class="datatorget2 section-fasiliteter mindre-margin">
-                <div class="introTekst grid-felles grid-felles-2kol-1rad">
-                    <div class="grid-item-felles mindre-margin datatekst2">
+            <section class="datatorget2 section-fasiliteter hiddendata">
+                <div class="fasilitet_tekst grid-felles grid-felles-2kol-1rad">
+                    <div class="grid-item-felles datatekst2">
                         <h3>Toalett</h3>
-                        <p class = "">
+                        <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aperiam quisquam labore eum rem 
                             consectetur. Aut maiores 
                         </p>
                     </div>
                     <div>
-                        <img class="databilder databilder2" src="/HTML/Media/Datatorget/toalett.jpg" alt=""><!--Mangler alt tekst-->
+                        <img class="databilder" src="/HTML/Media/Datatorget/toalett.jpg" alt=""><!--Mangler alt tekst-->
                     </div>
                 </div>
             </section>
@@ -182,7 +186,7 @@
         <div class="IntroContainer-datatorget">
             <div class="introTekst grid-felles grid-felles-2kol-1rad padding-20px">
 
-                <div>
+                <div class=>
                     <img class="responsiv-img-min426px introBilde Introside-bilde-responsiv" src="/HTML/Media/Datatorget/klasserom 2.jpg" alt="bilde av klasserom">
                 </div>
 
@@ -274,7 +278,13 @@
     <p class="footer-copyright">
         Copyright © 2023 Lorem ipsum dolor
     </p>
+
+
 </footer>
+
+<script src="/HTML/Style/index.js" defer></script>
+<script src="/HTML/Style/data.js" defer></script>
+
         
 </body>
 </html>
