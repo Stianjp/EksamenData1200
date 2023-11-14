@@ -652,14 +652,12 @@ body {
 
 
 /* ----- Endring av kantine.html START ----- */
-<<<<<<< Updated upstream
+
 main{
     background-image: url('/HTML/Media/Kantine/marmor4.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
-=======
->>>>>>> Stashed changes
 
 /*CSS FOR MAIN START*/
 .kantineIntro{
@@ -754,23 +752,8 @@ main{
     }
 }
 /* ----- Responsivt design for accessibility-siden SLUTT----- */
-<<<<<<< Updated upstream
-=======
 
                                 /* ----- Endring av datatorget.html START ----- */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .fasilitet_tekst{
     align-items: center; /*Sentrerer teksten vertikalt*/
@@ -878,8 +861,16 @@ main{
 /*Mobil 320-425px*/
 @media (max-width: 425px){
 
-    .databilder2{
-        max-height: 30vh;
+    .databilder{
+        height: 30vh !important;
+    }
+
+    .datatekst{
+        font-size: 15px !important;
+    }
+
+    .datatekst2{
+        font-size: 15px !important;
     }
 
 
@@ -891,7 +882,7 @@ main{
         font-size: 20px;
     }
 
-    .databilder{
+    .databilder img{
         max-height: 35vh;
     }
 
@@ -923,7 +914,6 @@ main{
 }
 
 
->>>>>>> Stashed changes
 
 /* ----- Endring av datatorget.html START ----- */
 

@@ -257,6 +257,10 @@ body{
         max-height: 20vh;
     }
 
+    .datatekst{
+        font-size: 3px !important;
+    }
+
 }
 
 /*Nettbrett stående 426-768*/
