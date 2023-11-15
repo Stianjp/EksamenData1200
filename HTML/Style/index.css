@@ -745,8 +745,6 @@ main{
 
                                 /* ----- Endring av datatorget.html START ----- */
 
-
-
 .fasilitet_tekst {
   align-items: center; /*Sentrerer teksten vertikalt*/
   height: 74vh; /*Øker høyden i grid-boks*/
@@ -754,10 +752,9 @@ main{
 }
 
 .introBilde {
-  /*1.Bilde på introside*/
   border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
   border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kontrast og design*/
-  margin-top: 9%;
+  margin-top: 9%; /*legger en  */
 }
 
 .IntroContainer-datatorget {
