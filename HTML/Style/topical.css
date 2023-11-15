@@ -46,6 +46,7 @@
     border-radius: 10px; /* Avrundede hjørner for penere utseende */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Legger til en subtil skyggeeffekt */
     max-width: 400px;
+    
 }
 
 .sidebar > * {
@@ -93,7 +94,6 @@
     .sidebar {
         grid-column: 1; /* Endre til en kolonne når skjermbredden er under 425px */
         grid-row: 2; /* Flytt sidebar under main content */
-
     }
 }
 /* Media query for nettbrett stående */
@@ -127,6 +127,7 @@
         grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 1024px */
         grid-row: 2; /* Flytt sidebar under main content */
     }
+   
 
 }
 
