@@ -44,8 +44,8 @@
     background-color: #6D9DC5; /* Bakgrunnsfarge for sidebar */
     padding: 16px; /* Setter padding til 16px */
     border-radius: 10px; /* Avrundede hjørner for penere utseende */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Legger til en subtil skyggeeffekt */
-    max-width: 400px;
+    box-shadow: 0 0 10px rgba(30, 27, 27, 0.1); /* Legger til en subtil skyggeeffekt */
+    
 }
 
 .sidebar > * {
@@ -53,7 +53,7 @@
 }
 
 .sidebar a {
-    color: #333; /* Farge for lenker */
+    color: black; /* Farge for lenker */
     font-weight: bold; /* Gjør teksten halvfet */
     font-size: 30px; /* Endrer tekststørrelse */
 }
@@ -71,64 +71,90 @@
     max-width: 100%; /* Sørg for at bilder ikke overstiger bredden av parent container */
 }
 
-.main-content {
-    line-height: 1.5; /* Endrer linjeavstande */
-    text-align: center; /* Sentrerer teksten */
-    font-size: 20px; /* Endrer tekststørrelsen */
-    padding: 16px; /* Setter padding til 16px */
-}
-
-/* Media query for mobil */
-@media screen and (max-width: 425px) {
-    .grid-felles {
-        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 425px */
-    }
-    .grid-container {
-        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 425px */
-    }
-    .main-content {
-        grid-column: 1; /* Endre til en kolonne når skjermbredden er under 425px */
-        grid-row: 1; /* Flytt main content over sidebar */
-    }
+/*Endrer sidebar for når nettsiden er mindre enn 1024px*/
+@media screen and (max-width: 1024px) {
     .sidebar {
-        grid-column: 1; /* Endre til en kolonne når skjermbredden er under 425px */
-        grid-row: 2; /* Flytt sidebar under main content */
+        /* Flytt sidebar under main content */
+        grid-column: 1; 
+        grid-row: 1;  
 
+        margin: 0px;
+        padding: 30px 20px 0px 20px;
+        border: 20px;
+        background-color:rgb(255, 255, 255);
+        box-shadow: none;
+        position: relative;
+        height: auto;
+        overflow: auto;
+        /*Benytter flex for å legge elementene på en horisontal linje og tar opp 80% av navbaren - slik at det er plass til logo*/
+        display: flex;
+        /*Plasserer elementene med lik avstand mellom seg*/
+        justify-content: space-between;
+        
+      }
+      .sidebar-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+      }
+      
+      
+      /*Skjuler headers, vanlige lenker og paragrafer*/
+      .sidebar-lenke {display:none;}
+      .sidebar h1 {display:none}
+      .sidebar p {display: none;}
+      .sidebar img {
+        width: 90px;
+        height: 90px;
+        margin:auto;
+        border:80px;
+        border-radius:50%;
+        border-width: 2px;
+        border-style:solid;
+        border-color: rgb(40, 40, 40);
+        overflow:auto;
+        box-shadow: 3px 3px 1px #ccc;
+        -webkit-box-shadow: 0 8px 6px -6px #000;
+        -moz-box-shadow: 0 8px 6px -6px #000;
     }
-}
-/* Media query for nettbrett stående */
-@media screen and (min-width: 426px) and (max-width: 768px) {
-    .grid-felles {
-        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 768px */
-    }
-    .grid-container {
-        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 768px */
-    }
-    .main-content {
-        grid-column: 1; 
-        grid-row: 1; /* Flytt main content over sidebar */
-    }
-    .sidebar {
-        grid-column: 1; 
-        grid-row: 2;  /* Flytt sidebar under main content */
+    .sidebar img:hover {
+        animation: animasjon 1.8s ease-in-out infinite;
     }
     
 }
-/* Media query for nettbrett liggende */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/* Media query for mobil */
+@media screen and (max-width: 534px) {
+    .sidebar img {
+        width: 55px;
+        height: 55px;
+        margin: auto;
+    }
+}
+/* Media query for nettbrett stående */
+@media screen and (max-width: 700px) {
+    .grid-felles {
+        grid-template-columns: 1fr;
+    }
     .grid-container {
-        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 1024px */
+        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 768px */
     }
     .main-content {
-        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 1024px */
-        grid-row: 1; /* Flytt main content over sidebar */
+        grid-column: 1; 
+        grid-row: 2; /* Flytt main content over sidebar */
     }
-    .sidebar{
-        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 1024px */
-        grid-row: 2; /* Flytt sidebar under main content */
-    }
-
 }
+/* Media query for nettbrett liggende */
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Endre til en kolonne når skjermbredden er under 768px */
+    }
+    .main-content {
+        grid-column: 1; 
+        grid-row: 2; /* Flytt main content over sidebar */
+    }
+}
+
+
 
 /* -------- Header: Navbar (felles for alle sider)  ---------------------*/
 /* ------Responsivt design: Desktop 1200px -> 2000px er grunninnstilling ----- */
@@ -277,10 +303,13 @@
         width: 100%;
 
         /*Benytter samme farge som opprinnelig navbar*/
-        background-color: #55d2ff;
+        background-color: #6D9DC5;
 
         /*Plasserer elementene i mobil-nav i midten*/
         align-items: center;
+
+        /*Setter navbar over alt annet*/
+        z-index: 1
     }
 
     /*Spesifikke stiler for lenker inni mobil navigasjon*/
