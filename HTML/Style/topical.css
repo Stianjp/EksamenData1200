@@ -53,7 +53,7 @@
 }
 
 .sidebar a {
-    color: #333; /* Farge for lenker */
+    color: black; /* Farge for lenker */
     font-weight: bold; /* Gjør teksten halvfet */
     font-size: 30px; /* Endrer tekststørrelse */
 }
@@ -71,15 +71,16 @@
     max-width: 100%; /* Sørg for at bilder ikke overstiger bredden av parent container */
 }
 
+/*Endrer sidebar for når nettsiden er mindre enn 1024px*/
 @media screen and (max-width: 1024px) {
     .sidebar {
+        /* Flytt sidebar under main content */
         grid-column: 1; 
         grid-row: 1;  
-        /* Flytt sidebar under main content */
+
         margin: 0px;
-        padding: 20px;
+        padding: 30px 20px 0px 20px;
         border: 20px;
-        
         background-color:rgb(255, 255, 255);
         box-shadow: none;
         position: relative;
@@ -97,17 +98,9 @@
         grid-template-rows: 1fr;
       }
       
-      /*.sidebar a {
-        float: left;
-        display: block;
-        color: black;
-        padding: 16px;
-        font-size: 16px;
-        text-decoration: none;
-      }*/
-      .sidebar-lenke {
-        display:none;
-      }
+      
+      /*Skjuler headers, vanlige lenker og paragrafer*/
+      .sidebar-lenke {display:none;}
       .sidebar h1 {display:none}
       .sidebar p {display: none;}
       .sidebar img {
@@ -116,9 +109,16 @@
         margin:auto;
         border:80px;
         border-radius:50%;
-        border-width: 2.5px;
+        border-width: 2px;
         border-style:solid;
-        border-color: black;
+        border-color: rgb(40, 40, 40);
+        overflow:auto;
+        box-shadow: 3px 3px 1px #ccc;
+        -webkit-box-shadow: 0 8px 6px -6px #000;
+        -moz-box-shadow: 0 8px 6px -6px #000;
+    }
+    .sidebar img:hover {
+        animation: animasjon 1.8s ease-in-out infinite;
     }
     
 }
@@ -303,10 +303,13 @@
         width: 100%;
 
         /*Benytter samme farge som opprinnelig navbar*/
-        background-color: #55d2ff;
+        background-color: #6D9DC5;
 
         /*Plasserer elementene i mobil-nav i midten*/
         align-items: center;
+
+        /*Setter navbar over alt annet*/
+        z-index: 1
     }
 
     /*Spesifikke stiler for lenker inni mobil navigasjon*/
