@@ -261,7 +261,7 @@ body {
 /*CSS FOR INTROSIDE START*/
 .bakgrunn-intro-container {
   /*Bilde tatt selv med mobiltelefonen*/
-  background-image: url(../Media/Introside/Bakgrunn-intro.webp);
+  background-image: url(/EksamenData1200/Media/Introside/Bakgrunn-intro.webp);
 
   /*Endring av bildet: plasserer bildet i midten av elementet, unngår at den gjentar seg og dekker hele siden*/
   background-position: center;
@@ -638,7 +638,7 @@ body {
 
 /* ----- Endring av kantine.html START ----- */
 main{
-    background-image: url('/HTML/Media/Kantine/marmor4.jpg');
+    background-image: url('/Eksamendata1200/Media/Kantine/marmor4.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
@@ -841,7 +841,7 @@ main{
 }
 
 .gradering {
-  background-image: url(/HTML/Media/Datatorget/klasserom-1.webp); /*bakgrunn for klasserom-siden. Bildet er tatt privat*/
+  background-image: url(/Eksamendata1200/Media/Datatorget/klasserom-1.webp); /*bakgrunn for klasserom-siden. Bildet er tatt privat*/
   background-position: center; /*vil plassere bildet i midten av elementet*/
   background-repeat: no-repeat; /*forhindrer bildet i å gjenta seg hvis det er for lite*/
   background-size: cover; /*forstørrer bildet for å dekke hele elementet*/
@@ -919,7 +919,7 @@ main{
   color: yellow;
 }
 .dark-mode main {
-  background-image: url("/HTML/Media/Kantine/marmor2.jpg");
+  background-image: url("/Eksamendata1200/Media/Kantine/marmor2.jpg");
   background-attachment: fixed;
   background-size: cover;
 }
