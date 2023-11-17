@@ -638,7 +638,7 @@ body {
 
 /* ----- Endring av kantine.html START ----- */
 main{
-    background-image: url('/Eksamendata1200/Media/Kantine/marmor4.jpg');
+    background-image: url('/Eksamendata1200/Media/Kantine/marmor4.webp');
     background-attachment: fixed;
     background-size: cover;
 }
@@ -919,7 +919,7 @@ main{
   color: yellow;
 }
 .dark-mode main {
-  background-image: url("/Eksamendata1200/Media/Kantine/marmor2.jpg");
+  background-image: url("/Eksamendata1200/Media/Kantine/marmor2.webp");
   background-attachment: fixed;
   background-size: cover;
 }
