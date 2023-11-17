@@ -364,8 +364,6 @@ footer {
     text-align: left;
     align-items: center;
     padding: 20px;
-    list-style:none;
-    list-style-type: none;
 }
 
 footer p {
@@ -375,6 +373,14 @@ footer p {
 
 .some-logo {
     width:20px;
-    
+}
+
+.icons{
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+.litteraturliste{
+    margin-left: 20px;
 }
 /* ----- TOPICAL FOOTER SLUTT ----- */
