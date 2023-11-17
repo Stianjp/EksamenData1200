@@ -754,17 +754,12 @@ main{
 .introBilde {
   border: solid; /*Legger til en marg rundt bilde for å fremheve bilde*/
   border-color: #ffdb01; /*Benytter samme farge som navbar for å opprettholde kontrast og design*/
-  margin-top: 9%; /*legger en  */
+  margin-top: 9%; /*legger en margin over så bildet ikke "stanger" i navbaren */
 }
 
 .IntroContainer-datatorget {
   color: white; /*Endrer farge på tekst til hvit for å øke kontraster*/
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.591
-  ); /*legger til en gjennomsniktig bakgrunn for å få frem konstraster*/
+  background-color: rgba(0,0,0,0.591); /*legger til en gjennomsniktig bakgrunn med en gråtone for å få frem konstraster*/
 }
 
 .bakgrunn-intro-container-datatorget {
@@ -789,13 +784,13 @@ main{
 }
 
 .bakgrunn_data {
-  background-color: #2d241b;
+  background-color: #2d241b; /*bruker en bakgrunn som passer inn med resten av fargetonene på siden*/
 }
 
 .datatorgetflex {
   scroll-snap-type: y mandatory; /*koden kontrollerer scrollingen på siden som gjør at den "hopper" til bestemte plasser*/
   overflow-y: scroll; /*oppretter en vertikal rullefelt som en kreativ løsning på et slideshow*/
-  height: 75vh; /*setter hver bokst til å være 75% av visual highten */
+  height: 75vh; /*setter hver bokst til å være 75% av visual highten*/
   margin: 5%; /*legger inn en margin rundt boksen*/
   margin-left: 10%; /*legger boksen mer mot midten*/
   margin-right: 10%; /*legger boksen mer mot midten*/
@@ -818,7 +813,7 @@ main{
   border-color: #ffd901; /*setter border fargen til svart*/
 }
 
-/*legger på unike farger per side i boksen*/
+/*legger til annenhver gul og svart bakgrunn på boksene i sliden*/
 .datatorget1 {
   background-color: #ffd901;
 }
@@ -832,12 +827,12 @@ main{
 }
 
 .hiddendata {
-  opacity: 0;
-  transition: all 2s;
+  opacity: 0; /*setter boksen til å være usynlig*/
+  transition: all 2s; /*legger inn en transition på 2 sekunder*/ 
 }
 
 .show {
-  opacity: 1;
+  opacity: 1; /*se javascript for å se helheten, men setter man synligheten til å vøre synlig igjen*/
 }
 
 .gradering {
@@ -851,54 +846,36 @@ main{
 @media (max-width: 425px){
 
     .databilder{
-        height: 30vh !important;
+        height: 30vh !important; /*tvinger høyden til å endre seg med !important for å være tilgjengelig med mobil*/
     }
-
     .datatekst{
-        font-size: 15px !important;
+        font-size: 15px !important; /*tvinger fonten til å bli mindre for å være tilgjengelig med mobil*/
     }
-
     .datatekst2{
-        font-size: 15px !important;
+        font-size: 15px !important; /*tvinger fonten til å bli mindre for å være tilgjengelig med mobil*/
     }
-
-
 }
 
 /*Nettbrett stående 426-768*/
 @media (max-width: 768px) {
-  .grid-item-felles {
-    font-size: 20px;
-  }
-
   .databilder {
-    max-height: 35vh;
+    max-height: 35vh; /*tvinger høyden til å endre seg med !important for å være tilgjengelig med nettbrett*/
   }
 }
 
 /*Nettbrett liggende 769-1024*/
 @media (max-width: 1024px) {
-  .fa-bars {
-    visibility: visible;
-  }
-  .NavElementer {
-    visibility: hidden;
-  }
 
   .databilder {
-    max-height: 45vh;
+    max-height: 45vh;  /*tvinger høyden til å endre seg med !important for å være tilgjengelig med nettbrett*/
   }
 }
 
 @media (max-width: 1999px) {
-  .databilder {
-    max-height: 45vh;
+    .databilder {
+      max-height: 45vh; /*tvinger høyden til å endre seg med !important for å være tilgjengelig med nettbrett*/
+    }
   }
-}
-
-
-
-/* ----- Endring av datatorget.html START ----- */
 
 /* ----- Endring av datatorget.html SLUTT ----- */
 
