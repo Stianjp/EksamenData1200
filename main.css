@@ -636,9 +636,10 @@ body {
 
 /* ----- Endring av kantine.html START ----- */
 main{
-    background-image: url('Media/Kantine/marmor4.webp'); /* Hentet fra: https://www.pexels.com/nb-no/bilde/hvit-klinkekule-marmor-overflate-1323712/ */
+    background-image: url('Media/Introside/bakrgunn3.webp'); /* Hentet fra: https://www.pexels.com/nb-no/bilde/hvit-klinkekule-marmor-overflate-1323712/ */
     background-attachment: fixed; /*  */
     background-size: cover; /* */
+    
 }
 
 
