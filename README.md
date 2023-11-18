@@ -1,7 +1,7 @@
 # EksamenData1200
 Dette er Git-siden til eksamen i Data1200 2023
-Gruppen består av (kandidatnummer i stigende rekkefølge): 
-  - 
+Gruppen består av (Gruppemedlemmer i stigende rekkefølge): 
+  - 469
   -
   -
 
@@ -28,16 +28,16 @@ Innholdsfortegnelse til CSS-kode
 Linje (heretter L):
 L1-22: CSS Selector (*), html og body klasser
 L25-54: Felles-klasser som er brukt på flere av sidene 
-L59-261: Navbar 
-  L127-260:Responsiv design for navbar
-L266-534: Hjem-siden
-  L398-533: Responsiv design for hjem-siden
-L537-640: Footer (felles for flere sider)
-  L629-640: Responsiv design for footer
-L646-729: Kantine-siden
-  L715-728: Responsiv design for kantine-siden
-L733- : Datatorget-siden
-  : Responsiv design for datatorget-siden
-L: Accessibility-siden
-  : Responsiv design for accessibility-siden
+L56-257: Navbar 
+  L126-257:Responsiv design for navbar
+L260-530: Hjem-siden
+  L393-530: Responsiv design for hjem-siden
+L531-638: Footer (felles for flere sider)
+  L624-638: Responsiv design for footer
+L639-744: Kantine-siden
+  L724-744: Responsiv design for kantine-siden
+L746-880 : Datatorget-siden
+  L845-878: Responsiv design for datatorget-siden
+L883-988: Accessibility-siden
+  L971-988: Responsiv design for accessibility-siden
 
