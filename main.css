@@ -636,9 +636,9 @@ body {
 
 /* ----- Endring av kantine.html START ----- */
 main{
-    background-image: url('Media/Kantine/marmor4.webp');
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: url('Media/Kantine/marmor4.webp'); /* Hentet fra: https://www.pexels.com/nb-no/bilde/hvit-klinkekule-marmor-overflate-1323712/ */
+    background-attachment: fixed; /*  */
+    background-size: cover; /* */
 }
 
 
@@ -894,7 +894,7 @@ main{
   color: yellow;
 }
 .dark-mode main {
-  background-image: url("Media/Kantine/marmor2.webp");
+  background-image: url("Media/Kantine/marmor2.webp"); //*Bilde hentet fra: https://www.pexels.com/nb-no/bilde/design-kult-bakgrunnbilde-stup-solid-2117938/ */
   background-attachment: fixed;
   background-size: cover;
 }
