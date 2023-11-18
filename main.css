@@ -719,7 +719,7 @@ main{
   height: 20px; /* Definerer høyde på location-pin elementene */
 }
 /* ----- Endring av kantine.html SLUTT ----- */
-/* ----- Responsivt design for accessibility-siden START----- */
+/* ----- Responsivt design for Kantine-siden START----- */
 
 @media (max-width: 1024px) {
   /* Nettbrett (liggende) størrelse */
@@ -741,7 +741,7 @@ main{
     width: 50%; /* Filter-valgene brer seg ut til 50% av skjermen*/
   }
 }
-/* ----- Responsivt design for accessibility-siden SLUTT----- */
+/* ----- Responsivt design for Kantine-siden SLUTT----- */
 
                                 /* ----- Endring av datatorget.html START ----- */
 
