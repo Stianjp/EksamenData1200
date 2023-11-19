@@ -9,94 +9,53 @@
     </head>
 
     <body>
-        <header>
             <!--Header START-->
     <header>
         <!--Navigasjonsbar START-->
         <nav class="navbar">
-            <a href="index.html" class="logo"><img src="../Media/Navbar/OsloMetLogo.webp" alt="OsloMet Logo"></a><!--Bilde er hentet fra: https://kommunikasjon.ntb.no/presserom/oslomet/mi?publisherId=15678779&item=logo-16984812 17.09.23. Dette bilde har en rekke regler for hva som er lovt å bruke det til og hvordan.-->
-            
-            <!--Standrad navigasjonsmeny for større skjermer-->
-            <div class="NavElementer"><!--SE CSS-fil, diven har display flex for å få elementene i en egen boks på horisontal linje-->
-                <a href="index.html">Home</a><!--Flex-boks 1-->
-                <a href="Topical.html">Topical</a><!--Flex-boks 2-->
-                <a href="Cafeteria.html">Cafeteria</a><!--Flex-boks 3-->
-                <a href="Datatorget.html">Datatorget</a><!--Flex-boks 4-->
-                <a href="../Tilgjenglighet.html">Accessibility</a><!--Flex-boks 5-->
-                <a href="../Topical.html">NO</a><!--Flex-boks 6-->
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa fa-bars"></i></button>
+                <div class="dropdown-content">
+                    <div class="meny-knapp"><a href="index.html">Home</a></div>
+                    <div class="meny-knapp"><a href="Topical.html">Topical</a></div>
+                    <div class="meny-knapp"><a href="Cafeteria.html">Cafeteria</a></div>
+                    <div class="meny-knapp"><a href="Datatorget.html">Datatorget</a></div>
+                    <div class="meny-knapp"><a href="../Tilgjenglighet.html">Accessibility</a></div>
+                </div>
             </div>
 
-            <!--Standard naviasjonsmeny for mindre skjermer enn 1024px bredde-->
-            <!--Legger til hamburger-ikonet-->
-            <i id="menyToggle" class="fa fa-bars"></i>
-
-            <!--Meny for når man trykker på hamburger-ikonet-->
-            <div class="mobil-nav" id="mobilmeny">
-                <div class="grid-meny-mobil">
-
-                    <!--Link til index siden: grid-boks 1-->
-                    <div class="meny-knapp">
-                        <a href="index.html">Home</a>
-                    </div>
-
-                    <!--Link til topical siden: grid-boks 2-->
-                    <div class="meny-knapp">
-                        <a href="Topical.html">Topical </a>
-                    </div>
-
-                    <!--Link til kantine siden: grid-boks 3-->
-                    <div>
-                        <a href="Cafeteria.html">Cafeteria</a>
-                    </div>
-
-                    <!--Link til datatorget siden: grid-boks 4-->
-                    <div>
-                        <a href="Datatorget.html">Datatorget</a>
-                    </div>
-
-                    <!--Link til accessibility siden: grid-boks 5-->
-                    <div>
-                        <a href="../Tilgjenglighet.html">Accessibility</a>
-                    </div>
-
-                    <!--Link til den engelske siden som man befinner seg på: grid-boks 6-->
-                    <div>
-                        <a href="../Topical.html">NO</a>
-                    </div>
-                </div>
-
-                <!--Knapp for å lukke menyen-->
-                <button id="lukkMeny">Close</button>
+            <h1 class="TittelTopical">Topical</h1>
+            
+            <div class="språk">
+                <p><a href="../Topical.html">NO</a></p>
             </div>
         </nav>
         <!--Navigasjonsbar SLUTT-->
-       
+    </header>
         <div class="grid-container">
             <div class="sidebar">
 
                 <!-- Sidebar-innhold her -->
                 <h1>Learn more...</h1>
-                
-                <a href="https://rri-tools.eu">RRI</a>
+
+                <a class="sidebar-lenke" href="https://rri-tools.eu">RRI</a>
                 <p>Learn more about RRI</p>
-                <img title="Foto: Sharoid /Cleanpng" src="../Media/Topical/RRI 1.2.webp" alt="Sidebar/RRI">
+                <a href="https://rri-tools.eu"><img title="Foto: Sharoid /Cleanpng" src="../Media/Topical/RRI 1.2.webp" alt="Sidebar/RRI"></a>
                     
-                <a href="https://www.cnbc.com/2018/01/17/why-mark-zuckerberg-started-facebook.html">Zuckerberg</a>
+                <a class="sidebar-lenke" href="https://www.cnbc.com/2018/01/17/why-mark-zuckerberg-started-facebook.html">Zuckerberg</a>
                 <p>An article about Mark Zuckerberg's Facebook journey. </p>
-                <img title="Foto: Meta Platforms Inc" src="../Media/Topical/Facebook.webp" alt="Sidebar/Zuckerberg">
+                <a href="https://www.cnbc.com/2018/01/17/why-mark-zuckerberg-started-facebook.html"><img title="Foto: Meta Platforms Inc" src="../Media/Topical/Facebook.webp" alt="Sidebar/Zuckerberg"></a>
                     
-                <a href="https://www.youtube.com/watch?v=pahiARTWb0U">Oppenheimer</a>
+                <a class="sidebar-lenke" href="https://www.youtube.com/watch?v=pahiARTWb0U">Oppenheimer</a>
                 <p>A video of the nuclear bomb test in Los Alamos.</p>
-                <img title="Foto: Dulga /Cleanpng" src="../Media/Topical/Atombombe.webp" alt="Sidebar/Oppenheimer">
+                <a href="https://www.youtube.com/watch?v=pahiARTWb0U"><img title="Foto: Dulga /Cleanpng" src="../Media/Topical/Atombombe.webp" alt="Sidebar/Oppenheimer"></a>
                     
-                <a href="https://www.mdpi.com/2071-1050/9/10/1759">RRI implementation</a>
+                <a class="sidebar-lenke" href="https://www.mdpi.com/2071-1050/9/10/1759">RRI 2</a>
                 <p>An article on how to implement RRI.</p>
-                <img title="Foto: Housing /Cleanpng" src="../Media/Topical/RRI 2.2.webp" alt="Sidebar/RRI implementering">
-            
+                <a href="https://www.mdpi.com/2071-1050/9/10/1759"><img title="Foto: Housing /Cleanpng" src="../Media/Topical/RRI 2.2.webp" alt="Sidebar/RRI implementering"></a>
             </div>
             <div class="main-content">
                 <!-- Hovedinnhold her -->
-                <h1>Topical page: a website about RRI</h1>
                 <div class="grid-felles">
                     <div class="grid-item-felles">
                         <img class="grid-image" title="Foto: Emily /Adobe" src="../Media/Topical/RRI 1.1.webp" alt="Hoved/RRI">
@@ -170,8 +129,6 @@
             </div>
             <p>Copyright © 2021 Lorem ipsum dolor</p>
         </footer>
-
-        <script src="../Javascript/main.js"></script> <!--Linker javascript-filen til HTML-->
     </body>
 </html>
 
