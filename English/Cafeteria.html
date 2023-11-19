@@ -9,9 +9,9 @@
 
      <!--Legger til ikon i fanen-->
      <link
-     rel="shortcut icon"
-     href="../Media/Navbar/Logomedsignatur_gul_OsloMet-01.png"
-     type="image/x-icon"/>
+        rel="shortcut icon"
+        href="../Media/Navbar/Logomedsignatur_gul_OsloMet-01.png"
+        type="image/x-icon"/>
    <!--Legger til metabeskrivelse-->
    <meta
      name="description"
@@ -48,8 +48,8 @@
                 <!--Flex-boks 6-->
                 <a href="../Kantine.html">NO</a>
             </div>
-
             <!--Standard naviasjonsmeny for mindre skjermer enn 1024px bredde-->
+
             <!--Legger til hamburger-ikonet-->
             <i id="menyToggle" class="fa fa-bars"></i>
 
@@ -185,89 +185,88 @@
                 </div>
             </div>
         </div>
-        <script src="Style/kantine.js"></script>
     </main>
         <!--Kantine main SLUTT-->
     
-         <footer class="Footer-gul">
-        <!--Container for footer-->
-        <div class="grid-footer-container">
+    <footer class="Footer-gul">
+    <!--Container for footer-->
+    <div class="grid-footer-container">
 
-            <!--Feedback boks: grid-boks  1-->
+        <!--Feedback boks: grid-boks  1-->
+        <div class="grid-item-felles">
+            <label for="melding">Send oss spørsmål eller tilbakemelding</label>
+            <textarea id="melding" class="tilbakemelding-textarea"
+                placeholder="Skriv din melding her..."></textarea>
+            <!-- Unik klasse for tekstområdet -->
+            <button class="tilbakemelding-knapp" onclick="sendMelding()">
+                Send
+            </button>
+            <!--Unik klasse for send-knappen - Legger også til en javascript-->
+        </div>
+
+            <!--Adresseinfo: grid-boks 2-->
             <div class="grid-item-felles">
-                <label for="melding">Send oss spørsmål eller tilbakemelding</label>
-                <textarea id="melding" class="tilbakemelding-textarea"
-                    placeholder="Skriv din melding her..."></textarea>
-                <!-- Unik klasse for tekstområdet -->
-                <button class="tilbakemelding-knapp" onclick="sendMelding()">
-                    Send
-                </button>
-                <!--Unik klasse for send-knappen - Legger også til en javascript-->
+                <h3>
+                    OSLO METROPOLITAN UNIVERSITY
+                </h3>
+                <h4>
+                    STORBYUNIVERSITETET
+                </h4>
+                <p>
+                    Postboks 4 St. Olavs plass, 0130 Oslo
+                </p>
+                <p>
+                    Telephone: +47 67 23 50 00
+                </p>
+                <p>
+                    E-post:
+                    <a href="mailto:someone@example.com">
+                        someone@example.com
+                    </a>
+                </p>
             </div>
-    
-                <!--Adresseinfo: grid-boks 2-->
-                <div class="grid-item-felles">
-                    <h3>
-                        OSLO METROPOLITAN UNIVERSITY
-                    </h3>
-                    <h4>
-                        STORBYUNIVERSITETET
-                    </h4>
-                    <p>
-                        Postboks 4 St. Olavs plass, 0130 Oslo
-                    </p>
-                    <p>
-                        Telephone: +47 67 23 50 00
-                    </p>
-                    <p>
-                        E-post:
-                        <a href="mailto:someone@example.com">
-                            someone@example.com
+
+            <!--Sosiale medier: grid-boks 3-->
+            <div class="grid-item-felles">
+                <div class="grid-footer-some">
+                    <div class="inline-footer-some">
+                        <a href="https://www.facebook.com/oslomet/" class="fa fa-facebook">
+                            <p>
+                                Facebook
+                            </p>
                         </a>
-                    </p>
-                </div>
-    
-                <!--Sosiale medier: grid-boks 3-->
-                <div class="grid-item-felles">
-                    <div class="grid-footer-some">
-                        <div class="inline-footer-some">
-                            <a href="https://www.facebook.com/oslomet/" class="fa fa-facebook">
-                                <p>
-                                    Facebook
-                                </p>
-                            </a>
-                        </div>
-                        <div class="inline-footer-some">
-                            <a href="https://twitter.com/oslomet" class="fa fa-twitter">
-                                <p>
-                                    X
-                                </p>
-                            </a>
-                        </div>
-                        <div class="inline-footer-some">
-                            <a href="https://www.linkedin.com/school/oslomet/?originalSubdomain=no" class="fa fa-linkedin">
-                                <p>
-                                    LinkedIn
-                                </p>
-                            </a>
-                        </div>
-                        <div class="inline-footer-some">
-                            <a href="https://www.instagram.com/oslomet/?hl=nb" class="fa fa-instagram">
-                                <p>
-                                    Instagram
-                                </p>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="inline-footer-some">
+                        <a href="https://twitter.com/oslomet" class="fa fa-twitter">
+                            <p>
+                                X
+                            </p>
+                        </a>
+                    </div>
+                    <div class="inline-footer-some">
+                        <a href="https://www.linkedin.com/school/oslomet/?originalSubdomain=no" class="fa fa-linkedin">
+                            <p>
+                                LinkedIn
+                            </p>
+                        </a>
+                    </div>
+                    <div class="inline-footer-some">
+                        <a href="https://www.instagram.com/oslomet/?hl=nb" class="fa fa-instagram">
+                            <p>
+                                Instagram
+                            </p>
+                        </a>
                     </div>
                 </div>
             </div>
-            <p class="footer-copyright">
-                Copyright © 2023 Lorem ipsum dolor
-            </p>
-        </footer>
-
-        <!--Linker javascript-filen til HTML-->
-        <script src="../Javascript/main.js"></script>
-    </body>
+        </div>
+        <p class="footer-copyright">
+            Copyright © 2023 Lorem ipsum dolor
+        </p>
+    </footer>
     
-    </html>
+    <!--Linker javascript-filen til HTML-->
+    <script src="../Javascript/main.js"></script>
+</body>
+
+</html>
