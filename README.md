@@ -1,10 +1,12 @@
 # EksamenData1200
 Dette er Git-siden til eksamen i Data1200 2023
 Gruppen består av (Gruppemedlemmer i stigende rekkefølge): 
+  - 354
   - 469
-  -
-  -
-
+  - 496
+  - 506
+  - 523
+  
 Denne koden er bygget opp ved bruk av HMTL, CSS og noe JavaScript. 
 
 Mappestruktur: 
