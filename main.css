@@ -52,8 +52,8 @@ body {
   color: white;
   /* background-color: rgba(0, 0, 0, 0.733);*/
 }
-
 /* -------- Header: Navbar (felles for alle sider)  ---------------------*/
+
 /* ------Responsivt design: Desktop 1200px -> 2000px er grunninnstilling ----- */
 .navbar {
   /*Benytter flex for å legge elementene på en horisontal linje*/
@@ -741,7 +741,7 @@ main{
 }
 /* ----- Responsivt design for Kantine-siden SLUTT----- */
 
-                                /* ----- Endring av datatorget.html START ----- */
+ /* ----- Endring av datatorget.html START ----- */
 
 .fasilitet_tekst {
   align-items: center; /*Sentrerer teksten vertikalt*/
@@ -893,15 +893,7 @@ main{
 .dark-mode a {
   color: yellow;
 }
-.dark-mode main {
-  background-image: url("Media/Kantine/marmor2.webp"); //*Bilde hentet fra: https://www.pexels.com/nb-no/bilde/design-kult-bakgrunnbilde-stup-solid-2117938/ */
-  background-attachment: fixed;
-  background-size: cover;
-}
-.dark-mode .kantineContainer a {
-  /* Ved dark-mode endres kart-linkene i kantineside til hvit skrift for bedre kontrast */
-  color: white;
-}
+
 #dark-mode-toggle {
   background-color: #4c4b4b; /*Bakgrunnsfarge*/
   color: white; /* Tekstfarge */
@@ -919,23 +911,19 @@ main{
 .red-dot {
   width: 10px;
   height: 10px;
-  background-color: black;
+  background-color: red;
   border-radius: 50%; /* Gjør prikken siruklær */
   display: inline-block;
   margin-right: 5px; /*Avstand fra teksten */
 }
 /*Grønn prikk når dark-mode er på*/
 .green-dot {
-  background-color: white;
+  background-color: green;
 }
 
 /*Beholder footer-farge på teksten ved dark-mode aktivert*/
 body.dark-mode footer {
   color: black;
-}
-
-.dark-mode .kantineItem {
-  background-color:#333;
 }
 
 /*Introteksten til accessibility-siden:*/
