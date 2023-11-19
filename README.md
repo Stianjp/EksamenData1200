@@ -14,10 +14,7 @@ Alt ligger i en overordnet mappe som heter "HTML".
 Inne i denne mappen har vi delt den videre inn i 4 mapper: 
   - English (Inneholder engelsk versjon av nettsiden)
   - Media (Inneholder bilder)
-  - Norsk (Inneholder norsk versjon av nettsiden)
-  - Style (Inneholder CSS-kode og JavaScript-kode)
-
-  Hver av mappene har egne mapper både innenfor English, Norsk og Media, slik at vi får en ryddig mappestruktur. 
+  - Javascript
 
 Vi har valgt å ha to CSS-filer, en felles for sidene: hjem, datatorget, accesibility og kantine. Den andre CSS-filen er for topical-siden. 
 
