@@ -636,7 +636,7 @@ body {
 
 /* ----- Endring av kantine.html START ----- */
 main{
-  background-image: url(/Media/Kantine/BakgrunnKantine.webp); /* Setter bakgrunnsbildet*/
+  background-image: url(Media/Kantine/BakgrunnKantine.webp); /* Setter bakgrunnsbildet*/
   background-size: 100%; /* Setter bildet til å ta hele plassen den kan */
   background-attachment: fixed; /* Gjør at bildet ikke scroller med siden, men står fast ved scroll*/
 }
