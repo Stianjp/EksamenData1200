@@ -636,7 +636,11 @@ body {
 
 /* ----- Endring av kantine.html START ----- */
 main{
+<<<<<<< Updated upstream
   background-image: url(Media/Kantine/BakgrunnKantine.webp); /* Setter bakgrunnsbildet*/
+=======
+  background-image: url(/Media/Kantine/BakgrunnKantine.webp); /* Setter bakgrunnsbildet - Henet fra: https://kommunikasjon.ntb.no/pressemelding/17887040/stor-interesse-for-utdanning-i-automasjon-i-bygg?publisherId=15678779&lang=no 19.11.2023*/ 
+>>>>>>> Stashed changes
   background-size: 100%; /* Setter bildet til å ta hele plassen den kan */
   background-attachment: fixed; /* Gjør at bildet ikke scroller med siden, men står fast ved scroll*/
 }
