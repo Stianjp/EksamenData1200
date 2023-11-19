@@ -636,9 +636,9 @@ body {
 
 /* ----- Endring av kantine.html START ----- */
 main{
-    background-image: url('Media/Kantine/BakgrunnKantine.webp');
-    background-attachment: fixed; /*  */
-    background-size: cover; /* */
+  background-image: url(/Media/Kantine/BakgrunnKantine1.webp);
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 
@@ -648,6 +648,8 @@ main{
   padding: 50px; /* Gir større plass rundt innholdet i elementet*/
   overflow-wrap: break-word; /*Bryter ordene dersom teksten går utenfor tillatt område*/
   padding-top: 15%;
+  color: white;
+  background-color: #19181885;
 }
 
 .filter {
