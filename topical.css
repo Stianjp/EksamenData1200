@@ -19,7 +19,6 @@
     text-align: center; /* Sentrerer teksten */
     font-size: 20px; /* Endrer tekststørrelsen */
     padding: 16px; /* Setter padding til 16px */
-    
 }
 
 .grid-image {
@@ -45,7 +44,6 @@
     padding: 16px; /* Setter padding til 16px */
     border-radius: 10px; /* Avrundede hjørner for penere utseende */
     box-shadow: 0 0 10px rgba(30, 27, 27, 0.1); /* Legger til en subtil skyggeeffekt */
-    
 }
 
 .sidebar > * {
